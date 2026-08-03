@@ -1,0 +1,101 @@
+* {
+  font-family: NotoSansKR;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "맑은 고딕", sans-serif;
+  background: #f6f4f1;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+}
+
+
+
+
+
+/* header */
+header {
+  width: 1400px;
+  background: #f6f4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+}
+header ul a {
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #f6f4f1;
+  border-radius: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+}
+.search button {
+  border: none;
+  background: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .icon {
+  display: flex;
+  color: #3a3a2e;
+  align-items: center;
+  gap: 8px;
+}
+
+header .icon a {
+  font-size: 18px;
+  color: inherit;
+}
+
+.icon img {
+  width: 35px;
+}
+/* //header */

@@ -1,0 +1,726 @@
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Thin.ttf);
+  font-weight: 300;
+}
+
+* {
+  font-family: NotoSansKR;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "맑은 고딕", sans-serif;
+  background: #f6f4f1;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+}
+svg{
+  color: #3a3a2e!important;
+}
+
+
+/* header */
+header {
+  width: 1400px;
+  background: #f6f4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+}
+header ul a {
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.logo {
+    width: 220px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.logo img {
+  width: 150px;
+}
+.logo img:nth-child(2) {
+  width: 60px;
+  height: 54px;
+}
+
+nav {
+width: 465px;
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  font-size: 18px;
+  color: #3a3a2e;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #f6f4f1;
+  border-radius: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+}
+.search button {
+  border: none;
+  background: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .icon {
+    width: 126.5px;
+  display: flex;
+  color: #3a3a2e;
+  align-items: center;
+  gap: 8px;
+}
+
+header .icon a {
+  font-size: 18px;
+  color: inherit;
+}
+
+.icon img {
+  width: 35px;
+}
+/* //header */
+
+/* 배너 */
+.banner{
+    width: 1400px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10px;
+}
+.banner .banner-card{
+    flex: 1;
+    position: relative;
+}
+
+.banner .banner-card > img{
+    position: relative;
+    width: 100%;
+}
+.banner .banner-card > div{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: white;
+    padding: 24px;
+}
+.banner .banner-card p{
+    margin: 12px 0;
+}
+
+
+.banner .banner-card a{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 18px;
+    color: white;
+}
+.banner .banner-card svg{
+    color: white!important;
+}
+
+/* //배너 */
+
+
+/* 카테고리 */
+.category {
+  width: 1400px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.category > h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.category .more {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.category .more a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.category .more i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.category-list{
+    display: flex;
+    justify-content: space-between;
+}
+.category-card{
+    width: fit-content;
+    text-align: center;
+}
+/* //카테고리 */
+
+/* 베스트 */
+.best {
+  width: 1400px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.best > h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.best .more {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.best .more a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.best .more   i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.product_list{
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+.product_card{
+    width: 342px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+.product_card svg{
+    color: #74A640!important;
+}
+.best .product_card a{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.best .product_img img{
+    width:100%;
+    display:block;
+    border-radius:8px 8px 0 0;
+}
+
+.best .product_info{
+    padding:18px 12px 16px;
+}
+
+.best .product_title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.best .product_title b{
+    font-size:17px;
+    font-weight:700;
+    color:#3a3a2e;
+}
+
+.best .product_title button{
+    border:none;
+    background:none;
+    padding:0;
+    cursor:pointer;
+}
+
+.best .product_title i{
+    color:#74A640;
+    font-size:15px;
+}
+
+.best .nosale{
+    margin-bottom:6px;
+}
+
+.best .nosale s{
+    color:rgba(58, 58, 46, 0.6);
+    font-size:15px;
+    font-weight:400;
+}
+
+.best .sale{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+.best .sale span{
+    color:#E35A45;
+    font-size:15px;
+    font-weight:700;
+}
+
+.best .sale b{
+    color:#3a3a2e;
+    font-size:24px;
+    font-weight:700;
+}
+
+.best .free{
+    display:inline-block;
+    background:rgba(230, 221, 184, 0.3);
+    color:#9A9A9A;
+    font-size:12px;
+    padding:4px 10px;
+}
+/* //베스트 */
+
+
+/* 뉴 */
+.new {
+  width: 1400px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.new > h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.new .more {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.new .more a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.new .more   i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.new .product_card a{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.new .product_img img{
+    width:100%;
+    display:block;
+    border-radius:8px 8px 0 0;
+}
+
+.new .product_info{
+    padding:18px 12px 16px;
+}
+
+.new .product_title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.new .product_title b{
+    font-size:17px;
+    font-weight:700;
+    color:#3a3a2e;
+}
+
+.new .product_title button{
+    border:none;
+    background:none;
+    padding:0;
+    cursor:pointer;
+}
+
+.new .product_title i{
+    color:#74A640;
+    font-size:15px;
+}
+
+.new .nosale{
+    margin-bottom:6px;
+}
+
+.new .nosale s{
+    color:rgba(58, 58, 46, 0.6);
+    font-size:15px;
+    font-weight:400;
+}
+
+.new .sale{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+.new .sale span{
+    color:#E35A45;
+    font-size:15px;
+    font-weight:700;
+}
+
+.new .sale b{
+    color:#3a3a2e;
+    font-size:24px;
+    font-weight:700;
+}
+
+.new .free{
+    display:inline-block;
+    background:rgba(230, 221, 184, 0.3);
+    color:#9A9A9A;
+    font-size:12px;
+    padding:4px 10px;
+    
+}
+/* //뉴 */
+
+
+/* 레시피와 함께 */
+.with-recipe {
+  width: 1400px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.with-recipe > h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.with-recipe .more {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.with-recipe .more a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.with-recipe .more   i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.recipe-wrap{
+    width: 1400px;
+    display: flex;
+    gap: 40px;
+}
+
+.recipe-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.recipe-left > div{
+    background-color: white;
+    border-radius: 8px;
+}
+
+.recipe-right{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.with-recipe .product_card{
+    width:342px;
+    border-radius:8px;
+    background:#fff;
+}
+
+.with-recipe .product_card a{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.with-recipe .product_img img{
+    width:100%;
+    display:block;
+    border-radius:8px 8px 0 0;
+}
+
+.with-recipe .product_info{
+    padding:18px 12px 16px;
+}
+
+.with-recipe .product_title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.with-recipe .product_title b{
+    font-size:17px;
+    font-weight:700;
+    color:#333;
+}
+
+.with-recipe .product_title button{
+    border:none;
+    background:none;
+    padding:0;
+    cursor:pointer;
+}
+
+.with-recipe .product_title i{
+    color:#74A640;
+    font-size:15px;
+}
+
+.with-recipe .nosale{
+    margin-bottom:6px;
+}
+
+.with-recipe .nosale s{
+    color:#9b9b9b;
+    font-size:15px;
+    font-weight:400;
+}
+
+.with-recipe .sale{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+.with-recipe .sale span{
+    color:#E35A45;
+    font-size:15px;
+    font-weight:700;
+}
+
+.with-recipe .sale b{
+    color:#3a3a2e;
+    font-size:24px;
+    font-weight:700;
+}
+
+.with-recipe .free{
+    display:inline-block;
+    background:rgba(230, 221, 184, 0.3);
+    color:#9A9A9A;
+    padding:4px 10px;
+    font-size:12px;
+    
+}
+.store_r img{
+    width:100%;
+    display:block;
+    border-radius:8px;
+}
+
+.store_rt{
+    margin: 10px;
+    text-align:center;
+}
+
+.store_rtn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+}
+
+.store_rtn b{
+    font-size:24px;
+    font-weight:700;
+    color: #3a3a2e;;
+}
+
+.store_rtn span{
+    display:inline-block;
+    padding:4px 10px;
+    background:#DFE9D6;
+    color:#74A640;
+    font-size:13px;
+    font-weight:600;
+}
+
+.store_rt p{
+    margin-bottom:24px;
+    font-size:18px;
+    line-height:1.7;
+    font-weight:500;
+    color:#3a3a2e;
+}
+
+.go a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    padding:10px 20px;
+    color:#3a3a2e;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+
+.go i{
+    font-size:12px;
+}
+/* //레시피와 함께 */
+
+/* footer */
+footer {
+  width: 100%;
+  background: #FFF;
+  opacity: 0.5;
+}
+
+.footer_i {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer_l {
+  width: 35%;
+}
+
+.footer_r {
+  width: 65%;
+}
+
+.footer_l ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.footer_l ul li a {
+  text-decoration: none;
+  color: #3a3a2e;
+  font-size: 15px;
+}
+
+.footer_icon {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.footer_icon a {
+  color: #3a3a2e;
+  font-size: 30px;
+}
+
+.footer_l p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer_r p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* //footer */

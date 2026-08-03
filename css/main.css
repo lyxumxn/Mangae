@@ -1,0 +1,530 @@
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  src: url(static/NotoSansKR-Thin.ttf);
+  font-weight: 300;
+}
+
+* {
+  font-family: NotoSansKR;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "맑은 고딕", sans-serif;
+  background: #f6f4f1;
+  color: #3a3a2e;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+}
+
+svg{
+  color: #3a3a2e!important;
+}
+
+/* header */
+header {
+  width: 1400px;
+  background: #f6f4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+}
+header ul a {
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 18px;
+}
+header .logo{
+  width: 220px;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+header nav {
+  display: flex;
+  gap: 35px;
+}
+
+header nav a {
+  font-size: 18px;
+  color: #3a3a2e;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #f6f4f1;
+  border-radius: 10px;
+}
+
+header .search input {
+  border: none;
+  outline: none;
+}
+header .search button {
+  border: none;
+  background: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .icon {
+  display: flex;
+  color: #3a3a2e;
+  align-items: center;
+  gap: 8px;
+}
+
+header .icon a {
+  font-size: 18px;
+  color: inherit;
+}
+
+header .icon img {
+  width: 35px;
+}
+/* //header */
+
+
+/* 배너 */
+header .banner {
+  width: 1400px;
+  margin: 40px auto;
+}
+
+header .banner img {
+  width: 100%;
+  margin: auto;
+}
+/* //배너 */
+
+/* main */
+/* 지금 가장 인기있는 레시피 */
+header .contents1 {
+  width: 1400px;
+  align-content: center;
+}
+
+
+body > section {
+  width: 1400px;
+  margin: 90px auto;
+}
+
+.banner{
+  margin-top: 10px;
+}
+
+.contents1 h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.contents1 h3 {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.contents1 h3 a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contents1 h3 i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px 16px;
+}
+.recipe {
+  width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.recipe > a {
+  display: block;
+  text-decoration: none;
+  color:#3a3a2e;
+}
+.img-container {
+  width: 220px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe .img-container{
+  border-radius: unset;
+}
+
+.recipe > a > div:last-child{
+  padding: 12px;
+}
+
+.recipe > a .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.recipe > a .title b {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a3a2e;
+}
+.recipe .info .time >span {
+  color: #3a3a2e;
+}
+
+.recipe > a .title button {
+  border: none;
+  background: none;
+  color: #bfbfbf;
+  cursor: pointer;
+  font-size: 13px;
+}
+.recipe > a .time {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.recipe > a .time i {
+  font-size: 11px;
+}
+.recipe > a .review {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.recipe > a .review i {
+  color: #f6b400;
+}
+
+.recipe > a .review span:nth-child(2) {
+  color: #3a3a2e;
+  font-weight: 600;
+}
+
+.recipe > a .review span:last-child {
+  color: #3a3a2e;
+}
+/* //지금 가장 인기있는 레시피 */
+
+/* 오늘의 추천 콘텐츠 */
+.contents2 {
+  width: 1400px;
+  margin: 90px auto;
+}
+
+.contents2 h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.contents2 h3 {
+  text-align: right;
+  margin-top: -68px;
+  margin-bottom: 18px;
+}
+
+.contents2 h3 a {
+  text-decoration: none;
+  color: #3a3a2e;
+  font-size: 15px;
+}
+
+.contents2 h3 i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.contents2 .card3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.contents2 .card {
+  position: relative;
+  height: 138px;
+  background-color: rgba(146, 181, 116, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contents2 .card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #3a3a2e;
+  text-decoration: none;
+}
+.contents2 .card > a > div:nth-child(1) {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+.contents2 .card b {
+  position: absolute;
+  left: 16px;
+  top: 42px;
+  width: 135px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #3a3a2e;
+}
+.contents2 .card > a > div:nth-child(3) {
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+.contents2 .card p {
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+
+.contents2 .card i {
+  margin-left: 4px;
+  font-size: 10px;
+}
+.contents2 .card img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 160px;
+  height: 138px;
+  object-fit: cover;
+}
+/* //오늘의 추천 콘텐츠 */
+
+/* 테마별 레시피 모음 */
+.contents3 {
+  width: 1400px;
+  margin: 90px auto;
+}
+
+.contents3 h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.contents3 h3 {
+  text-align: right;
+  margin-top: -68px;
+  margin-bottom: 18px;
+}
+
+.contents3 h3 a {
+  text-decoration: none;
+  color: #3a3a2e;
+  font-size: 15px;
+}
+
+.contents3 h3 i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.contents3 .card3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.contents3 .card {
+  position: relative;
+  height: 138px;
+  background-color: rgba(146, 181, 116, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contents3 .card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #3a3a2e;
+  text-decoration: none;
+}
+.contents3 .card > a > div:nth-child(1) {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+.contents3 .card b {
+  position: absolute;
+  left: 16px;
+  top: 42px;
+  width: 135px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #3a3a2e;
+}
+.contents3 .card > a > div:nth-child(3) {
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+.contents3 .card p {
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  font-size: 11px;
+  color: #3a3a2e;
+}
+
+.contents3 .card i {
+  margin-left: 4px;
+  font-size: 10px;
+}
+.contents3 .card img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 160px;
+  height: 138px;
+  object-fit: cover;
+}
+/* 테마별 레시피 모음 */
+
+/* main */
+
+/* footer */
+footer {
+  width: 100%;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.footer_i {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer_l {
+  width: 35%;
+}
+
+.footer_r {
+  width: 65%;
+}
+
+.footer_l ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.footer_l ul li a {
+  text-decoration: none;
+  color: #3a3a2e;
+  font-size: 15px;
+}
+
+.footer_icon {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.footer_icon a {
+  color: #3a3a2e;
+  font-size: 30px;
+}
+
+.footer_l p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer_r p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* //footer */

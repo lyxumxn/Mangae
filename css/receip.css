@@ -1,0 +1,709 @@
+* {
+  font-family: NotoSansKR;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "맑은 고딕", sans-serif;
+  background: #f6f4f1;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+}
+
+/* header */
+header {
+  width: 1400px;
+  background: #f6f4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+}
+header ul a {
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  font-size: 18px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #f6f4f1;
+  border-radius: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+}
+.search button {
+  border: none;
+  background: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .icon {
+  display: flex;
+  color: #3a3a2e;
+  align-items: center;
+  gap: 8px;
+}
+
+header .icon a {
+  font-size: 18px;
+  color: inherit;
+}
+
+.icon img {
+  width: 35px;
+}
+/* //header */
+
+/* main */
+/* 배너 */
+.banner {
+  width: 1400px;
+  margin: 40px auto;
+}
+
+.banner img {
+  width: 100%;
+  margin: auto;
+}
+/* //배너 */
+
+
+/* 재료선택 */
+.section1{
+  display: flex;
+  width: 1400px;
+  margin: auto;
+  gap: 16px;
+}
+.section1 .left{
+  width: 950px;
+}
+.section1 .right{
+  flex: 1;
+}
+.section1 .left .box2 .buttons1 button:nth-child(1){
+  color: #fff;
+  background-color: #74a640;
+}
+
+
+.section1 .left .box1 button{
+  width: 950px;
+  padding: 8px;
+  border-radius: 32px;
+  text-align: left;
+  color: rgba(58, 58, 46, 0.3);
+  border: 1px solid rgba(58, 58, 46, 0.3);
+}
+.section1 .left .box2 h3{
+  padding: 8px 0;
+}
+
+.section1 .left .box2 .buttons1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section1 .left .box2 button{
+  width: 90px;
+  height: 37px;
+  border-radius: 32px;
+  border: 1px solid rgba(58, 58, 46, 0.3);
+  color: #3a3a2e;
+  font-weight: 700;
+}
+
+.section1 .left .box1{
+  margin-bottom: 18px;
+}
+
+.section1 .left .box1 button{
+  height: 42px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.section1 .left .box1 i{
+  margin-right: 8px;
+  font-size: 17px;
+}
+
+.section1 .left .box2{
+  margin-bottom: 25px;
+}
+
+.section1 .left .box2 h3{
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a3a2e;
+}
+
+.section1 .left .box2 .buttons1{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section1 .left .box2 .buttons1 button{
+  height: 37px;
+  width: 90px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.section1 .left .box3,
+.section1 .left .box4,
+.section1 .left .box5,
+.section1 .left .box6,
+.section1 .left .box7{
+  margin-top: 25px;
+}
+
+.section1 .left .box3 h3,
+.section1 .left .box4 h3,
+.section1 .left .box5 h3,
+.section1 .left .box6 h3,
+.section1 .left .box7 h3{
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a3a2e;
+  margin-bottom: 8px;
+}
+
+.section1 .left .box3 .buttons1,
+.section1 .left .box4 .buttons1,
+.section1 .left .box5 .buttons1,
+.section1 .left .box6 .buttons1,
+.section1 .left .box7 .buttons1{
+  display: flex;
+  width: 950px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.section1 .left .box3 .buttons1 button,
+.section1 .left .box4 .buttons1 button,
+.section1 .left .box5 .buttons1 button,
+.section1 .left .box6 .buttons1 button,
+.section1 .left .box7 .buttons1 button{
+  width: fit-content;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 22px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #3a3a2e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.section1 .left .box3 button img,
+.section1 .left .box4 button img,
+.section1 .left .box5 button img,
+.section1 .left .box6 button img,
+.section1 .left .box7 button img{
+  width: 48px;
+  height: 30px;
+  object-fit: contain;
+}
+.section1 .left .box3 .buttons1 button{
+  border: 2px solid #F4D5D7;
+  background-color: #FDF7F6;
+}
+.section1 .left .box4 .buttons1 button{
+  border: 2px solid #E0EAD1;
+  background-color: #F8F9F2;
+}
+
+.section1 .left .box5 .buttons1 button{
+  border: 2px solid #F0E9E2;
+  background-color: #F9F6F2;
+}
+
+.section1 .left .box6 .buttons1 button{
+  border: 2px solid #DAE5EF;
+  background-color: #F5F8FC;
+}
+
+.section1 .left .box7 .buttons1 button{
+  border: 2px solid #F9E8C8;
+  background-color: #FEF9EE;
+}
+
+.section1 .left .box3 .buttons1 button:last-child,
+.section1 .left .box4 .buttons1 button:last-child,
+.section1 .left .box5 .buttons1 button:last-child,
+.section1 .left .box6 .buttons1 button:last-child,
+.section1 .left .box7 .buttons1 button:last-child{
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid fff;
+  border-radius: 50%;
+  background: #fff; 
+  flex-shrink: 0;
+}
+
+.section1 .left .box3 .buttons1 button:last-child i,
+.section1 .left .box4 .buttons1 button:last-child i,
+.section1 .left .box5 .buttons1 button:last-child i,
+.section1 .left .box6 .buttons1 button:last-child i,
+.section1 .left .box7 .buttons1 button:last-child i{
+  font-size: 11px;
+}
+.section1 .left .box3 .buttons1 button:last-child svg,
+.section1 .left .box4 .buttons1 button:last-child svg,
+.section1 .left .box5 .buttons1 button:last-child svg,
+.section1 .left .box6 .buttons1 button:last-child svg,
+.section1 .left .box7 .buttons1 button:last-child svg{
+  padding: 2px;
+}
+
+.section1 .right .top{
+  width: 100%;
+}
+
+.section1 .right .material{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section1 .right .m_l{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section1 .right .m_l h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #3a3a2e;
+}
+
+.section1 .right .m_l br{
+  display: none;
+}
+
+.section1 .right .m_l span{
+  font-size: 13px;
+  color: #3a3a2e;
+  font-weight: 500;
+}
+
+.section1 .right .m_r span{
+  font-size: 13px;
+  color: #3a3a2e;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.section1 .right > svg{
+  color: #3a3a2e;
+}
+
+
+.section1 .right .pick{
+  height: 56px;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: #f0f5e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section1 .right .meat{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section1 .right .meat img{
+  width: 55px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.section1 .right .meat span{
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a2e;
+}
+
+.section1 .right .pick > i{
+  font-size: 17px;
+  color: #3a3a2e;
+  cursor: pointer;
+}
+
+.section1 .right .plus{
+  margin-top: 10px;
+}
+
+.section1 .right .plus button{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    color: #74a640;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.section1 .right .bottom button > svg{
+  padding: 0 8px;
+}
+
+.section1 .right .plus i{
+  margin-right: 12px;
+  font-size: 17px;
+}
+.section1 .right .middle{
+  margin-top: 20px;
+}
+
+.section1 .right .line{
+  width: 100%;
+  height: 1px;
+  background: rgba(58, 58, 46, 0.3);
+
+  margin-bottom: 20px;
+}
+
+.section1 .right .select{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.section1 .right .select h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #3a3a2e;
+}
+
+.section1 .right .select span{
+  font-size: 13px;
+  color: #3a3a2e;
+}
+
+.section1 .right .buttons2{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.section1 .right .buttons2 button{
+  height: 38px;
+  border-radius: 22px;
+  border: 1px solid rgba(58, 58, 46, 0.3);
+  background: #fff;
+  color: #3a3a2e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.section1 .right .buttons2 button:first-child{
+  background: #74a640;
+  border-color: #74a640;
+  color: #fff;
+}
+
+.section1 .right .buttons2 button:last-child i{
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.section1 .right .bottom{
+  margin-top: 145px;
+  text-align: center;
+}
+
+.section1 .right .magnifier button{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: #74a640;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section1 .right .magnifier i{
+  margin-right: 12px;
+  font-size: 17px;
+}
+
+.section1 .right .bottom > span{
+  display: block;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #3a3a2e;
+}
+
+.section1 .right .bottom > span b{
+  color: #74a640;
+  font-weight: 700;
+}
+/* //재료선택 */
+
+/* 이재료로만들수있는요리 */
+header .section2 {
+  width: 1400px;
+  align-content: center;
+}
+
+
+body > .section2 {
+  width: 1400px;
+  margin: 90px auto;
+}
+
+.section2 h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #74a640;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.section2 h3 {
+  text-align: right;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.section2 h3 a {
+  color: #3a3a2e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.section2 h3 i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px 16px;
+}
+.recipe {
+  width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.recipe > a {
+  display: block;
+  text-decoration: none;
+  color:#3a3a2e;
+}
+.img-container {
+  width: 220px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe .img-container{
+  border-radius: unset;
+}
+
+.recipe > a > div:last-child{
+  padding: 12px;
+}
+
+.recipe > a .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.recipe > a .title b {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a3a2e;
+}
+.recipe .info .time >span {
+  color: #3a3a2e;
+}
+
+.recipe > a .title button {
+  border: none;
+  background: none;
+  color: #bfbfbf;
+  cursor: pointer;
+  font-size: 13px;
+}
+.recipe > a .time {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.recipe > a .time i {
+  font-size: 11px;
+}
+.recipe > a .review {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.recipe > a .review i {
+  color: #f6b400;
+}
+
+.recipe > a .review span:nth-child(2) {
+  color: #3a3a2e;
+  font-weight: 600;
+}
+
+.recipe > a .review span:last-child {
+  color: #3a3a2e;
+}
+.recipe{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.recipe:hover .img-container img{
+    transform: scale(1.03);
+}
+
+.img-container img{
+    transition: transform 0.3s ease;
+}
+
+/* ///* 이재료로만들수있는요리 */ */
+
+/* footer */
+footer {
+  width: 100%;
+  background: #f5f5f5;
+  opacity: 0.5;
+}
+
+.footer_i {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer_l {
+  width: 35%;
+}
+
+.footer_r {
+  width: 65%;
+}
+
+.footer_l ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.footer_l ul li a {
+  text-decoration: none;
+  color: #3a3a2e;
+  font-size: 15px;
+}
+
+.footer_icon {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.footer_icon a {
+  color: #3a3a2e;
+  font-size: 30px;
+}
+
+.footer_l p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.footer_r p {
+  color: #3a3a2e;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* //footer */
