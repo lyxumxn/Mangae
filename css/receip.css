@@ -310,6 +310,18 @@ header .icon a {
 .section1 .left .box7 .buttons1 button:last-child i{
   font-size: 11px;
 }
+
+/* Keep the five ingredient buttons in every row evenly sized. */
+.section1 .left .box3 .buttons1 button:not(:last-child),
+.section1 .left .box4 .buttons1 button:not(:last-child),
+.section1 .left .box5 .buttons1 button:not(:last-child),
+.section1 .left .box6 .buttons1 button:not(:last-child),
+.section1 .left .box7 .buttons1 button:not(:last-child){
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+}
+
 .section1 .left .box3 .buttons1 button:last-child svg,
 .section1 .left .box4 .buttons1 button:last-child svg,
 .section1 .left .box5 .buttons1 button:last-child svg,
@@ -699,7 +711,7 @@ footer {
   .section1,
   body > .section2,
   .footer_i {
-    width: calc(100% - 48px);
+    width: calc(100% - 64px);
   }
 
   header {
@@ -799,11 +811,11 @@ footer {
   .section1,
   body > .section2,
   .footer_i {
-    width: calc(100% - 20px);
+    width: calc(100% - 32px);
   }
 
   header {
-    padding: 14px 6px;
+    padding: 14px 0;
   }
 
   .logo img {

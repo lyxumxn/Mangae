@@ -59,6 +59,12 @@ header ul a {
   gap: 8px;
 }
 
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .logo img {
   width: 150px;
 }
@@ -691,6 +697,22 @@ footer {
 
 /* //footer */
 
+/* desktop header alignment */
+@media (min-width: 1025px) {
+  header {
+    display: grid;
+    grid-template-columns: 220px 465px 260px 126.5px;
+    justify-content: space-between;
+  }
+
+  header .logo,
+  header nav,
+  header .search,
+  header .icon {
+    width: auto;
+  }
+}
+
 /* tablet: 768px ~ 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   header,
@@ -815,7 +837,7 @@ footer {
   .new,
   .with-recipe,
   .footer_i {
-    width: calc(100% - 24px);
+    width: calc(100% - 32px);
   }
 
   header {
