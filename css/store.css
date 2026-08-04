@@ -178,24 +178,6 @@ header .icon a {
   letter-spacing: 2px;
 }
 
-.category .more {
-  text-align: right;
-  margin-top: -70px;
-  margin-bottom: 20px;
-}
-
-.category .more a {
-  color: #3a3a2e;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.category .more i {
-  margin-left: 5px;
-  font-size: 12px;
-}
-
 .category-list{
     display: flex;
     justify-content: space-between;

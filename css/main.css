@@ -111,25 +111,10 @@ header .icon img {
 
 
 /* 배너 */
-header .banner {
-  width: 1400px;
-  margin: auto;
-}
-
-header .banner img {
-  width: 1400px;
-  margin: auto;
-}
 /* //배너 */
 
 /* main */
 /* 지금 가장 인기있는 레시피 */
-header .contents1 {
-  width: 1400px;
-  align-content: center;
-}
-
-
 body > section {
   width: 1400px;
   margin: 90px auto;

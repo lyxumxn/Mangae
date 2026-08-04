@@ -358,11 +358,6 @@ header .icon a {
   cursor: pointer;
 }
 
-.section1 .right > svg{
-  color: #3a3a2e;
-}
-
-
 .section1 .right .pick{
   height: 56px;
   padding: 0 12px;
@@ -412,10 +407,6 @@ header .icon a {
     font-weight: 700;
     cursor: pointer;
 }
-.section1 .right .bottom button > svg{
-  padding: 0 8px;
-}
-
 .section1 .right .plus i{
   margin-right: 12px;
   font-size: 17px;
@@ -514,12 +505,6 @@ header .icon a {
 /* //재료선택 */
 
 /* 이재료로만들수있는요리 */
-header .section2 {
-  width: 1400px;
-  align-content: center;
-}
-
-
 body > .section2 {
   width: 1400px;
   margin: 90px auto;
