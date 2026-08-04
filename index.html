@@ -7,6 +7,7 @@
     <title>만개의레시피</title>
     <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="/제이쿼리.html/jquery-4.0.0.min.js"></script>
 </head>
 
 <body>
@@ -26,12 +27,12 @@
                 </ul>
             </nav>
 
-            <label class="search">
+            <div class="search">
                 <input type="text">
                 <button type="button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </label>
+            </div>
 
             <div class="icon">
                 <a href="#">
@@ -53,6 +54,7 @@
     <!-- main -->
     <!-- 배너 -->
     <section class="banner">
+        <h1 class="sr-only">만개의레시피</h1>
         <img src="./image/main/mainbanner.png" alt="배너">
     </section>
     <!-- //배너 -->
@@ -70,14 +72,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (12).png" alt="#">
+                    <img src="./image/main/food%20(12).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>해물 볶음우동</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 30분</span>
@@ -95,14 +97,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (5).png" alt="#">
+                    <img src="./image/main/food%20(5).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>바질파스타</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>양식 / 40분</span>
@@ -120,14 +122,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (2).png" alt="#">
+                    <img src="./image/main/food%20(2).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>감성스테이크</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>양식 / 60분</span>
@@ -145,14 +147,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (3).png" alt="#">
+                    <img src="./image/main/food%20(3).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>깐쇼새우</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>중식 / 60분</span>
@@ -170,14 +172,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (4).png" alt="#">
+                    <img src="./image/main/food%20(4).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>돈까스덮밥</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>양식 / 40분</span>
@@ -195,14 +197,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (9).png" alt="#">
+                    <img src="./image/main/food%20(9).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>새우만두구이</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 45분</span>
@@ -220,14 +222,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (1).png" alt="#">
+                    <img src="./image/main/food%20(1).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>간장삼겹덮밥</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 60분</span>
@@ -245,14 +247,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (6).png" alt="#">
+                    <img src="./image/main/food%20(6).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>버섯볶음밥</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 15분</span>
@@ -270,14 +272,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (7).png" alt="#">
+                    <img src="./image/main/food%20(7).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>삼겹메추리조림</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 30분</span>
@@ -295,14 +297,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (10).png" alt="#">
+                    <img src="./image/main/food%20(10).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>어묵잔치국수</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 20분</span>
@@ -320,14 +322,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (11).png" alt="#">
+                    <img src="./image/main/food%20(11).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>연근전</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 50분</span>
@@ -345,14 +347,14 @@
         <div class="recipe">
             <a href="#">
                 <div class="img-container">
-                    <img src="./image/main/food (8).png" alt="#">
+                    <img src="./image/main/food%20(8).png" alt="#">
                 </div>
                 <div class="info">
                     <div class="title">
                         <b>새우녹두전</b>
-                        <button type="button">
+                        <span class="bookmark" aria-hidden="true">
                             <i class="fa-regular fa-bookmark"></i>
-                        </button>
+                        </span>
                     </div>
                     <div class="time">
                         <span>한식 / 50분</span>
@@ -386,7 +388,7 @@
                     <div>푸드 스타일링 팁</div>
                     <b>음식을 더 예쁘게 !</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (2).png">
+                    <img src="./image/main/contents%20(2).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -394,7 +396,7 @@
                     <div>5월 식재료 가이드</div>
                     <b>5월 제철 음식 ~</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (3).png">
+                    <img src="./image/main/contents%20(3).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -402,7 +404,7 @@
                     <div>요리 기본 가이드</div>
                     <b>칼질부터 양념까지</b>
                     <p>바로가기<i class="fa-solid fa-chevron-right"></i></p>
-                    <img src="./image/main/contents (4).png">
+                    <img src="./image/main/contents%20(4).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -410,7 +412,7 @@
                     <div>쉐프레시피</div>
                     <b>집에서 즐기는 <br> 레스토랑</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (5).png">
+                    <img src="./image/main/contents%20(5).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -418,7 +420,7 @@
                     <div>건강 요리 식단</div>
                     <b>더 건강하게</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (6).png">
+                    <img src="./image/main/contents%20(6).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -426,7 +428,7 @@
                     <div>야채 듬뿍 식단</div>
                     <b>야채 요리 모음</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (7).png">
+                    <img src="./image/main/contents%20(7).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -434,7 +436,7 @@
                     <div>간편 도시락 가이드</div>
                     <b>든든한 한 끼</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (8).png">
+                    <img src="./image/main/contents%20(8).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -442,7 +444,7 @@
                     <div>매운 게 땡길 땐</div>
                     <b>화끈하게</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/contents (1).png">
+                    <img src="./image/main/contents%20(1).png" alt="">
                 </a>
             </div>
         </div>
@@ -464,7 +466,7 @@
                     <div>초보자도 실패없는</div>
                     <b>요리모음</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (2).png">
+                    <img src="./image/main/thema%20(2).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -472,7 +474,7 @@
                     <div>집밥이 그리울 때</div>
                     <b>한국 가정식</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (3).png">
+                    <img src="./image/main/thema%20(3).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -480,7 +482,7 @@
                     <div>특별한 날을 위한</div>
                     <b>손님 초대 요리</b>
                     <p>바로가기<i class="fa-solid fa-chevron-right"></i></p>
-                    <img src="./image/main/thema (4).png">
+                    <img src="./image/main/thema%20(4).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -488,7 +490,7 @@
                     <div>아이들이 좋아하는</div>
                     <b>키즈 식단</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (5).png">
+                    <img src="./image/main/thema%20(5).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -496,7 +498,7 @@
                     <div>요리 기본 가이드</div>
                     <b>야채 손질부터 !</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (6).png">
+                    <img src="./image/main/thema%20(6).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -504,7 +506,7 @@
                     <div>요리 기본 가이드</div>
                     <b>고기 손질부터 !</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (7).png">
+                    <img src="./image/main/thema%20(7).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -512,7 +514,7 @@
                     <div>요리 기본 가이드</div>
                     <b>생선 손질부터 !</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (8).png">
+                    <img src="./image/main/thema%20(8).png" alt="">
                 </a>
             </div>
             <div class="card">
@@ -520,7 +522,7 @@
                     <div>요리 기본 가이드</div>
                     <b>해산물 손질부터 !</b>
                     <div>바로가기<i class="fa-solid fa-chevron-right"></i></div>
-                    <img src="./image/main/thema (1).png">
+                    <img src="./image/main/thema%20(1).png" alt="">
                 </a>
             </div>
         </div>
