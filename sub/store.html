@@ -7,6 +7,7 @@
     <title>스토어</title>
     <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/store.css">
+    <script src="/제이쿼리.html/jquery-4.0.0.min.js"></script>
 </head>
 
 
@@ -30,12 +31,12 @@
             </ul>
         </nav>
 
-        <label class="search">
+        <div class="search">
             <input type="text">
             <button type="button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-        </label>
+        </div>
 
         <div class="icon">
             <a href="#">
@@ -57,8 +58,9 @@
     <!-- main -->
     <!-- 배너 -->
     <section class="banner">
+        <h1 class="sr-only">만개의레시피 스토어</h1>
         <div class="banner-card">
-            <img src="../image/sub1/banner (1).png">
+            <img src="../image/sub1/banner%20(1).png" alt="">
             <div class="banner-text">
                 <span>요리가 즐거워지는</span>
                 <h2>주방의 모든 것</h2>
@@ -74,7 +76,7 @@
             </div>
         </div>
         <div class="banner-card">
-            <img src="../image/sub1/banner (3).png">
+            <img src="../image/sub1/banner%20(3).png" alt="">
             <div class="banner-text banner-text-dark">
                 <span>신선한 식재료로 완성하는</span>
                 <h2>오늘의 요리, 쉽고 맛있게</h2>
@@ -90,7 +92,7 @@
             </div>
         </div>
         <div class="banner-card">
-            <img src="../image/sub1/banner (1).png">
+            <img src="../image/sub1/banner%20(1).png" alt="">
             <div class="banner-text">
                 <span>간편한 맛을 동시에</span>
                 <h2>밀키트로 요리를 더 쉽게</h2>
@@ -115,42 +117,42 @@
 
         <div class="category-list">
             <div class="category-card">
-                <img src="../image/sub1/icon (3).png">
+                <img src="../image/sub1/icon%20(3).png" alt="">
                 <span>푸드</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (8).png">
+                <img src="../image/sub1/icon%20(8).png" alt="">
                 <span>키친</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (2).png">
+                <img src="../image/sub1/icon%20(2).png" alt="">
                 <span>리빙</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (1).png">
+                <img src="../image/sub1/icon%20(1).png" alt="">
                 <span>가전</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (7).png">
+                <img src="../image/sub1/icon%20(7).png" alt="">
                 <span>집들이</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (6).png">
+                <img src="../image/sub1/icon%20(6).png" alt="">
                 <span>만개특가</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (5).png">
+                <img src="../image/sub1/icon%20(5).png" alt="">
                 <span>밀키트</span>
             </div>
 
             <div class="category-card">
-                <img src="../image/sub1/icon (4).png">
+                <img src="../image/sub1/icon%20(4).png" alt="">
                 <span>한정특가</span>
             </div>
         </div>
@@ -172,14 +174,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (3).png" alt="국간장">
+                        <img src="../image/sub1/food%20(3).png" alt="국간장">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>국간장 500ml</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>12,190원</s>
@@ -195,14 +197,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (1).png" alt="표고버섯">
+                        <img src="../image/sub1/food%20(1).png" alt="표고버섯">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>표고버섯 600g</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>11,980원</s>
@@ -218,14 +220,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (10).png" alt="시금치">
+                        <img src="../image/sub1/food%20(10).png" alt="시금치">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>싱싱 시금치 600g</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>7,300원</s>
@@ -241,14 +243,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (12).png" alt="쌀">
+                        <img src="../image/sub1/food%20(12).png" alt="쌀">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>이천쌀 3kg</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>53,900원</s>
@@ -282,14 +284,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (8).png" alt="마늘">
+                        <img src="../image/sub1/food%20(8).png" alt="마늘">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>의성마늘 500g</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>13,600원</s>
@@ -305,14 +307,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (2).png" alt="계란">
+                        <img src="../image/sub1/food%20(2).png" alt="계란">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>싱싱 유정란 15구</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>24,600원</s>
@@ -328,14 +330,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (7).png" alt="두부">
+                        <img src="../image/sub1/food%20(7).png" alt="두부">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>국산콩 두부</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>4,600원</s>
@@ -351,14 +353,14 @@
             <div class="product_card">
                 <a href="#">
                     <div class="product_img">
-                        <img src="../image/sub1/food (11).png" alt="식용유">
+                        <img src="../image/sub1/food%20(11).png" alt="식용유">
                     </div>
                     <div class="product_info">
                         <div class="product_title">
                             <b>올리브유 800ml</b>
-                            <button type="button">
+                            <span class="cart-icon" aria-hidden="true">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
+                            </span>
                         </div>
                         <div class="nosale">
                             <s>7,600원</s>
@@ -390,7 +392,7 @@
             <div class="recipe-left">
                 <div>
                     <div class="store_r">
-                        <img src="../image/sub1/food (5).png" alt="김치찌개">
+                        <img src="../image/sub1/food%20(5).png" alt="김치찌개">
                     </div>
     
                     <div class="store_rt">
@@ -413,14 +415,14 @@
                 <div class="product_card">
                     <a href="#">
                         <div class="product_img">
-                            <img src="../image/sub1/food (9).png" alt="삼겹살">
+                            <img src="../image/sub1/food%20(9).png" alt="삼겹살">
                         </div>
                         <div class="product_info">
                             <div class="product_title">
                                 <b>한돈 삼겹살 300g</b>
-                                <button type="button">
+                                <span class="cart-icon" aria-hidden="true">
                                     <i class="fa-solid fa-basket-shopping"></i>
-                                </button>
+                                </span>
                             </div>
                             <div class="nosale">
                                 <s>24,600원</s>
@@ -436,14 +438,14 @@
                 <div class="product_card">
                     <a href="#">
                         <div class="product_img">
-                            <img src="../image/sub1/food (13).png" alt="청양고추">
+                            <img src="../image/sub1/food%20(13).png" alt="청양고추">
                         </div>
                         <div class="product_info">
                             <div class="product_title">
                                 <b>청양고추 300g</b>
-                                <button type="button">
+                                <span class="cart-icon" aria-hidden="true">
                                     <i class="fa-solid fa-basket-shopping"></i>
-                                </button>
+                                </span>
                             </div>
                             <div class="nosale">
                                 <s>7,800원</s>
@@ -459,14 +461,14 @@
                 <div class="product_card">
                     <a href="#">
                         <div class="product_img">
-                            <img src="../image/sub1/food (6).png" alt="대파">
+                            <img src="../image/sub1/food%20(6).png" alt="대파">
                         </div>
                         <div class="product_info">
                             <div class="product_title">
                                 <b>대파 300g</b>
-                                <button type="button">
+                                <span class="cart-icon" aria-hidden="true">
                                     <i class="fa-solid fa-basket-shopping"></i>
-                                </button>
+                                </span>
                             </div>
                             <div class="nosale">
                                 <s>14,600원</s>
@@ -482,14 +484,14 @@
                 <div class="product_card">
                     <a href="#">
                         <div class="product_img">
-                            <img src="../image/sub1/food (4).png" alt="김치">
+                            <img src="../image/sub1/food%20(4).png" alt="김치">
                         </div>
                         <div class="product_info">
                             <div class="product_title">
                                 <b>원할머니 김치 1kg</b>
-                                <button type="button">
+                                <span class="cart-icon" aria-hidden="true">
                                     <i class="fa-solid fa-basket-shopping"></i>
-                                </button>
+                                </span>
                             </div>
                             <div class="nosale">
                                 <s>43,800원</s>
