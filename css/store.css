@@ -80,7 +80,7 @@ header ul a {
 .logo img {
   width: 150px;
 }
-.logo img:nth-child(2) {
+.logo a:nth-child(2) img {
   width: 60px;
   height: 54px;
 }
@@ -864,7 +864,7 @@ footer {
     width: 110px;
   }
 
-  .logo img:nth-child(2) {
+  .logo a:nth-child(2) img {
     display: none;
   }
 
