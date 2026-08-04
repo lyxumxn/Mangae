@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'sb';
+  src: url(../font/NotoSerif_Condensed-SemiBold.ttf);
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +16,7 @@ ul {
 body {
   background: #f6f4f1;
   color: #333;
+  font-family: 'sb';
 }
 
 a {
@@ -525,6 +531,7 @@ body > .section2 {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .section2 h3 {
@@ -634,22 +641,7 @@ body > .section2 {
 .recipe > a .review span:last-child {
   color: #3a3a2e;
 }
-.recipe{
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.recipe:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.recipe:hover .img-container img{
-    transform: scale(1.03);
-}
-
-.img-container img{
-    transition: transform 0.3s ease;
-}
 
 /* ///* 이재료로만들수있는요리 */ */
 

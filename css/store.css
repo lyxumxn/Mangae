@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'sb';
+  src: url(../font/NotoSerif_Condensed-SemiBold.ttf);
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +16,7 @@ ul {
 body {
   background: #f6f4f1;
   color: #333;
+  font-family: 'sb';
 }
 
 a {
@@ -169,6 +175,7 @@ header .icon a {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .category .more {
@@ -212,6 +219,7 @@ header .icon a {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .best .more {
@@ -337,6 +345,7 @@ header .icon a {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .new .more {
@@ -450,6 +459,7 @@ header .icon a {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .with-recipe .more {

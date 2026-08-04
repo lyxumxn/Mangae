@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'sb';
+  src: url(../font/NotoSerif_Condensed-SemiBold.ttf);
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +16,7 @@ ul {
 body {
   background: #f6f4f1;
   color: #3a3a2e;
+  font-family: 'sb';
 }
 
 a {
@@ -139,6 +145,7 @@ body > section {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .contents1 h3 {
@@ -262,6 +269,7 @@ body > section {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .contents2 h3 {
@@ -357,6 +365,7 @@ body > section {
   color: #74a640;
   font-weight: 700;
   margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
 .contents3 h3 {
