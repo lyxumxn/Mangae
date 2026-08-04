@@ -1,29 +1,4 @@
-@font-face {
-  font-family: NotoSansKR;
-  src: url(static/NotoSansKR-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  src: url(static/NotoSansKR-Regular.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  src: url(static/NotoSansKR-SemiBold.ttf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  src: url(static/NotoSansKR-Thin.ttf);
-  font-weight: 300;
-}
-
 * {
-  font-family: NotoSansKR;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,7 +9,6 @@ ul {
 }
 
 body {
-  font-family: "맑은 고딕", sans-serif;
   background: #f6f4f1;
   color: #333;
 }
