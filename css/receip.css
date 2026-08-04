@@ -136,19 +136,27 @@ header .icon a {
 .section1 .right{
   flex: 1;
 }
-.section1 .left .box2 .buttons1 button:nth-child(1){
+.section1 .left .box2 .buttons1 button.is-active{
   color: #fff;
   background-color: #74a640;
 }
 
+.category-empty{
+  margin-top: 24px;
+  color: #777;
+  font-size: 14px;
+}
 
-.section1 .left .box1 button{
+
+.section1 .left .box1 .ingredient-search{
   width: 950px;
   padding: 8px;
   border-radius: 32px;
   text-align: left;
   color: rgba(58, 58, 46, 0.3);
   border: 1px solid rgba(58, 58, 46, 0.3);
+  display: flex;
+  align-items: center;
 }
 .section1 .left .box2 h3{
   padding: 8px 0;
@@ -172,11 +180,25 @@ header .icon a {
   margin-bottom: 18px;
 }
 
-.section1 .left .box1 button{
+.section1 .left .box1 .ingredient-search{
   height: 42px;
   background: #fff;
   font-size: 14px;
-  cursor: pointer;
+  cursor: text;
+}
+
+.section1 .left .box1 .ingredient-search input{
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #3a3a2e;
+  font: inherit;
+}
+
+.section1 .left .box1 .ingredient-search input::placeholder{
+  color: rgba(58, 58, 46, 0.3);
 }
 
 .section1 .left .box1 i{
@@ -312,14 +334,16 @@ header .icon a {
 }
 
 /* Keep the five ingredient buttons in every row evenly sized. */
-.section1 .left .box3 .buttons1 button:not(:last-child),
-.section1 .left .box4 .buttons1 button:not(:last-child),
-.section1 .left .box5 .buttons1 button:not(:last-child),
-.section1 .left .box6 .buttons1 button:not(:last-child),
-.section1 .left .box7 .buttons1 button:not(:last-child){
-  flex: 1 1 0;
-  width: 0;
-  min-width: 0;
+@media (min-width: 768px) {
+  .section1 .left .box3 .buttons1 button:not(:last-child),
+  .section1 .left .box4 .buttons1 button:not(:last-child),
+  .section1 .left .box5 .buttons1 button:not(:last-child),
+  .section1 .left .box6 .buttons1 button:not(:last-child),
+  .section1 .left .box7 .buttons1 button:not(:last-child){
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+  }
 }
 
 .section1 .left .box3 .buttons1 button:last-child svg,
@@ -398,10 +422,16 @@ header .icon a {
   color: #3a3a2e;
 }
 
-.section1 .right .pick > i{
-  font-size: 17px;
+.section1 .right .pick .remove{
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: #3a3a2e;
   cursor: pointer;
+}
+
+.section1 .right .pick .remove i{
+  font-size: 17px;
 }
 
 .section1 .right .plus{
@@ -470,10 +500,48 @@ header .icon a {
   cursor: pointer;
 }
 
-.section1 .right .buttons2 button:first-child{
+.section1 .right .buttons2 button.is-active{
   background: #74a640;
   border-color: #74a640;
   color: #fff;
+}
+
+.section1 .left .box3 .buttons1 button:not(:last-child),
+.section1 .left .box4 .buttons1 button:not(:last-child),
+.section1 .left .box5 .buttons1 button:not(:last-child),
+.section1 .left .box6 .buttons1 button:not(:last-child),
+.section1 .left .box7 .buttons1 button:not(:last-child){
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.section1 .left .box3 .buttons1 button:not(:last-child):hover,
+.section1 .left .box4 .buttons1 button:not(:last-child):hover,
+.section1 .left .box5 .buttons1 button:not(:last-child):hover,
+.section1 .left .box6 .buttons1 button:not(:last-child):hover,
+.section1 .left .box7 .buttons1 button:not(:last-child):hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(58, 58, 46, .15);
+  z-index: 1;
+}
+
+.section1 .left .box3 .buttons1 button.is-selected{
+  box-shadow: 0 0 0 2px #e69aa2;
+}
+
+.section1 .left .box4 .buttons1 button.is-selected{
+  box-shadow: 0 0 0 2px #a8c77a;
+}
+
+.section1 .left .box5 .buttons1 button.is-selected{
+  box-shadow: 0 0 0 2px #c9a37d;
+}
+
+.section1 .left .box6 .buttons1 button.is-selected{
+  box-shadow: 0 0 0 2px #82b9dd;
+}
+
+.section1 .left .box7 .buttons1 button.is-selected{
+  box-shadow: 0 0 0 2px #e4b55f;
 }
 
 .section1 .right .buttons2 button:last-child i{
@@ -754,7 +822,7 @@ footer {
     width: 100%;
   }
 
-  .section1 .left .box1 button,
+  .section1 .left .box1 .ingredient-search,
   .section1 .left .box3 .buttons1,
   .section1 .left .box4 .buttons1,
   .section1 .left .box5 .buttons1,
@@ -874,7 +942,7 @@ footer {
     margin-bottom: 12px;
   }
 
-  .section1 .left .box1 button {
+  .section1 .left .box1 .ingredient-search {
     width: 100%;
     height: 32px;
     padding: 6px 10px;
@@ -1119,5 +1187,96 @@ footer {
 
   .footer_icon a {
     font-size: 15px;
+  }
+}
+
+/* Responsive type scale for the ingredient and recipe content. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section1 .left .box1 .ingredient-search {
+    font-size: 13px;
+  }
+
+  .section1 .left .box2 h3,
+  .section1 .left .box3 h3,
+  .section1 .left .box4 h3,
+  .section1 .left .box5 h3,
+  .section1 .left .box6 h3,
+  .section1 .left .box7 h3 {
+    font-size: 14px;
+  }
+
+  .section1 .left .box2 .buttons1 button,
+  .section1 .left .box3 .buttons1 button,
+  .section1 .left .box4 .buttons1 button,
+  .section1 .left .box5 .buttons1 button,
+  .section1 .left .box6 .buttons1 button,
+  .section1 .left .box7 .buttons1 button {
+    font-size: 12px;
+  }
+
+  .section1 .left .box3 button img,
+  .section1 .left .box4 button img,
+  .section1 .left .box5 button img,
+  .section1 .left .box6 button img,
+  .section1 .left .box7 button img {
+    width: 42px;
+    height: 26px;
+  }
+
+  .section1 .right .m_l h3,
+  .section1 .right .select h3 {
+    font-size: 16px;
+  }
+
+  .section1 .right .m_l span,
+  .section1 .right .m_r span,
+  .section1 .right .select span,
+  .section1 .right .bottom > span {
+    font-size: 12px;
+  }
+
+  .section1 .right .meat span,
+  .section1 .right .plus button,
+  .section1 .right .magnifier button,
+  .section1 .right .buttons2 button {
+    font-size: 13px;
+  }
+
+  .section2 h2 {
+    font-size: 28px;
+  }
+
+  .recipe > a .title b {
+    font-size: 14px;
+  }
+
+  .recipe > a .time,
+  .recipe > a .review {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .section1 .right .pick .remove i,
+  .section1 .right .plus i,
+  .section1 .right .magnifier i {
+    font-size: 13px;
+  }
+
+  .section1 .left .box3 .buttons1 button:last-child i,
+  .section1 .left .box4 .buttons1 button:last-child i,
+  .section1 .left .box5 .buttons1 button:last-child i,
+  .section1 .left .box6 .buttons1 button:last-child i,
+  .section1 .left .box7 .buttons1 button:last-child i {
+    font-size: 8px;
+  }
+
+  .section1 .left .box3 button img,
+  .section1 .left .box4 button img,
+  .section1 .left .box5 button img,
+  .section1 .left .box6 button img,
+  .section1 .left .box7 button img {
+    width: 30px;
+    height: 19px;
   }
 }
