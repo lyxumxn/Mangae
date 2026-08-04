@@ -69,22 +69,23 @@
     <section class="section1">
         <div class="left">
             <div class="box1">
-                <button type="button">
+                <label class="ingredient-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    재료를 검색해 보세요. (예:돼지고기, 김치, 대파)</button>
+                    <input type="text" placeholder="재료를 검색해 보세요. (예: 돼지고기, 김치, 대파)">
+                </label>
             </div>
             <div class="box2">
                 <h3>재료카테고리</h3>
                 <div class="buttons1">
-                    <button type="button">전체</button>
-                    <button type="button">육류</button>
-                    <button type="button">채소</button>
-                    <button type="button">버섯</button>
-                    <button type="button">해조류</button>
-                    <button type="button">해산물</button>
-                    <button type="button">양념</button>
-                    <button type="button">유제품</button>
-                    <button type="button">기타</button>
+                    <button class="is-active" data-target="all" type="button">전체</button>
+                    <button data-target="box3" type="button">육류</button>
+                    <button data-target="box4" type="button">채소</button>
+                    <button data-target="box5" type="button">버섯</button>
+                    <button data-target="box5" type="button">해조류</button>
+                    <button data-target="box6" type="button">해산물</button>
+                    <button data-target="box7" type="button">양념</button>
+                    <button data-target="empty" type="button">유제품</button>
+                    <button data-target="empty" type="button">기타</button>
                 </div>
             </div>
             <div class="box3">
@@ -190,7 +191,9 @@
                         <img src="../image/sub2/button (11).png" alt="#">
                         <span>돼지고기</span>
                     </div>
-                    <i class="fa-solid fa-xmark"></i>
+                    <button class="remove" type="button" aria-label="돼지고기 삭제">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
                 <div class="plus">
                     <button type="button"><i class="fa-solid fa-plus"></i>재료 추가하기</button>
@@ -204,7 +207,7 @@
                     <span>선택</span>
                 </div>
                 <div class="buttons2">
-                    <button type="button">전체</button>
+                    <button class="is-active" type="button">전체</button>
                     <button type="button">한식</button>
                     <button type="button">양식</button>
                     <button type="button">중식</button>
@@ -588,6 +591,93 @@
     </footer>
     <!-- //footer -->
 
+    <script>
+        const ingredientButtons = document.querySelectorAll(
+            '.box3 .buttons1 button:not(:last-child), .box4 .buttons1 button:not(:last-child), .box5 .buttons1 button:not(:last-child), .box6 .buttons1 button:not(:last-child), .box7 .buttons1 button:not(:last-child)'
+        );
+        const selectedArea = document.querySelector('.section1 .right .top');
+        const addButton = selectedArea.querySelector('.plus');
+        const count = selectedArea.querySelector('.m_l span');
+        const clearButton = selectedArea.querySelector('.m_r span');
+
+        function updateCount() {
+            count.textContent = `(${selectedArea.querySelectorAll('.pick').length}/20)`;
+        }
+
+        function removeIngredient(pick) {
+            const name = pick.querySelector('.meat span').textContent;
+            const button = [...ingredientButtons].find((item) => item.textContent.trim() === name);
+            if (button) button.classList.remove('is-selected');
+            pick.remove();
+            updateCount();
+        }
+
+        function addRemoveEvent(pick) {
+            pick.querySelector('.remove').addEventListener('click', () => removeIngredient(pick));
+        }
+
+        ingredientButtons.forEach((button) => {
+            if (selectedArea.querySelector('.pick .meat span').textContent === button.textContent.trim()) {
+                button.classList.add('is-selected');
+            }
+
+            button.addEventListener('click', () => {
+                const name = button.textContent.trim();
+                const image = button.querySelector('img');
+
+                if (selectedArea.querySelectorAll('.pick').length >= 20 || button.classList.contains('is-selected')) return;
+
+                const pick = document.createElement('div');
+                pick.className = 'pick';
+                pick.innerHTML = `
+                    <div class="meat">
+                        <img src="${image.src}" alt="${name}">
+                        <span>${name}</span>
+                    </div>
+                    <button class="remove" type="button" aria-label="${name} 삭제">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>`;
+
+                addButton.before(pick);
+                button.classList.add('is-selected');
+                addRemoveEvent(pick);
+                updateCount();
+            });
+        });
+
+        selectedArea.querySelectorAll('.pick').forEach(addRemoveEvent);
+        clearButton.addEventListener('click', () => {
+            selectedArea.querySelectorAll('.pick').forEach((pick) => removeIngredient(pick));
+        });
+
+        document.querySelectorAll('.buttons2 button').forEach((button) => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.buttons2 button').forEach((item) => item.classList.remove('is-active'));
+                button.classList.add('is-active');
+            });
+        });
+
+        const categoryButtons = document.querySelectorAll('.box2 .buttons1 button');
+        const ingredientGroups = document.querySelectorAll('.box3, .box4, .box5, .box6, .box7');
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'category-empty';
+        emptyMessage.textContent = '등록된 재료가 없습니다.';
+        emptyMessage.hidden = true;
+        document.querySelector('.box2').after(emptyMessage);
+
+        categoryButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const target = button.dataset.target;
+                categoryButtons.forEach((item) => item.classList.remove('is-active'));
+                button.classList.add('is-active');
+
+                ingredientGroups.forEach((group) => {
+                    group.hidden = target !== 'all' && !group.classList.contains(target);
+                });
+                emptyMessage.hidden = target !== 'empty';
+            });
+        });
+    </script>
 </body>
 
 </html>
