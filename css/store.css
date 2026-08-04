@@ -27,6 +27,18 @@ a {
 img {
   display: block;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 svg{
   color: #3a3a2e!important;
 }
@@ -269,7 +281,7 @@ header .icon a {
     color:#3a3a2e;
 }
 
-.best .product_title button{
+.best .product_title .cart-icon{
     border:none;
     background:none;
     padding:0;
@@ -382,7 +394,7 @@ header .icon a {
     color:#3a3a2e;
 }
 
-.new .product_title button{
+.new .product_title .cart-icon{
     border:none;
     background:none;
     padding:0;
@@ -526,7 +538,7 @@ header .icon a {
     color:#333;
 }
 
-.with-recipe .product_title button{
+.with-recipe .product_title .cart-icon{
     border:none;
     background:none;
     padding:0;

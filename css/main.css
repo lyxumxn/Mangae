@@ -29,6 +29,18 @@ img {
   max-width: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 svg{
   color: #3a3a2e!important;
 }
@@ -201,11 +213,8 @@ body > section {
   color: #3a3a2e;
 }
 
-.recipe > a .title button {
-  border: none;
-  background: none;
+.recipe > a .title .bookmark {
   color: #bfbfbf;
-  cursor: pointer;
   font-size: 13px;
 }
 .recipe > a .time {
@@ -702,7 +711,7 @@ footer {
     font-size: 11px;
   }
 
-  .recipe > a .title button {
+  .recipe > a .title .bookmark {
     font-size: 10px;
   }
 
