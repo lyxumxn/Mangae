@@ -497,3 +497,290 @@ footer {
 }
 
 /* //footer */
+
+/* tablet: 768px ~ 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header,
+  body > section,
+  .contents2,
+  .contents3,
+  .footer_i {
+    width: calc(100% - 64px);
+  }
+
+  header {
+    padding: 32px 0;
+  }
+
+  header .logo {
+    width: auto;
+  }
+
+  header nav,
+  header .search {
+    display: none;
+  }
+
+  header .icon::before {
+    content: "☰";
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  header .icon {
+    order: 1;
+  }
+
+  .banner {
+    margin-top: 0;
+  }
+
+  .contents1 h2,
+  .contents2 h2,
+  .contents3 h2 {
+    font-size: 28px;
+  }
+
+  .recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 16px;
+  }
+
+  .recipe,
+  .img-container {
+    width: auto;
+  }
+
+  .img-container {
+    height: auto;
+    aspect-ratio: 11 / 7;
+  }
+
+  .contents2 .card3,
+  .contents3 .card3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .contents2 .card,
+  .contents3 .card {
+    height: 126px;
+  }
+
+  .contents2 .card img,
+  .contents3 .card img {
+    width: 48%;
+    height: 126px;
+  }
+
+  .footer_i {
+    gap: 40px;
+  }
+}
+
+/* mobile: 320px ~ 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+  header,
+  body > section,
+  .contents2,
+  .contents3,
+  .footer_i {
+    width: calc(100% - 32px);
+  }
+
+  header {
+    padding: 18px 0;
+  }
+
+  header .logo {
+    width: auto;
+  }
+
+  header .logo img {
+    width: 112px;
+  }
+
+  header nav,
+  header .search {
+    display: none;
+  }
+
+  header .icon::before {
+    content: "☰";
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  header .icon {
+    order: 2;
+    gap: 6px;
+  }
+
+  header .icon a {
+    font-size: 13px;
+  }
+
+  header .icon img {
+    width: 25px;
+  }
+
+  body > section {
+    margin: 52px auto;
+  }
+
+  .banner {
+    margin-top: 0;
+  }
+
+  .contents1 h2,
+  .contents2 h2,
+  .contents3 h2 {
+    font-size: 17px;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+
+  .contents1 h3,
+  .contents2 h3,
+  .contents3 h3 {
+    margin-top: -48px;
+    margin-bottom: 14px;
+  }
+
+  .contents1 h3 a,
+  .contents2 h3 a,
+  .contents3 h3 a {
+    font-size: 10px;
+  }
+
+  .contents1 h3 i,
+  .contents2 h3 i,
+  .contents3 h3 i {
+    font-size: 8px;
+  }
+
+  .recipe-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+  }
+
+  .recipe,
+  .img-container {
+    width: auto;
+  }
+
+  .img-container {
+    height: auto;
+    aspect-ratio: 11 / 7;
+  }
+
+  .recipe > a > div:last-child {
+    padding: 7px;
+  }
+
+  .recipe > a .title {
+    margin-top: 4px;
+  }
+
+  .recipe > a .title b {
+    font-size: 11px;
+  }
+
+  .recipe > a .title button {
+    font-size: 10px;
+  }
+
+  .recipe > a .time,
+  .recipe > a .review {
+    gap: 3px;
+    font-size: 9px;
+  }
+
+  .recipe > a .time i {
+    font-size: 8px;
+  }
+
+  .recipe > a .review {
+    margin-top: 7px;
+  }
+
+  .contents2 .card3,
+  .contents3 .card3 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .contents2 .card,
+  .contents3 .card {
+    height: 84px;
+  }
+
+  .contents2 .card img,
+  .contents3 .card img {
+    width: 42%;
+    height: 84px;
+  }
+
+  .contents2 .card > a > div:nth-child(1),
+  .contents3 .card > a > div:nth-child(1) {
+    top: 12px;
+    left: 12px;
+    font-size: 8px;
+  }
+
+  .contents2 .card b,
+  .contents3 .card b {
+    top: 29px;
+    left: 12px;
+    width: 145px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .contents2 .card > a > div:nth-child(3),
+  .contents3 .card > a > div:nth-child(3),
+  .contents2 .card p,
+  .contents3 .card p {
+    bottom: 11px;
+    left: 12px;
+    font-size: 8px;
+  }
+
+  .contents2 .card i,
+  .contents3 .card i {
+    font-size: 7px;
+  }
+
+  .footer_i {
+    padding: 18px 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_l,
+  .footer_r {
+    width: 100%;
+  }
+
+  .footer_l ul {
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-bottom: 9px;
+  }
+
+  .footer_l ul li a,
+  .footer_l p,
+  .footer_r p {
+    font-size: 8px;
+    line-height: 15px;
+  }
+
+  .footer_icon {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .footer_icon a {
+    font-size: 16px;
+  }
+}

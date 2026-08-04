@@ -691,3 +691,421 @@ footer {
 }
 
 /* //footer */
+
+/* tablet: 768px ~ 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header,
+  .banner,
+  .section1,
+  body > .section2,
+  .footer_i {
+    width: calc(100% - 48px);
+  }
+
+  header {
+    padding: 32px 0;
+  }
+
+  header nav,
+  header .search {
+    display: none;
+  }
+
+  header .icon::before {
+    content: "☰";
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .banner {
+    margin-bottom: 70px;
+  }
+
+  .banner_i {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner_t {
+    padding: 22px;
+    transform: scale(.78);
+    transform-origin: top left;
+  }
+
+  .section1 {
+    display: block;
+  }
+
+  .section1 .left,
+  .section1 .right {
+    width: 100%;
+  }
+
+  .section1 .left .box1 button,
+  .section1 .left .box3 .buttons1,
+  .section1 .left .box4 .buttons1,
+  .section1 .left .box5 .buttons1,
+  .section1 .left .box6 .buttons1,
+  .section1 .left .box7 .buttons1 {
+    width: 100%;
+  }
+
+  .section1 .left .box2 .buttons1,
+  .section1 .left .box3 .buttons1,
+  .section1 .left .box4 .buttons1,
+  .section1 .left .box5 .buttons1,
+  .section1 .left .box6 .buttons1,
+  .section1 .left .box7 .buttons1 {
+    overflow: hidden;
+  }
+
+  .section1 .right {
+    margin-top: 80px;
+  }
+
+  .section1 .right .bottom {
+    margin-top: 80px;
+  }
+
+  body > .section2 {
+    margin: 80px auto;
+  }
+
+  .recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 16px;
+  }
+
+  .recipe,
+  .img-container {
+    width: auto;
+  }
+
+  .img-container {
+    height: auto;
+    aspect-ratio: 11 / 7;
+  }
+
+  .footer_i {
+    gap: 40px;
+  }
+}
+
+/* mobile: 320px ~ 480px */
+@media (min-width: 320px) and (max-width: 480px) {
+  header,
+  .banner,
+  .section1,
+  body > .section2,
+  .footer_i {
+    width: calc(100% - 20px);
+  }
+
+  header {
+    padding: 14px 6px;
+  }
+
+  .logo img {
+    width: 108px;
+  }
+
+  header nav,
+  header .search {
+    display: none;
+  }
+
+  header .icon {
+    gap: 5px;
+  }
+
+  header .icon::before {
+    content: "☰";
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  header .icon a {
+    font-size: 12px;
+  }
+
+  .icon img {
+    width: 24px;
+  }
+
+  .banner {
+    margin-bottom: 38px;
+  }
+
+  .banner_i {
+    height: 82px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner_t {
+    padding: 12px;
+    transform: scale(.38);
+    transform-origin: top left;
+  }
+
+  .section1 {
+    display: block;
+  }
+
+  .section1 .left,
+  .section1 .right {
+    width: 100%;
+  }
+
+  .section1 .left .box1 {
+    margin-bottom: 12px;
+  }
+
+  .section1 .left .box1 button {
+    width: 100%;
+    height: 32px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .section1 .left .box1 i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  .section1 .left .box2,
+  .section1 .left .box3,
+  .section1 .left .box4,
+  .section1 .left .box5,
+  .section1 .left .box6,
+  .section1 .left .box7 {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .section1 .left .box2 h3,
+  .section1 .left .box3 h3,
+  .section1 .left .box4 h3,
+  .section1 .left .box5 h3,
+  .section1 .left .box6 h3,
+  .section1 .left .box7 h3 {
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 11px;
+  }
+
+  .section1 .left .box2 .buttons1,
+  .section1 .left .box3 .buttons1,
+  .section1 .left .box4 .buttons1,
+  .section1 .left .box5 .buttons1,
+  .section1 .left .box6 .buttons1,
+  .section1 .left .box7 .buttons1 {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 7px;
+    overflow: hidden;
+  }
+
+  .section1 .left .box2 button {
+    width: 64px;
+    height: 25px;
+    flex: 0 0 64px;
+    font-size: 10px;
+  }
+
+  .section1 .left .box3 .buttons1 button,
+  .section1 .left .box4 .buttons1 button,
+  .section1 .left .box5 .buttons1 button,
+  .section1 .left .box6 .buttons1 button,
+  .section1 .left .box7 .buttons1 button {
+    height: 27px;
+    padding: 0 8px;
+    flex: 0 0 auto;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .section1 .left .box3 button img,
+  .section1 .left .box4 button img,
+  .section1 .left .box5 button img,
+  .section1 .left .box6 button img,
+  .section1 .left .box7 button img {
+    width: 34px;
+    height: 21px;
+  }
+
+  .section1 .left .box3 .buttons1 button:last-child,
+  .section1 .left .box4 .buttons1 button:last-child,
+  .section1 .left .box5 .buttons1 button:last-child,
+  .section1 .left .box6 .buttons1 button:last-child,
+  .section1 .left .box7 .buttons1 button:last-child {
+    width: 22px;
+    height: 22px;
+  }
+
+  .section1 .right {
+    margin-top: 52px;
+  }
+
+  .section1 .right .material {
+    margin-bottom: 10px;
+  }
+
+  .section1 .right .m_l h3,
+  .section1 .right .select h3 {
+    font-size: 14px;
+  }
+
+  .section1 .right .m_l span,
+  .section1 .right .m_r span,
+  .section1 .right .select span,
+  .section1 .right .bottom > span {
+    font-size: 10px;
+  }
+
+  .section1 .right .pick {
+    height: 42px;
+  }
+
+  .section1 .right .meat img {
+    width: 42px;
+    height: 28px;
+  }
+
+  .section1 .right .meat span,
+  .section1 .right .plus button,
+  .section1 .right .magnifier button {
+    font-size: 11px;
+  }
+
+  .section1 .right .plus button,
+  .section1 .right .magnifier button {
+    height: 40px;
+  }
+
+  .section1 .right .middle {
+    margin-top: 16px;
+  }
+
+  .section1 .right .line {
+    margin-bottom: 16px;
+  }
+
+  .section1 .right .buttons2 {
+    gap: 10px;
+  }
+
+  .section1 .right .buttons2 button {
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .section1 .right .bottom {
+    margin-top: 42px;
+  }
+
+  .section1 .right .bottom > span {
+    margin-top: 16px;
+  }
+
+  body > .section2 {
+    margin: 65px auto;
+  }
+
+  .section2 h2 {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .section2 h3 {
+    margin-top: -42px;
+    margin-bottom: 12px;
+  }
+
+  .section2 h3 a {
+    font-size: 9px;
+  }
+
+  .section2 h3 i {
+    font-size: 7px;
+  }
+
+  .recipe-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 10px;
+  }
+
+  .recipe,
+  .img-container {
+    width: auto;
+  }
+
+  .img-container {
+    height: auto;
+    aspect-ratio: 11 / 7;
+  }
+
+  .recipe > a > div:last-child {
+    padding: 7px;
+  }
+
+  .recipe > a .title {
+    margin-top: 4px;
+  }
+
+  .recipe > a .title b {
+    font-size: 10px;
+  }
+
+  .recipe > a .title button {
+    font-size: 9px;
+  }
+
+  .recipe > a .time,
+  .recipe > a .review {
+    gap: 3px;
+    font-size: 8px;
+  }
+
+  .recipe > a .time i {
+    font-size: 7px;
+  }
+
+  .recipe > a .review {
+    margin-top: 6px;
+  }
+
+  .footer_i {
+    padding: 16px 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_l,
+  .footer_r {
+    width: 100%;
+  }
+
+  .footer_l ul {
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .footer_l ul li a,
+  .footer_l p,
+  .footer_r p {
+    font-size: 7px;
+    line-height: 14px;
+  }
+
+  .footer_icon {
+    gap: 9px;
+    margin-bottom: 7px;
+  }
+
+  .footer_icon a {
+    font-size: 15px;
+  }
+}
