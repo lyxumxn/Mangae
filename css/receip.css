@@ -98,13 +98,22 @@ header .icon a {
 /* 배너 */
 .banner {
   width: 1400px;
-  margin: 40px auto;
+  margin: auto;
+  margin-bottom: 90px;
 }
 
-.banner img {
+.banner_i{
   width: 100%;
+  height: 444px;
   margin: auto;
+  background-image: url(../image/sub2/banner.png);
+  position: relative;
 }
+.banner_t{
+  position: absolute;
+  padding: 40px;
+}
+
 /* //배너 */
 
 
