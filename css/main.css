@@ -619,6 +619,80 @@ footer {
   }
 }
 
+/* responsive hamburger menu */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    position: relative;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: calc(100% - 8px);
+    left: 50%;
+    width: max-content;
+    min-width: 430px;
+    padding: 14px 20px;
+    transform: translateX(-50%);
+    background: #f6f4f1;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(58, 58, 46, .12);
+    z-index: 10;
+  }
+
+  header:has(.icon:hover) nav,
+  header:has(nav:hover) nav {
+    display: block;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav a {
+    padding: 0 14px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    position: relative;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 50%;
+    width: calc(100vw - 32px);
+    padding: 11px 6px;
+    transform: translateX(-50%);
+    background: #f6f4f1;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px rgba(58, 58, 46, .12);
+    z-index: 10;
+  }
+
+  header:has(.icon:hover) nav,
+  header:has(nav:hover) nav {
+    display: block;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav a {
+    padding: 0 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
 /* mobile: 320px ~ 480px */
 @media (min-width: 320px) and (max-width: 480px) {
   header,
@@ -800,7 +874,7 @@ footer {
 
   .footer_l,
   .footer_r {
-    width: 100%;
+    width: 100vw;
   }
 
   .footer_l ul {
@@ -841,5 +915,139 @@ footer {
   .footer_l p,
   .footer_r p {
     font-size: 12px;
+  }
+}
+
+/* top hamburger menu layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header nav {
+    top: -85px;
+    width: 100vw;
+    min-width: 0;
+    padding: 27px 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  header:has(.icon:hover),
+  header:has(nav:hover) {
+    margin-top: 85px;
+  }
+
+  header nav a {
+    padding: 0 18px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header nav {
+    top: -60px;
+    width: 100vw;
+    padding: 19px 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  header:has(.icon:hover),
+  header:has(nav:hover) {
+    margin-top: 60px;
+  }
+
+  header nav a {
+    padding: 0 6px;
+    font-size: 14px;
+  }
+}
+
+/* animated menu below the header */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header nav {
+    display: block;
+    top: 100%;
+    width: 100vw;
+    min-width: 0;
+    padding: 27px 0;
+    transform: translate(-50%, -12px);
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: 0 6px 14px rgba(58, 58, 46, .08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .45s ease, transform .45s ease, visibility .45s ease;
+  }
+
+  header:has(.icon:hover),
+  header:has(nav:hover) {
+    margin-top: 0;
+  }
+
+  header .icon {
+    position: relative;
+  }
+
+  header .icon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100vw;
+    height: 40px;
+  }
+
+  header:has(.icon:hover) nav,
+  header:has(nav:hover) nav {
+    display: block;
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header nav {
+    display: block;
+    top: 100%;
+    width: 100vw;
+    padding: 18px 0;
+    transform: translate(-50%, -10px);
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: 0 5px 12px rgba(58, 58, 46, .08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .45s ease, transform .45s ease, visibility .45s ease;
+  }
+
+  header:has(.icon:hover),
+  header:has(nav:hover) {
+    margin-top: 0;
+  }
+
+  header .icon {
+    position: relative;
+  }
+
+  header .icon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100vw;
+    height: 30px;
+  }
+
+  header:has(.icon:hover) nav,
+  header:has(nav:hover) nav {
+    display: block;
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
