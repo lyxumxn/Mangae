@@ -824,7 +824,7 @@ footer {
 
   .product_list {
     display: grid;
-    width: 100vw;
+    width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
   }
@@ -985,35 +985,44 @@ footer {
   }
 
   .banner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
-  .banner .banner-card:nth-child(3) {
+  .banner::-webkit-scrollbar {
     display: none;
   }
 
-  .banner .banner-card > div {
-    padding: 9px;
-    width: 100%;
-    font-size: 7px;
+  .banner .banner-card {
+    display: block;
+    flex: 0 0 70%;
+    scroll-snap-align: start;
   }
 
-  .banner .banner-card h2 {
-    margin: 4px 0;
+  .banner .banner-card > div {
+    padding: 14px;
+    width: 100%;
     font-size: 10px;
   }
 
+  .banner .banner-card h2 {
+    margin: 7px 0;
+    font-size: 16px;
+  }
+
   .banner .banner-card p {
-    margin: 4px 0;
+    margin: 7px 0;
   }
 
   .banner .banner-card a {
-    margin-top: 4px;
-    padding: 3px 6px;
-    border-radius: 9px;
-    font-size: 7px;
+    margin-top: 7px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 9px;
   }
 
   .category,

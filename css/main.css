@@ -874,7 +874,7 @@ footer {
 
   .footer_l,
   .footer_r {
-    width: 100vw;
+    width: 100%;
   }
 
   .footer_l ul {
