@@ -1020,8 +1020,15 @@ footer {
 
   .banner_t {
     padding: 12px;
-    transform: scale(.38);
+    width: max-content;
+    transform: scale(.36);
     transform-origin: top left;
+  }
+
+  .banner_t span,
+  .banner_t h2,
+  .banner_t a {
+    white-space: nowrap;
   }
 
   .section1 {
@@ -1083,10 +1090,11 @@ footer {
   }
 
   .section1 .left .box2 button {
-    width: 64px;
-    height: 25px;
-    flex: 0 0 64px;
-    font-size: 10px;
+    width: 54px;
+    height: 20px;
+    padding: 0 4px;
+    flex: 0 0 54px;
+    font-size: 9px;
   }
 
   .section1 .left .box3 .buttons1 button,
