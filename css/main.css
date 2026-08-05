@@ -519,7 +519,7 @@ footer {
   line-height: 30px;
 }
 
-/* card hover effect */
+/* 카드 호버 효과 */
 .recipe,
 .contents2 .card,
 .contents3 .card {
@@ -537,7 +537,7 @@ footer {
 
 /* //footer */
 
-/* desktop header alignment */
+/* PC 헤더 정렬 */
 @media (min-width: 1025px) {
   header {
     display: grid;
@@ -553,7 +553,7 @@ footer {
   }
 }
 
-/* tablet: 768px ~ 1024px */
+/* 태블릿: 768px ~ 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   header,
   body > section,
@@ -654,7 +654,7 @@ footer {
   }
 }
 
-/* responsive hamburger menu */
+/* 반응형 햄버거 메뉴 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     position: relative;
@@ -728,7 +728,7 @@ footer {
   }
 }
 
-/* mobile: 320px ~ 480px */
+/* 모바일: 320px ~ 480px */
 @media (min-width: 320px) and (max-width: 480px) {
   header,
   body > section,
@@ -941,7 +941,7 @@ footer {
   }
 }
 
-/* responsive type scale */
+/* 반응형 글자 크기 */
 @media (min-width: 768px) and (max-width: 1024px) {
   .recipe > a .title b {
     font-size: 14px;
@@ -959,7 +959,7 @@ footer {
   }
 }
 
-/* top hamburger menu layout */
+/* 상단 햄버거 메뉴 레이아웃 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header nav {
     top: -85px;
@@ -1003,7 +1003,7 @@ footer {
   }
 }
 
-/* animated menu below the header */
+/* 헤더 아래 펼침 메뉴 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header nav {
     display: block;

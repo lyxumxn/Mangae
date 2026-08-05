@@ -359,7 +359,7 @@ header .icon .menu-trigger {
   font-size: 11px;
 }
 
-/* Keep the five ingredient buttons in every row evenly sized. */
+/* 각 줄의 재료 버튼 5개 크기를 동일하게 유지 */
 @media (min-width: 768px) {
   .section1 .left .box3 .buttons1 button:not(:last-child),
   .section1 .left .box4 .buttons1 button:not(:last-child),
@@ -793,7 +793,7 @@ footer {
   line-height: 30px;
 }
 
-/* card hover effect */
+/* 카드 호버 효과 */
 .recipe {
   position: relative;
   transition: transform .2s ease, box-shadow .2s ease;
@@ -807,7 +807,7 @@ footer {
 
 /* //footer */
 
-/* tablet: 768px ~ 1024px */
+/* 태블릿: 768px ~ 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   header,
   .banner,
@@ -928,7 +928,7 @@ footer {
   }
 }
 
-/* responsive hamburger menu */
+/* 반응형 햄버거 메뉴 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     position: relative;
@@ -1002,7 +1002,7 @@ footer {
   }
 }
 
-/* mobile: 320px ~ 480px */
+/* 모바일: 320px ~ 480px */
 @media (min-width: 320px) and (max-width: 480px) {
   header,
   .banner,
@@ -1334,7 +1334,7 @@ footer {
   }
 }
 
-/* Responsive type scale for the ingredient and recipe content. */
+/* 재료와 레시피 콘텐츠 반응형 글자 크기 */
 @media (min-width: 768px) and (max-width: 1024px) {
   .section1 .left .box1 .ingredient-search {
     font-size: 13px;
@@ -1459,7 +1459,7 @@ footer {
   }
 }
 
-/* top hamburger menu layout */
+/* 상단 햄버거 메뉴 레이아웃 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header nav {
     top: -85px;
@@ -1503,7 +1503,7 @@ footer {
   }
 }
 
-/* animated menu below the header */
+/* 헤더 아래 펼침 메뉴 */
 @media (min-width: 768px) and (max-width: 1024px) {
   header nav {
     display: block;
@@ -1551,7 +1551,7 @@ footer {
   }
 }
 
-/* ingredient rows: horizontal swipe slides */
+/* 재료 버튼 가로 슬라이드 */
 @media (min-width: 768px) and (max-width: 1024px) {
   .section1 .left .box2 .buttons1,
   .section1 .left .box3 .buttons1,
