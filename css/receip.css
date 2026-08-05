@@ -779,6 +779,18 @@ footer {
   line-height: 30px;
 }
 
+/* card hover effect */
+.recipe {
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.recipe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(58, 58, 46, .16);
+  z-index: 1;
+}
+
 /* //footer */
 
 /* tablet: 768px ~ 1024px */
@@ -1228,13 +1240,21 @@ footer {
   .section1 .left .box5 button img,
   .section1 .left .box6 button img,
   .section1 .left .box7 button img {
-    width: 42px;
-    height: 26px;
+    width: 38px;
+    height: 24px;
   }
 
   .section1 .right .m_l h3,
   .section1 .right .select h3 {
     font-size: 16px;
+  }
+
+  .section1 .left .box3 .buttons1 button,
+  .section1 .left .box4 .buttons1 button,
+  .section1 .left .box5 .buttons1 button,
+  .section1 .left .box6 .buttons1 button,
+  .section1 .left .box7 .buttons1 button {
+    font-size: 11px;
   }
 
   .section1 .right .m_l span,
@@ -1285,7 +1305,33 @@ footer {
   .section1 .left .box5 button img,
   .section1 .left .box6 button img,
   .section1 .left .box7 button img {
-    width: 30px;
-    height: 19px;
+    width: 26px;
+    height: 17px;
+  }
+
+  .section1 .left .box3 .buttons1 button:not(:last-child),
+  .section1 .left .box4 .buttons1 button:not(:last-child),
+  .section1 .left .box5 .buttons1 button:not(:last-child),
+  .section1 .left .box6 .buttons1 button:not(:last-child),
+  .section1 .left .box7 .buttons1 button:not(:last-child) {
+    font-size: 9px;
+  }
+
+  .section1 .left .box3 .buttons1 button:not(:last-child),
+  .section1 .left .box4 .buttons1 button:not(:last-child),
+  .section1 .left .box5 .buttons1 button:not(:last-child),
+  .section1 .left .box6 .buttons1 button:not(:last-child),
+  .section1 .left .box7 .buttons1 button:not(:last-child) {
+    width: 92px;
+    flex: 0 0 92px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer_l ul li a,
+  .footer_l p,
+  .footer_r p {
+    font-size: 12px;
   }
 }

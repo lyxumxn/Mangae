@@ -505,6 +505,22 @@ footer {
   line-height: 30px;
 }
 
+/* card hover effect */
+.recipe,
+.contents2 .card,
+.contents3 .card {
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.recipe:hover,
+.contents2 .card:hover,
+.contents3 .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(58, 58, 46, .16);
+  z-index: 1;
+}
+
 /* //footer */
 
 /* desktop header alignment */
@@ -807,5 +823,23 @@ footer {
 
   .footer_icon a {
     font-size: 16px;
+  }
+}
+
+/* responsive type scale */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recipe > a .title b {
+    font-size: 14px;
+  }
+
+  .recipe > a .time,
+  .recipe > a .review {
+    font-size: 11px;
+  }
+
+  .footer_l ul li a,
+  .footer_l p,
+  .footer_r p {
+    font-size: 12px;
   }
 }
