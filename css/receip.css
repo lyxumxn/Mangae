@@ -4,6 +4,26 @@
   font-weight: 400;
   unicode-range: U+0041-005A, U+0061-007A;
 }
+@font-face {
+  font-family: 'ns';
+  src: url(../font/NotoSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'ns';
+  src: url(../font/NotoSans-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'ns';
+  src: url(../font/NotoSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'ns';
+  src: url(../font/NotoSans-Bold.ttf);
+  font-weight: 700;
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +35,7 @@ ul {
 }
 
 body {
-  font-family: 'sb', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  font-family: 'sb', 'ns', sans-serif;
   background: #f6f4f1;
   color: #333;
 }
