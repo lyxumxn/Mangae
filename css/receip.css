@@ -1582,9 +1582,19 @@ footer {
   .section1 .left .box5 .buttons1 button:not(:last-child),
   .section1 .left .box6 .buttons1 button:not(:last-child),
   .section1 .left .box7 .buttons1 button:not(:last-child) {
-    flex: 0 0 140px;
-    width: 140px;
-    scroll-snap-align: start;
+    flex: 1 1 0;
+    width: 0;
+  }
+
+  .section1 .left .box2 .buttons1 {
+    justify-content: space-between;
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+
+  .section1 .left .box2 .buttons1 button {
+    flex: 1 1 0;
+    width: 0;
   }
 }
 
