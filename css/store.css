@@ -240,6 +240,10 @@ header .icon .menu-trigger {
     width: fit-content;
     text-align: center;
 }
+
+.category-card span{
+    font-weight: 700;
+}
 /* //카테고리 */
 
 /* 베스트 */
@@ -746,7 +750,6 @@ footer {
 
 /* 카드 호버 효과 */
 .banner .banner-card,
-.category-card,
 .product_card,
 .recipe-left > div {
   position: relative;
@@ -754,7 +757,6 @@ footer {
 }
 
 .banner .banner-card:hover,
-.category-card:hover,
 .product_card:hover,
 .recipe-left > div:hover {
   transform: scale(1.03);
