@@ -116,6 +116,10 @@ header .icon a {
   color: inherit;
 }
 
+header .icon .mobile-search {
+  display: none;
+}
+
 header .icon img {
   width: 35px;
 }
@@ -616,6 +620,15 @@ footer {
 
   .footer_i {
     gap: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px),
+       (min-width: 320px) and (max-width: 480px) {
+  header .icon .mobile-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
