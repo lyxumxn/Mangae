@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레시피</title>
     <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../제이쿼리/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/receip.css">
     <link rel="shortcut icon" href="../파비콘/favicon.ico" type="image/x-icon">
     <script src="/제이쿼리.html/jquery-4.0.0.min.js"></script>
@@ -22,12 +23,11 @@
 
         <nav>
             <ul>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">인기</a></li>
-                <li><a href="#">재료</a></li>
-                <li><a href="#">난이도</a></li>
-                <li><a href="#">조리방법</a></li>
-                <li><a href="#">요리분류</a></li>
+                <li><a href="./receip.html">레시피</a></li>
+                <li><a href="#">랭킹</a></li>
+                <li><a href="./store.html">스토어</a></li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">공지</a></li>
             </ul>
         </nav>
 
@@ -43,32 +43,32 @@
             <a class="mobile-search" href="#" aria-label="검색">
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </a>
-            <a href="#">
-                <i class="fa-regular fa-bookmark"></i>
-            </a>
-            <a href="#">
-                <i class="fa-regular fa-bell"></i>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-store"></i>
-            </a>
-            <a href="#">
-                <img src="../image/profile.png" alt="#">
-            </a>
+            <details class="header-menu"><summary><i class="fa-regular fa-bookmark"></i></summary><div class="dropdown"><h2>북마크</h2><div class="dropdown-row dropdown-line"><i class="fa-regular fa-bookmark"></i>내가 찜한 레시피<strong>›</strong></div><div class="dropdown-row dropdown-line"><i class="fa-regular fa-clock"></i>최근에 본 레시피<strong>›</strong></div><div class="dropdown-title"><span>최근 저장한 레시피</span><span>더보기 &gt;</span></div><div class="dropdown-empty">저장한 레시피가 없습니다.</div><button class="dropdown-button">전체 보기　›</button></div></details>
+            <details class="header-menu"><summary><i class="fa-regular fa-bell"></i></summary><div class="dropdown"><h2>알림</h2><div class="dropdown-tabs"><b>전체</b><span>댓글</span><span>활동</span><span>소식</span></div><div class="dropdown-empty">최근 알림이 없습니다.</div><button class="dropdown-button">전체 보기　›</button></div></details>
+            <details class="header-menu"><summary><i class="fa-solid fa-store"></i></summary><div class="dropdown"><h2>스토어</h2><div class="dropdown-row"><i class="fa-solid fa-receipt"></i>주문내역</div><div class="dropdown-row"><i class="fa-solid fa-basket-shopping"></i>장바구니</div><div class="dropdown-row"><i class="fa-regular fa-heart"></i>찜한상품</div><div class="dropdown-row"><i class="fa-solid fa-location-dot"></i>배송지관리</div><div class="dropdown-row"><i class="fa-solid fa-ticket"></i>쿠폰함</div><div class="dropdown-row"><i class="fa-regular fa-comment"></i>1:1 문의</div><div class="dropdown-space"></div><button class="dropdown-button">전체 보기　›</button></div></details>
+            <details class="header-menu"><summary><img src="../image/profile.png" alt="프로필"></summary><div class="dropdown"><div class="dropdown-profile"><img src="../image/profile.png" alt="프로필"><div><h2>배고파님</h2><p>dasd1222@mangae.com</p></div></div><div class="dropdown-row"><i class="fa-regular fa-circle-user"></i>프로필 관리</div><div class="dropdown-row"><i class="fa-solid fa-pencil"></i>내가 쓴 레시피</div><div class="dropdown-row"><i class="fa-regular fa-heart"></i>내가 남긴 반응</div><div class="dropdown-row"><i class="fa-solid fa-gear"></i>설정</div><div class="dropdown-row"><i class="fa-regular fa-circle-question"></i>고객센터</div><div class="dropdown-row"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</div><div class="dropdown-space"></div><button class="dropdown-button">전체 보기　›</button></div></details>
         </div>
     </header>
     <!-- //header -->
 
     <!-- mian -->
     <!-- 배너 -->
-    <section class="banner">
+    <section class="banner swiper recipe-banner-swiper">
         <h1 class="sr-only">만개의레시피 재료 기반 레시피</h1>
-        <div class="banner_i">
-            <div class="banner_t">
-                <h2>냉장고 속 재료로 만들어 보세요!</h2>
-                <span>보유한 재료를 선택하면 알맞은 레시피를 추천해드려요.</span>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide banner_i banner-slide-1">
+                <div class="banner_t"><h2>냉장고 속 재료로 만들어 보세요!</h2><span>보유한 재료를 선택하면 알맞은 레시피를 추천해드려요.</span></div>
+            </div>
+            <div class="swiper-slide banner_i banner-slide-2">
+                <div class="banner_t"><h2>손질부터 차근차근 시작해요</h2><span>기본 조리법과 재료 손질 노하우를 확인해 보세요.</span></div>
+            </div>
+            <div class="swiper-slide banner_i banner-slide-3">
+                <div class="banner_t"><h2>오늘은 따뜻한 집밥 어때요?</h2><span>간단한 재료로 맛있는 한 끼를 완성해 보세요.</span></div>
             </div>
         </div>
+        <button class="swiper-button-prev" type="button" aria-label="이전 배너"></button>
+        <button class="swiper-button-next" type="button" aria-label="다음 배너"></button>
+        <div class="swiper-pagination"></div>
     </section>
     <!-- //배너 -->
 
@@ -598,6 +598,8 @@
     </footer>
     <!-- //footer -->
 
+    <script src="../../제이쿼리/swiper/swiper-bundle.min.js"></script>
+    <script src="../script/banner-slider.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>만개의레시피</title>
     <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../제이쿼리/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./파비콘/favicon.ico" type="image/x-icon">
     <script src="/제이쿼리.html/jquery-4.0.0.min.js"></script>
@@ -42,27 +43,26 @@
                 <a class="mobile-search" href="#" aria-label="검색">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </a>
-                <a href="#">
-                    <i class="fa-regular fa-bookmark"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-regular fa-bell"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-store"></i>
-                </a>
-                <a href="#">
-                    <img src="./image/profile.png" alt="#">
-                </a>
+                <details class="header-menu"><summary><i class="fa-regular fa-bookmark"></i></summary><div class="dropdown"><h2>북마크</h2><div class="dropdown-row dropdown-line"><i class="fa-regular fa-bookmark"></i>내가 찜한 레시피<strong>›</strong></div><div class="dropdown-row dropdown-line"><i class="fa-regular fa-clock"></i>최근에 본 레시피<strong>›</strong></div><div class="dropdown-title"><span>최근 저장한 레시피</span><span>더보기 &gt;</span></div><div class="dropdown-empty">저장한 레시피가 없습니다.</div><button class="dropdown-button">전체 보기　›</button></div></details>
+                <details class="header-menu"><summary><i class="fa-regular fa-bell"></i></summary><div class="dropdown"><h2>알림</h2><div class="dropdown-tabs"><b>전체</b><span>댓글</span><span>활동</span><span>소식</span></div><div class="dropdown-empty">최근 알림이 없습니다.</div><button class="dropdown-button">전체 보기　›</button></div></details>
+                <details class="header-menu"><summary><i class="fa-solid fa-store"></i></summary><div class="dropdown"><h2>스토어</h2><div class="dropdown-row"><i class="fa-solid fa-receipt"></i>주문내역</div><div class="dropdown-row"><i class="fa-solid fa-basket-shopping"></i>장바구니</div><div class="dropdown-row"><i class="fa-regular fa-heart"></i>찜한상품</div><div class="dropdown-row"><i class="fa-solid fa-location-dot"></i>배송지관리</div><div class="dropdown-row"><i class="fa-solid fa-ticket"></i>쿠폰함</div><div class="dropdown-row"><i class="fa-regular fa-comment"></i>1:1 문의</div><div class="dropdown-space"></div><button class="dropdown-button">전체 보기　›</button></div></details>
+                <details class="header-menu"><summary><img src="./image/profile.png" alt="프로필"></summary><div class="dropdown"><div class="dropdown-profile"><img src="./image/profile.png" alt="프로필"><div><h2>배고파님</h2><p>dasd1222@mangae.com</p></div></div><div class="dropdown-row"><i class="fa-regular fa-circle-user"></i>프로필 관리</div><div class="dropdown-row"><i class="fa-solid fa-pencil"></i>내가 쓴 레시피</div><div class="dropdown-row"><i class="fa-regular fa-heart"></i>내가 남긴 반응</div><div class="dropdown-row"><i class="fa-solid fa-gear"></i>설정</div><div class="dropdown-row"><i class="fa-regular fa-circle-question"></i>고객센터</div><div class="dropdown-row"><i class="fa-solid fa-right-from-bracket"></i>로그아웃</div><div class="dropdown-space"></div><button class="dropdown-button">전체 보기　›</button></div></details>
             </div>
     </header>
     <!-- //header -->
 
     <!-- main -->
     <!-- 배너 -->
-    <section class="banner">
+    <section class="banner swiper main-banner-swiper">
         <h1 class="sr-only">만개의레시피</h1>
-        <img src="./image/main/mainbanner.png" alt="배너">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./image/main/mainbanner%20(1).png" alt="따뜻한 갈비탕 요리"></div>
+            <div class="swiper-slide"><img src="./image/main/mainbanner%20(2).png" alt="새우 아스파라거스 파스타"></div>
+            <div class="swiper-slide"><img src="./image/main/mainbanner%20(3).png" alt="크리미한 감자 수프"></div>
+        </div>
+        <button class="swiper-button-prev" type="button" aria-label="이전 배너"></button>
+        <button class="swiper-button-next" type="button" aria-label="다음 배너"></button>
+        <div class="swiper-pagination"></div>
     </section>
     <!-- //배너 -->
 
@@ -578,7 +578,8 @@
     </footer>
     <!-- //footer -->
 
-
+    <script src="../제이쿼리/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/banner-slider.js"></script>
 </body>
 
 </html>
