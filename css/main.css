@@ -6,6 +6,44 @@
 }
 
 
+/* 태블릿, 모바일 카테고리 메뉴 */
+.mobile-category { display: none; }
+
+@media (max-width: 1024px) {
+  header nav ul { flex-wrap: wrap; }
+
+  header nav .mobile-category {
+    display: block;
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  .mobile-category summary {
+    padding: 8px 12px;
+    color: #6ea247;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-category summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-category div {
+    padding: 0 12px 8px;
+  }
+
+  header nav .mobile-category a {
+    display: block;
+    padding: 5px 0;
+    font-size: 12px;
+  }
+}
+
+
+
 /* 레시피, 스토어 메가메뉴 */
 header { position: relative; }
 .mega-item { position: static; }
@@ -889,7 +927,7 @@ footer {
   }
 
   .banner .swiper-slide img {
-    height: 82px;
+    height: 180px;
   }
 
   .contents1 h2,
