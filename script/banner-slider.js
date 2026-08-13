@@ -1,3 +1,21 @@
+const header = document.querySelector("header");
+const menuButton = document.querySelector(".menu-trigger");
+const categoryButtons = document.querySelectorAll(".category-button");
+
+menuButton.addEventListener("click", function () {
+  header.classList.toggle("menu-open");
+});
+
+categoryButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const menuItem = button.parentElement;
+    const category = menuItem.nextElementSibling;
+    const categoryDetail = category.querySelector("details");
+
+    category.classList.toggle("open");
+    categoryDetail.open = category.classList.contains("open");
+  });
+});
 document.querySelectorAll('.banner.swiper').forEach((banner) => {
   new Swiper(banner, {
     loop: true,
@@ -10,10 +28,6 @@ document.querySelectorAll('.banner.swiper').forEach((banner) => {
     pagination: {
       el: banner.querySelector('.swiper-pagination'),
       clickable: true,
-    },
-    navigation: {
-      nextEl: banner.querySelector('.swiper-button-next'),
-      prevEl: banner.querySelector('.swiper-button-prev'),
     },
     keyboard: { enabled: true },
   });

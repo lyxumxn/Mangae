@@ -6,41 +6,8 @@
 }
 
 
-/* 태블릿, 모바일 카테고리 메뉴 */
 .mobile-category { display: none; }
 
-@media (max-width: 1024px) {
-  header nav ul { flex-wrap: wrap; }
-
-  header nav .mobile-category {
-    display: block;
-    width: 50%;
-    margin-top: 10px;
-  }
-
-  .mobile-category summary {
-    padding: 8px 12px;
-    color: #6ea247;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-  }
-
-  .mobile-category summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobile-category div {
-    padding: 0 12px 8px;
-  }
-
-  header nav .mobile-category a {
-    display: block;
-    padding: 5px 0;
-    font-size: 12px;
-  }
-}
 
 
 
@@ -49,13 +16,13 @@ header { position: relative; }
 .mega-item { position: static; }
 .mega-item > a { position: relative; }
 .mega-item > a::after { content: ""; position: absolute; top: 100%; left: 0; width: 100%; height: 50px; }
-.mega-menu { display: none; position: absolute; z-index: 90; top: 100%; left: 50%; width: 100vw; padding: 25px max(20px, calc((100vw - 1400px) / 2)); transform: translateX(-50%); background: #fff; border-top: 1px solid #eee; box-shadow: 0 8px 18px rgba(0,0,0,.08); }
+.mega-menu { display: none; position: absolute; z-index: 90; top: 100%; left: 50%; width: 100vw; padding: 25px max(20px, calc((100vw - 1400px) / 2)); transform: translateX(-50%); background: #fff; border-top: 1px solid #eee; box-shadow: 0 8px 18px rgba(0,0,0,.08); border-radius: 10px; }
 .mega-item:hover .mega-menu { display: block; }
 .mega-columns { display: grid; column-gap: 45px; min-height: 220px; }
 .recipe-mega .mega-columns { grid-template-columns: repeat(6, 1fr); }
 .store-mega .mega-columns { grid-template-columns: repeat(5, 1fr); }
 .mega-menu h3 { margin: 0 0 12px; color: #6ea247; font-size: 18px; font-weight: 600; }
-header .mega-menu .mega-columns a { display: block; padding: 5px 0; color: #3a3a2e; font-size: 13px; font-weight: 400; white-space: nowrap; }
+header .mega-menu .mega-columns a { display: block; padding: 5px 0; color: #3a3a2e; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .mega-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 16px; }
 header .mega-card { position: relative; height: 105px; padding: 12px; overflow: hidden; background: #f7f5f2; border-radius: 6px; }
 .mega-card b { position: relative; z-index: 2; color: #6ea247; font-size: 13px; }
@@ -64,7 +31,7 @@ header .mega-card { position: relative; height: 105px; padding: 12px; overflow: 
 .mega-card img { position: absolute; right: -5px; bottom: -8px; width: 45%; height: 85px; object-fit: contain; }
 .mega-buttons { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 18px; }
 header .mega-buttons a { padding: 12px; color: #6ea247; text-align: center; background: #dce5d2; border-radius: 6px; font-size: 13px; }
-@media (max-width: 1024px) { .mega-menu { display: none !important; } }
+@media (max-width: 1024px) { .mega-item:hover .mega-menu { display: none; } }
 
 
 
@@ -148,7 +115,7 @@ img {
   border: 0;
 }
 svg{
-  color: #3a3a2e!important;
+  color: #3a3a2e;
 }
 
 
@@ -297,7 +264,7 @@ header .icon .menu-trigger {
     color: white;
 }
 .banner .banner-card svg{
-    color: white!important;
+    color: white;
 }
 
 /* //배너 */
@@ -378,7 +345,7 @@ header .icon .menu-trigger {
     border-radius: 8px;
 }
 .product_card svg{
-    color: #74A640!important;
+    color: #74A640;
 }
 .best .product_card a{
     display:block;
@@ -1010,80 +977,6 @@ footer {
   }
 }
 
-/* 반응형 햄버거 메뉴 */
-@media (min-width: 768px) and (max-width: 1024px) {
-  header {
-    position: relative;
-  }
-
-  header nav {
-    display: none;
-    position: absolute;
-    top: calc(100% - 8px);
-    left: 50%;
-    width: max-content;
-    min-width: 500px;
-    padding: 14px 20px;
-    transform: translateX(-50%);
-    background: #f6f4f1;
-    border-radius: 8px;
-    box-shadow: 0 6px 14px rgba(58, 58, 46, .12);
-    z-index: 10;
-  }
-
-  header:has(.menu-trigger:hover) nav,
-  header:has(nav:hover) nav {
-    display: block;
-  }
-
-  header nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  header nav a {
-    padding: 0 12px;
-    font-size: 16px;
-    white-space: nowrap;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  header {
-    position: relative;
-  }
-
-  header nav {
-    display: none;
-    position: absolute;
-    top: calc(100% - 4px);
-    left: 50%;
-    width: calc(100vw - 32px);
-    padding: 11px 4px;
-    transform: translateX(-50%);
-    background: #f6f4f1;
-    border-radius: 6px;
-    box-shadow: 0 5px 12px rgba(58, 58, 46, .12);
-    z-index: 10;
-  }
-
-  header:has(.menu-trigger:hover) nav,
-  header:has(nav:hover) nav {
-    display: block;
-  }
-
-  header nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  header nav a {
-    padding: 0 4px;
-    font-size: 11px;
-    white-space: nowrap;
-  }
-}
-
 /* 모바일: 320px ~ 480px */
 @media (min-width: 320px) and (max-width: 480px) {
   header,
@@ -1429,140 +1322,102 @@ footer {
   }
 }
 
-/* 상단 햄버거 메뉴 레이아웃 */
-@media (min-width: 768px) and (max-width: 1024px) {
-  header nav {
-    top: -85px;
-    width: 100vw;
-    min-width: 0;
-    padding: 29px 0;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    box-shadow: none;
-  }
 
-  header:has(.menu-trigger:hover),
-  header:has(nav:hover) {
-    margin-top: 85px;
-  }
-
-  header nav a {
-    padding: 0 13px;
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  header nav {
-    top: -60px;
-    width: 100vw;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  header:has(.menu-trigger:hover),
-  header:has(nav:hover) {
-    margin-top: 60px;
-  }
-
-  header nav a {
-    padding: 0 4px;
-    font-size: 11px;
-  }
-}
-
-/* 헤더 아래 펼침 메뉴 */
-@media (min-width: 768px) and (max-width: 1024px) {
-  header nav {
-    display: block;
-    top: 100%;
-    width: 100vw;
-    min-width: 0;
-    padding: 27px 0;
-    transform: translate(-50%, -12px);
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    box-shadow: 0 6px 14px rgba(58, 58, 46, .08);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: auto;
-    transition: opacity .45s ease, transform .45s ease, visibility 0s linear .55s;
-  }
-
-  header:has(.menu-trigger:hover),
-  header:has(nav:hover) {
-    margin-top: 0;
-  }
-
-  header .icon {
+/* 모바일, 태블릿 메뉴 */
+@media (max-width: 1024px) {
+  header {
     position: relative;
   }
 
-  header .icon::after {
+  header nav {
     display: none;
-    content: "";
     position: absolute;
     top: 100%;
-    right: 0;
-    width: 100vw;
-    height: 40px;
+    left: 0;
+    width: 100%;
+    max-height: 70vh;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: 100;
   }
 
-  header:has(.menu-trigger:hover) nav,
-  header:has(nav:hover) nav {
+  header.menu-open nav {
     display: block;
-    transform: translate(-50%, 0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition-delay: 0s;
+  }
+
+  header nav ul {
+    display: block;
+  }
+
+  header nav li {
+    width: 100%;
+  }
+
+  header nav li > a {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  header nav .mobile-category {
+    display: none;
+    width: 100%;
+    margin-top: 0;
+    border-top: 1px solid #ddd;
+  }
+
+  header nav .mobile-category.open {
+    display: block;
+  }
+
+  .mobile-category summary {
+    display: none;
+  }
+
+  .mobile-category div {
+    padding: 0 10px 10px;
+  }
+
+  header nav .mobile-category div a {
+    display: block;
+    padding: 7px 20px;
+    font-size: 13px;
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  header nav {
+.category-button {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header nav .mega-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  header nav .mega-item > a {
+    flex: none;
+    padding-right: 0;
+  }
+
+  .category-button {
     display: block;
-    top: 100%;
-    width: 100vw;
-    padding: 18px 0;
-    transform: translate(-50%, -10px);
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    box-shadow: 0 5px 12px rgba(58, 58, 46, .08);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: auto;
-    transition: opacity .45s ease, transform .45s ease, visibility 0s linear .55s;
+    padding: 0;
+    color: #3a3a2e;
+    background: none;
+    border: 0;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
   }
+}
 
-  header:has(.menu-trigger:hover),
-  header:has(nav:hover) {
-    margin-top: 0;
-  }
-
-  header .icon {
-    position: relative;
-  }
-
-  header .icon::after {
-    display: none;
-    content: "";
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100vw;
-    height: 30px;
-  }
-
-  header:has(.menu-trigger:hover) nav,
-  header:has(nav:hover) nav {
-    display: block;
-    transform: translate(-50%, 0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition-delay: 0s;
-  }
+.category-button i {
+  font-size: 14px;
 }
