@@ -424,703 +424,61 @@ header .mega-buttons a {
     font-size: 12px;
 }
 
+
+/* 헤더 디자인 정리 */
+header { width: 90%; max-width: 1400px; min-height: 105px; background: #fff; }
+header .logo { width: 170px; flex-shrink: 0; }
+header nav { margin-left: 80px; }
+header nav > ul { gap: 46px; }
+header nav > ul > li > a { font-size: 15px; font-weight: 600; }
+header .search { width: 290px; height: 44px; margin-left: auto; border: 1px solid #ddd; border-radius: 24px; }
+header .icon { margin-left: 24px; gap: 20px; }
+
 /* //header */
 
-/* 메인 페이지와 동일한 헤더 */
-header .logo {
-    width: 220px;
-}
-
-header .logo img {
-    width: 150px;
-    max-width: 100%;
-}
-
-header nav {
-    display: flex;
-    gap: 35px;
-}
-
-header nav a {
-    color: #3a3a2e;
-    font-size: 18px;
-}
-
-header .search {
-    width: 260px;
-    height: 40px;
-}
-
-header .icon img {
-    width: 35px;
-    max-width: 100%;
-}
-
 /* main */
-
-/* 배너 */
-.banner {
-    width: 1400px;
-    margin: auto;
-    margin-bottom: 90px;
-    overflow: hidden;
-    border-radius: 10px;
-    --swiper-theme-color: #fff;
-}
-
-.banner_i {
-    width: 100%;
-    height: 444px;
-    margin: auto;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.banner-slide-1 {
-    background-image: url("../image/sub2/banner%20(1).png");
-}
-
-.banner-slide-2 {
-    background-image: url("../image/sub2/banner%20(2).png");
-}
-
-.banner-slide-3 {
-    background-image: url("../image/sub2/banner%20(3).png");
-}
-
-.banner_t {
-    position: absolute;
-    padding: 60px;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
-}
-
-.banner_t h2,
-.banner_t span {
-    color: inherit;
-}
-
-.banner .swiper-pagination-bullet {
-    background: #fff;
-    opacity: 0.55;
-}
-
-.banner .swiper-pagination-bullet-active {
-    width: 24px;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-/* //배너 */
-
-/* 재료선택 */
-.section1 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1400px;
-    margin: auto;
-    gap: 16px;
-}
-
-.section1-title {
-    width: 100%;
-}
-
-.section1 .left {
-    width: 950px;
-}
-
-.section1 .right {
-    flex: 1;
-}
-
-.section1 .left .box2 .buttons1 button.is-active {
-    color: #fff;
-    background-color: #74a640;
-}
-
-.category-empty {
-    margin-top: 24px;
-    color: #777;
-    font-size: 14px;
-}
-
-.section1 .left .box1 .ingredient-search {
-    width: 950px;
-    padding: 8px;
-    border-radius: 32px;
-    text-align: left;
-    color: rgba(58, 58, 46, 0.3);
-    border: 1px solid rgba(58, 58, 46, 0.3);
-    display: flex;
-    align-items: center;
-}
-
-.section1 .left .box2 h3 {
-    padding: 8px 0;
-}
-
-.section1 .left .box2 .buttons1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.section1 .left .box2 button {
-    width: 90px;
-    height: 37px;
-    border-radius: 32px;
-    border: 1px solid rgba(58, 58, 46, 0.3);
-    color: #3a3a2e;
-    font-weight: 700;
-}
-
-.section1 .left .box1 {
-    margin-bottom: 18px;
-}
-
-.section1 .left .box1 .ingredient-search {
-    height: 42px;
-    background: #fff;
-    font-size: 14px;
-    cursor: text;
-}
-
-.section1 .left .box1 .ingredient-search input {
-    flex: 1;
-    min-width: 0;
-    border: 0;
-    outline: none;
-    background: transparent;
-    color: #3a3a2e;
-    font: inherit;
-}
-
-.section1 .left .box1 .ingredient-search input::placeholder {
-    color: rgba(58, 58, 46, 0.3);
-}
-
-.section1 .left .box1 i {
-    margin-right: 8px;
-    font-size: 17px;
-}
-
-.section1 .left .box2 {
-    margin-bottom: 25px;
-}
-
-.section1 .left .box2 h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #3a3a2e;
-}
-
-.section1 .left .box2 .buttons1 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.section1 .left .box2 .buttons1 button {
-    height: 37px;
-    width: 90px;
-    background: #fff;
-    cursor: pointer;
-}
-
-.section1 .left .box3,
-.section1 .left .box4,
-.section1 .left .box5,
-.section1 .left .box6,
-.section1 .left .box7 {
-    margin-top: 25px;
-}
-
-.section1 .left .box3 h3,
-.section1 .left .box4 h3,
-.section1 .left .box5 h3,
-.section1 .left .box6 h3,
-.section1 .left .box7 h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #3a3a2e;
-    margin-bottom: 8px;
-}
-
-.section1 .left .box3 .buttons1,
-.section1 .left .box4 .buttons1,
-.section1 .left .box5 .buttons1,
-.section1 .left .box6 .buttons1,
-.section1 .left .box7 .buttons1 {
-    display: flex;
-    width: 950px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-}
-
-.section1 .left .box3 .buttons1 button,
-.section1 .left .box4 .buttons1 button,
-.section1 .left .box5 .buttons1 button,
-.section1 .left .box6 .buttons1 button,
-.section1 .left .box7 .buttons1 button {
-    width: fit-content;
-    height: 38px;
-    padding: 0 10px;
-    border-radius: 22px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    color: #3a3a2e;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.section1 .left .box3 button img,
-.section1 .left .box4 button img,
-.section1 .left .box5 button img,
-.section1 .left .box6 button img,
-.section1 .left .box7 button img {
-    width: 48px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.section1 .left .box3 .buttons1 button {
-    border: 2px solid #f4d5d7;
-    background-color: #fdf7f6;
-}
-
-.section1 .left .box4 .buttons1 button {
-    border: 2px solid #e0ead1;
-    background-color: #f8f9f2;
-}
-
-.section1 .left .box5 .buttons1 button {
-    border: 2px solid #f0e9e2;
-    background-color: #f9f6f2;
-}
-
-.section1 .left .box6 .buttons1 button {
-    border: 2px solid #dae5ef;
-    background-color: #f5f8fc;
-}
-
-.section1 .left .box7 .buttons1 button {
-    border: 2px solid #f9e8c8;
-    background-color: #fef9ee;
-}
-
-.section1 .left .box3 .buttons1 button:last-child,
-.section1 .left .box4 .buttons1 button:last-child,
-.section1 .left .box5 .buttons1 button:last-child,
-.section1 .left .box6 .buttons1 button:last-child,
-.section1 .left .box7 .buttons1 button:last-child {
-    width: 26px;
-    height: 26px;
-    padding: 0;
-    border: 1px solid fff;
-    border-radius: 50%;
-    background: #fff;
-    flex-shrink: 0;
-}
-
-.section1 .left .box3 .buttons1 button:last-child i,
-.section1 .left .box4 .buttons1 button:last-child i,
-.section1 .left .box5 .buttons1 button:last-child i,
-.section1 .left .box6 .buttons1 button:last-child i,
-.section1 .left .box7 .buttons1 button:last-child i {
-    font-size: 11px;
-}
-
-/* 각 줄의 재료 버튼 5개 크기를 동일하게 유지 */
-
-.section1 .left .box3 .buttons1 button:last-child svg,
-.section1 .left .box4 .buttons1 button:last-child svg,
-.section1 .left .box5 .buttons1 button:last-child svg,
-.section1 .left .box6 .buttons1 button:last-child svg,
-.section1 .left .box7 .buttons1 button:last-child svg {
-    padding: 2px;
-}
-
-.section1 .right .top {
-    width: 100%;
-}
-
-.section1 .right .material {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.section1 .right .m_l {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.section1 .right .m_l h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #3a3a2e;
-}
-
-.section1 .right .m_l br {
-    display: none;
-}
-
-.section1 .right .m_l span {
-    font-size: 13px;
-    color: #3a3a2e;
-    font-weight: 500;
-}
-
-.section1 .right .m_r span {
-    font-size: 13px;
-    color: #3a3a2e;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.section1 .right .pick {
-    height: 56px;
-    padding: 0 12px;
-    border-radius: 8px;
-    background: #f0f5e9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section1 .right .meat {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.section1 .right .meat img {
-    width: 55px;
-    height: 38px;
-    object-fit: contain;
-}
-
-.section1 .right .meat span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #3a3a2e;
-}
-
-.section1 .right .pick .remove {
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: #3a3a2e;
-    cursor: pointer;
-}
-
-.section1 .right .pick .remove i {
-    font-size: 17px;
-}
-
-.section1 .right .plus {
-    margin-top: 10px;
-}
-
-.section1 .right .plus button {
-    width: 100%;
-    height: 50px;
-    background: #fff;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    color: #74a640;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.section1 .right .plus i {
-    margin-right: 12px;
-    font-size: 17px;
-}
-
-.section1 .right .middle {
-    margin-top: 20px;
-}
-
-.section1 .right .line {
-    width: 100%;
-    height: 1px;
-    background: rgba(58, 58, 46, 0.3);
-
-    margin-bottom: 20px;
-}
-
-.section1 .right .select {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.section1 .right .select h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #3a3a2e;
-}
-
-.section1 .right .select span {
-    font-size: 13px;
-    color: #3a3a2e;
-}
-
-.section1 .right .buttons2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-}
-
-.section1 .right .buttons2 button {
-    height: 38px;
-    border-radius: 22px;
-    border: 1px solid rgba(58, 58, 46, 0.3);
-    background: #fff;
-    color: #3a3a2e;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.section1 .right .buttons2 button.is-active {
-    background: #74a640;
-    border-color: #74a640;
-    color: #fff;
-}
-
-.section1 .left .box3 .buttons1 button:not(:last-child),
-.section1 .left .box4 .buttons1 button:not(:last-child),
-.section1 .left .box5 .buttons1 button:not(:last-child),
-.section1 .left .box6 .buttons1 button:not(:last-child),
-.section1 .left .box7 .buttons1 button:not(:last-child) {
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.section1 .left .box3 .buttons1 button:not(:last-child):hover,
-.section1 .left .box4 .buttons1 button:not(:last-child):hover,
-.section1 .left .box5 .buttons1 button:not(:last-child):hover,
-.section1 .left .box6 .buttons1 button:not(:last-child):hover,
-.section1 .left .box7 .buttons1 button:not(:last-child):hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(58, 58, 46, 0.15);
-    z-index: 1;
-}
-
-.section1 .left .box3 .buttons1 button.is-selected {
-    box-shadow: 0 0 0 2px #e69aa2;
-}
-
-.section1 .left .box4 .buttons1 button.is-selected {
-    box-shadow: 0 0 0 2px #a8c77a;
-}
-
-.section1 .left .box5 .buttons1 button.is-selected {
-    box-shadow: 0 0 0 2px #c9a37d;
-}
-
-.section1 .left .box6 .buttons1 button.is-selected {
-    box-shadow: 0 0 0 2px #82b9dd;
-}
-
-.section1 .left .box7 .buttons1 button.is-selected {
-    box-shadow: 0 0 0 2px #e4b55f;
-}
-
-.section1 .right .buttons2 button:last-child i {
-    margin-left: 5px;
-    font-size: 10px;
-}
-
-.section1 .right .bottom {
-    margin-top: 145px;
-    text-align: center;
-}
-
-.section1 .right .magnifier button {
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-radius: 8px;
-    background: #74a640;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.section1 .right .magnifier i {
-    margin-right: 12px;
-    font-size: 17px;
-}
-
-.section1 .right .bottom > span {
-    display: block;
-    margin-top: 22px;
-    font-size: 13px;
-    color: #3a3a2e;
-}
-
-.section1 .right .bottom > span b {
-    color: #74a640;
-    font-weight: 700;
-}
-
-/* //재료선택 */
-
-/* 이재료로만들수있는요리 */
-body > .section2 {
-    width: 1400px;
-    margin: 90px auto;
-}
-
-.section1-title h2,
-.section2 h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #74a640;
-    font-weight: 700;
-    margin-bottom: 45px;
-    letter-spacing: 2px;
-}
-
-.section1-title h3,
-.section2 h3 {
-    text-align: right;
-    margin-top: -70px;
-    margin-bottom: 20px;
-}
-
-.section1-title h3 a,
-.section2 h3 a {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    color: #3a3a2e;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.section1-title h3 i,
-.section2 h3 i,
-.section1-title h3 svg,
-.section2 h3 svg {
-    margin-left: 0;
-    font-size: 12px;
-    color: #3a3a2e;
-}
-
-.recipe-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 22px 16px;
-}
-
-.recipe {
-    width: 220px;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.recipe > a {
-    display: block;
-    text-decoration: none;
-    color: #3a3a2e;
-}
-
-.img-container {
-    width: 220px;
-    height: 140px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.recipe .img-container {
-    border-radius: unset;
-}
-
-.recipe > a > div:last-child {
-    padding: 12px;
-}
-
-.recipe > a .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.recipe > a .title b {
-    font-size: 15px;
-    font-weight: 700;
-    color: #3a3a2e;
-}
-
-.recipe .info .time > span {
-    color: #3a3a2e;
-}
-
-.recipe > a .title .bookmark {
-    color: #bfbfbf;
-    font-size: 13px;
-}
-
-.recipe > a .time {
-    margin-top: 2px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    color: #999;
-}
-
-.recipe > a .time i {
-    font-size: 11px;
-}
-
-.recipe > a .review {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-}
-
-.recipe > a .review i {
-    color: #f6b400;
-}
-
-.recipe > a .review span:nth-child(2) {
-    color: #3a3a2e;
-    font-weight: 600;
-}
-
-.recipe > a .review span:last-child {
-    color: #3a3a2e;
-}
-
-/* //이 재료로 만들 수 있는 요리 */
+main { padding-bottom: 100px; }
+.find, .mix { width: 90%; max-width: 1400px; margin: 0 auto 100px; }
+.find { padding: 55px; background: #fff; border-radius: 20px; }
+.find_top, .pick_top, .section_top { display: flex; justify-content: space-between; }
+.find_top { margin-bottom: 40px; }
+.find_top h1 { margin-bottom: 10px; font-size: 34px; }
+.find_top p, .section_top p { color: #777; font-size: 14px; }
+.guide { padding: 9px 18px; border: 1px solid #ddd; border-radius: 20px; }
+.search_box { height: 56px; margin-bottom: 35px; padding: 0 20px; display: flex; align-items: center; border: 1px solid #ddd; border-radius: 12px; }
+.search_box input { width: 100%; border: 0; outline: 0; }
+.quick { margin-bottom: 45px; }
+.quick h2 { margin-bottom: 18px; font-size: 17px; }
+.quick_list { display: flex; gap: 14px; overflow-x: auto; }
+.quick_list button { min-width: 90px; padding: 13px 10px; display: flex; flex-direction: column; align-items: center; gap: 9px; background: #fff; border: 1px solid #ddd; border-radius: 12px; }
+.quick_list img { width: 42px; height: 32px; object-fit: contain; }
+.select_box { display: grid; grid-template-columns: 180px 1fr; gap: 35px; }
+.cate { padding: 18px; border: 1px solid #ddd; border-radius: 12px; }
+.cate h2 { margin-bottom: 15px; }
+.cate button { width: 100%; padding: 12px 15px; text-align: left; background: transparent; border: 0; border-radius: 9px; }
+.cate button.active, .kind_list button.active { color: #fff; background: #74a640; }
+.pick { margin-bottom: 35px; }
+.pick_top { margin-bottom: 15px; }
+.pick_list { display: flex; gap: 15px; }
+.pick_list > div { min-width: 210px; padding: 15px; display: flex; align-items: center; gap: 12px; background: #f8f6f2; border-radius: 10px; }
+.pick_list img { width: 45px; height: 35px; object-fit: contain; }
+.pick_list button { margin-left: auto; border: 0; background: transparent; }
+.kind { margin-bottom: 30px; }
+.kind h2 { margin-bottom: 15px; }
+.kind_list { display: flex; flex-wrap: wrap; gap: 10px; }
+.kind_list button { padding: 10px 22px; background: #fff; border: 1px solid #ddd; border-radius: 20px; }
+.find_btn { width: 100%; height: 58px; color: #fff; background: #74a640; border: 0; border-radius: 10px; }
+.find_result { margin-top: 18px; text-align: center; color: #777; }
+.find_result strong { color: #74a640; }
+.section_top { align-items: flex-end; margin-bottom: 35px; }
+.more_text { display: inline-flex; align-items: center; gap: 8px; }
+.mix_list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.mix_card { overflow: hidden; background: #fff; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,.07); }
+.mix_card img { width: 100%; height: 260px; object-fit: cover; }
+.mix_card > a > div { padding: 20px; }
+.mix_card p { margin: 8px 0 15px; color: #777; }
+.tag { display: flex; gap: 7px; }
+/* //main */
 
 /* footer */
 footer {
@@ -1970,4 +1328,25 @@ footer {
     }
 }
 
+/* 새 디자인 반응형 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main_banner, .pop, .today, .thema, .find, .mix, .store_banner, .store_cate, .product, .sale_banner { width: 92%; }
+  .pop_list { grid-template-columns: repeat(3, 1fr); }
+  .today_list, .thema_list, .mix_list, .product_list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .main_banner, .pop, .today, .thema, .find, .mix, .store_banner, .store_cate, .product, .sale_banner { width: 90%; }
+  .main_banner { height: 350px; }
+  .main_banner .swiper-slide > img { height: 350px; }
+  .banner_text { top: 45px; left: 22px; }
+  .banner_text h2 { font-size: 29px; }
+  .pop_list, .cate_list, .product_list { display: flex; overflow-x: auto; }
+  .pop_card, .product_card { min-width: 220px; }
+  .today_list, .thema_list, .mix_list { grid-template-columns: 1fr; }
+  .find { padding: 25px 18px; }
+  .select_box { display: block; }
+  .cate { margin-bottom: 30px; display: flex; overflow-x: auto; }
+  .cate h2 { display: none; }
+  .cate button { min-width: 80px; text-align: center; }
+}
 
