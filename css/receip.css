@@ -5,293 +5,6 @@
     unicode-range: U+0041-005A, U+0061-007A;
 }
 
-.mobile-category {
-    display: none;
-}
-
-/* 레시피, 스토어 메가메뉴 */
-header {
-    position: relative;
-}
-
-.mega-item {
-    position: static;
-}
-
-.mega-item > a {
-    position: relative;
-}
-
-.mega-item > a::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 50px;
-}
-
-.mega-menu {
-    display: none;
-    position: absolute;
-    z-index: 90;
-    top: 100%;
-    left: 50%;
-    width: 100vw;
-    padding: 25px max(20px, calc((100vw - 1400px) / 2));
-    transform: translateX(-50%);
-    background: #fff;
-    border-top: 1px solid #eee;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-}
-
-.mega-item:hover .mega-menu {
-    display: block;
-}
-
-.mega-columns {
-    display: grid;
-    column-gap: 45px;
-    min-height: 220px;
-}
-
-.recipe-mega .mega-columns {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.store-mega .mega-columns {
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.mega-menu h3 {
-    margin: 0 0 12px;
-    color: #6ea247;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-header .mega-menu .mega-columns a {
-    display: block;
-    padding: 5px 0;
-    color: #3a3a2e;
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.mega-cards {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
-    margin-top: 16px;
-}
-
-header .mega-card {
-    position: relative;
-    height: 105px;
-    padding: 12px;
-    overflow: hidden;
-    background: #f7f5f2;
-    border-radius: 6px;
-}
-
-.mega-card b {
-    position: relative;
-    z-index: 2;
-    color: #6ea247;
-    font-size: 13px;
-}
-
-.mega-card p {
-    position: relative;
-    z-index: 2;
-    width: 62%;
-    margin-top: 6px;
-    color: #555;
-    font-size: 10px;
-    line-height: 1.4;
-}
-
-.mega-card span {
-    position: absolute;
-    bottom: 8px;
-    left: 12px;
-    font-size: 20px;
-}
-
-.mega-card img {
-    position: absolute;
-    right: -5px;
-    bottom: -8px;
-    width: 45%;
-    height: 85px;
-    object-fit: contain;
-}
-
-.mega-buttons {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
-    margin-top: 18px;
-}
-
-header .mega-buttons a {
-    padding: 12px;
-    color: #6ea247;
-    text-align: center;
-    background: #dce5d2;
-    border-radius: 6px;
-    font-size: 13px;
-}
-
-@media (max-width: 1024px) {
-    .mega-item:hover .mega-menu {
-        display: none;
-    }
-}
-
-/* 헤더 아이콘 드롭다운 */
-.header-menu {
-    position: relative;
-}
-
-.header-menu summary {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    list-style: none;
-}
-
-.header-menu summary::-webkit-details-marker {
-    display: none;
-}
-
-.header-menu summary img {
-    width: 35px;
-}
-
-.dropdown {
-    position: absolute;
-    z-index: 100;
-    top: 40px;
-    right: 0;
-    width: 290px;
-    height: 440px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    color: #3a3a2e;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.dropdown h2 {
-    margin: 0 0 12px;
-    font-size: 19px;
-}
-
-.dropdown-row {
-    min-height: 42px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
-}
-
-.dropdown-row i {
-    width: 18px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.dropdown-row strong {
-    margin-left: auto;
-    font-size: 21px;
-    font-weight: 400;
-}
-
-.dropdown-line {
-    border-bottom: 1px solid #ccc;
-}
-
-.dropdown-title {
-    margin-top: 28px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.dropdown-title span:last-child,
-.dropdown-tabs span {
-    color: #bbb;
-}
-
-.dropdown-empty {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ccc;
-    font-size: 11px;
-}
-
-.dropdown-button {
-    height: 45px;
-    border: 0;
-    border-radius: 7px;
-    color: #6ea247;
-    background: #dce5d2;
-    font-size: 14px;
-}
-
-.dropdown-tabs {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.dropdown-space {
-    flex: 1;
-}
-
-.dropdown-profile {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 0 16px 16px;
-}
-
-.dropdown-profile img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.dropdown-profile h2 {
-    margin: 0;
-    font-size: 17px;
-}
-
-.dropdown-profile p {
-    margin: 4px 0 0;
-    color: #bbb;
-    font-size: 12px;
-}
-
-@media (max-width: 480px) {
-    .dropdown {
-        position: fixed;
-        top: 65px;
-        right: 10px;
-        width: calc(100% - 20px);
-        height: 420px;
-    }
-}
-
 @font-face {
     font-family: "ns";
     src: url(../font/NotoSans-Regular.ttf);
@@ -438,6 +151,277 @@ header .icon .menu-trigger {
 
 .icon img {
     width: 35px;
+}
+
+.mobile-category {
+    display: none;
+}
+
+/* 레시피, 스토어 메가메뉴 */
+header {
+    position: relative;
+}
+
+.mega-item {
+    position: static;
+}
+
+.mega-item > a {
+    position: relative;
+}
+
+.mega-item > a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    z-index: 90;
+    top: 100%;
+    left: 50%;
+    width: 100vw;
+    padding: 25px max(20px, calc((100vw - 1400px) / 2));
+    transform: translateX(-50%);
+    background: #fff;
+    border-top: 1px solid #eee;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.mega-item:hover .mega-menu {
+    display: block;
+}
+
+.mega-columns {
+    display: grid;
+    column-gap: 45px;
+    min-height: 220px;
+}
+
+.recipe-mega .mega-columns {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.store-mega .mega-columns {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.mega-menu h3 {
+    margin: 0 0 12px;
+    color: #6ea247;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .mega-menu .mega-columns a {
+    display: block;
+    padding: 5px 0;
+    color: #3a3a2e;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.mega-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+}
+
+header .mega-card {
+    position: relative;
+    height: 105px;
+    padding: 12px;
+    overflow: hidden;
+    background: #f7f5f2;
+    border-radius: 6px;
+}
+
+.mega-card b {
+    position: relative;
+    z-index: 2;
+    color: #6ea247;
+    font-size: 13px;
+}
+
+.mega-card p {
+    position: relative;
+    z-index: 2;
+    width: 62%;
+    margin-top: 6px;
+    color: #555;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.mega-card span {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    font-size: 20px;
+}
+
+.mega-card img {
+    position: absolute;
+    right: -5px;
+    bottom: -8px;
+    width: 45%;
+    height: 85px;
+    object-fit: contain;
+}
+
+.mega-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+}
+
+header .mega-buttons a {
+    padding: 12px;
+    color: #6ea247;
+    text-align: center;
+    background: #dce5d2;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* 헤더 아이콘 드롭다운 */
+.header-menu {
+    position: relative;
+}
+
+.header-menu summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.header-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.header-menu summary img {
+    width: 35px;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    right: 0;
+    width: 290px;
+    height: 440px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    color: #3a3a2e;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown h2 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.dropdown-row {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.dropdown-row i {
+    width: 18px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.dropdown-row strong {
+    margin-left: auto;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.dropdown-line {
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-title {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dropdown-title span:last-child,
+.dropdown-tabs span {
+    color: #bbb;
+}
+
+.dropdown-empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 11px;
+}
+
+.dropdown-button {
+    height: 45px;
+    border: 0;
+    border-radius: 7px;
+    color: #6ea247;
+    background: #dce5d2;
+    font-size: 14px;
+}
+
+.dropdown-tabs {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dropdown-space {
+    flex: 1;
+}
+
+.dropdown-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 16px 16px;
+}
+
+.dropdown-profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.dropdown-profile h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.dropdown-profile p {
+    margin: 4px 0 0;
+    color: #bbb;
+    font-size: 12px;
 }
 
 /* //header */
@@ -751,17 +735,6 @@ header .icon img {
 }
 
 /* 각 줄의 재료 버튼 5개 크기를 동일하게 유지 */
-@media (min-width: 768px) {
-    .section1 .left .box3 .buttons1 button:not(:last-child),
-    .section1 .left .box4 .buttons1 button:not(:last-child),
-    .section1 .left .box5 .buttons1 button:not(:last-child),
-    .section1 .left .box6 .buttons1 button:not(:last-child),
-    .section1 .left .box7 .buttons1 button:not(:last-child) {
-        flex: 1 1 0;
-        width: 0;
-        min-width: 0;
-    }
-}
 
 .section1 .left .box3 .buttons1 button:last-child svg,
 .section1 .left .box4 .buttons1 button:last-child svg,
@@ -1219,6 +1192,42 @@ footer {
 /* //footer */
 
 /* PC 헤더 정렬 - 메인 페이지와 동일 */
+
+/* 태블릿: 768px ~ 1024px */
+
+/* 모바일: 320px ~ 480px */
+
+/* 재료와 레시피 콘텐츠 반응형 글자 크기 */
+
+/* 재료 버튼 가로 슬라이드 */
+
+/* 모바일, 태블릿 메뉴 */
+
+.category-button {
+    display: none;
+}
+
+.category-button i {
+    font-size: 14px;
+}
+
+/* 모바일·태블릿 메가메뉴 */
+
+/* 모바일 헤더 아이콘 드롭다운 */
+
+/* 미디어쿼리 */
+@media (min-width: 768px) {
+    .section1 .left .box3 .buttons1 button:not(:last-child),
+    .section1 .left .box4 .buttons1 button:not(:last-child),
+    .section1 .left .box5 .buttons1 button:not(:last-child),
+    .section1 .left .box6 .buttons1 button:not(:last-child),
+    .section1 .left .box7 .buttons1 button:not(:last-child) {
+        flex: 1 1 0;
+        width: 0;
+        min-width: 0;
+    }
+}
+
 @media (min-width: 1025px) {
     header {
         display: grid;
@@ -1234,7 +1243,6 @@ footer {
     }
 }
 
-/* 태블릿: 768px ~ 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
     header,
     .banner,
@@ -1354,7 +1362,6 @@ footer {
     }
 }
 
-/* 모바일: 320px ~ 480px */
 @media (min-width: 320px) and (max-width: 480px) {
     header,
     .banner,
@@ -1695,7 +1702,6 @@ footer {
     }
 }
 
-/* 재료와 레시피 콘텐츠 반응형 글자 크기 */
 @media (min-width: 768px) and (max-width: 1024px) {
     .section1 .left .box1 .ingredient-search {
         font-size: 13px;
@@ -1821,7 +1827,6 @@ footer {
     }
 }
 
-/* 재료 버튼 가로 슬라이드 */
 @media (min-width: 768px) and (max-width: 1024px) {
     .section1 .left .box2 .buttons1,
     .section1 .left .box3 .buttons1,
@@ -1866,7 +1871,6 @@ footer {
     }
 }
 
-/* 모바일, 태블릿 메뉴 */
 @media (max-width: 1024px) {
     header {
         position: relative;
@@ -1932,10 +1936,6 @@ footer {
     }
 }
 
-.category-button {
-    display: none;
-}
-
 @media (max-width: 1024px) {
     header nav .mega-item {
         display: flex;
@@ -1961,6 +1961,18 @@ footer {
     }
 }
 
-.category-button i {
-    font-size: 14px;
+@media (max-width: 1024px) {
+    .mega-item:hover .mega-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown {
+        position: fixed;
+        top: 65px;
+        right: 10px;
+        width: calc(100% - 20px);
+        height: 420px;
+    }
 }
