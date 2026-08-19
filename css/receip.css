@@ -1118,7 +1118,7 @@ body > .section2 {
 /* footer */
 footer {
     width: 100%;
-    background: #f5f5f5;
+    background: #fff;
     opacity: 0.5;
 }
 
@@ -1191,18 +1191,6 @@ footer {
 
 /* //footer */
 
-/* PC 헤더 정렬 - 메인 페이지와 동일 */
-
-/* 태블릿: 768px ~ 1024px */
-
-/* 모바일: 320px ~ 480px */
-
-/* 재료와 레시피 콘텐츠 반응형 글자 크기 */
-
-/* 재료 버튼 가로 슬라이드 */
-
-/* 모바일, 태블릿 메뉴 */
-
 .category-button {
     display: none;
 }
@@ -1210,10 +1198,6 @@ footer {
 .category-button i {
     font-size: 14px;
 }
-
-/* 모바일·태블릿 메가메뉴 */
-
-/* 모바일 헤더 아이콘 드롭다운 */
 
 /* 미디어쿼리 */
 @media (min-width: 768px) {
@@ -1976,3 +1960,4 @@ footer {
         height: 420px;
     }
 }
+

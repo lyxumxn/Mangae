@@ -1056,18 +1056,6 @@ footer {
     z-index: 1;
 }
 
-/* //footer */
-
-/* PC 헤더 정렬 */
-
-/* 태블릿: 768px ~ 1024px */
-
-/* 모바일: 320px ~ 480px */
-
-/* 반응형 글자 크기 */
-
-/* 모바일, 태블릿 메뉴 */
-
 .category-button {
     display: none;
 }
@@ -1075,10 +1063,6 @@ footer {
 .category-button i {
     font-size: 14px;
 }
-
-/* 모바일·태블릿 메가메뉴 */
-
-/* 모바일 헤더 아이콘 드롭다운 */
 
 /* 미디어쿼리 */
 @media (min-width: 1025px) {
