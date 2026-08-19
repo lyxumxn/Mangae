@@ -39,10 +39,8 @@ ul {
     list-style: none;
 }
 
-body {
-    font-family: "sb", "ns", sans-serif;
-    background: #f6f4f1;
-    color: #333;
+img {
+    display: block;
 }
 
 a {
@@ -50,8 +48,10 @@ a {
     color: #333;
 }
 
-img {
-    display: block;
+body {
+    font-family: "sb", "ns", sans-serif;
+    background: #f6f4f1;
+    color: #333;
 }
 
 .sr-only {
