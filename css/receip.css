@@ -464,6 +464,7 @@ header .icon img {
     margin: auto;
     margin-bottom: 90px;
     overflow: hidden;
+    border-radius: 10px;
     --swiper-theme-color: #fff;
 }
 

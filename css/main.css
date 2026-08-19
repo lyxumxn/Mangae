@@ -440,6 +440,7 @@ header .mega-buttons a {
 .banner.swiper {
     overflow: hidden;
     --swiper-theme-color: #fff;
+    border-radius: 10px;
 }
 
 .banner .swiper-slide img {
