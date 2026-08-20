@@ -50,7 +50,7 @@ a {
 
 body {
     font-family: "sb", "ns", sans-serif;
-    background: #f6f4f1;
+    background: #ffffff;
     color: #333;
 }
 
@@ -59,17 +59,20 @@ svg {
 }
 
 header {
-    position: relative;
+    position: sticky;
+    z-index: 100;
+    top: 0;
     width: 100%;
     margin-bottom: 60px;
+    background: #fff;
+    border-bottom: 1px solid rgba(58, 58, 46, 0.3);
 }
 
 .header_inner {
     width: 90%;
     max-width: 1400px;
-    min-height: 100px;
+    height: 80px;
     margin: 0 auto;
-    padding: 20px 0;
     display: flex;
     align-items: center;
 }
@@ -185,10 +188,6 @@ header .icons img {
     display: none;
 }
 
-header {
-    position: relative;
-}
-
 .menu_item {
     position: static;
 }
@@ -212,8 +211,9 @@ header {
     z-index: 90;
     top: 100%;
     left: 50%;
-    width: 100%;
-    padding: 25px 5%;
+    width: 90%;
+    max-width: 1400px;
+    padding: 25px 30px;
     transform: translateX(-50%);
     background: #fff;
     border-top: 1px solid #eee;
@@ -227,7 +227,7 @@ header {
 
 .mega_list {
     display: grid;
-    column-gap: 45px;
+    column-gap: 30px;
     min-height: 220px;
 }
 
@@ -258,7 +258,7 @@ header .mega .mega_list a {
 .mega_card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
+    gap: 12px;
     margin-top: 16px;
 }
 
@@ -307,7 +307,7 @@ header .mega_card > a {
 .mega_button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
+    gap: 12px;
     margin-top: 18px;
 }
 
@@ -454,10 +454,8 @@ main {
     padding-bottom: 100px;
 }
 
-main > .banner,
 main > .section1,
-main > .section2,
-main > .section3 .sale {
+main > .section2 {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto 100px;
@@ -466,26 +464,29 @@ main > .section3 .sale {
 main > .banner,
 main > .section3 .sale {
     position: relative;
+    width: 100%;
+    margin-bottom: 100px;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 main > .banner {
     height: 520px;
 }
 
-main > .banner::after {
+main > .banner::after,
+main > .section3 .sale::after {
     content: "";
     position: absolute;
+    z-index: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0)
+        90deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
     );
 }
 
@@ -538,6 +539,11 @@ main .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+main > .section1 > .title h2,
+main > .section2 > .title h2 {
+    color: #74a640;
 }
 
 .more,
@@ -671,6 +677,7 @@ main > .section3 .sale {
 
 .sale_text {
     position: absolute;
+    z-index: 1;
     top: 80px;
     left: 55px;
 }
@@ -986,10 +993,8 @@ main > .section2 .card:hover {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    main > .banner,
     main > .section1,
-    main > .section2,
-    main > .section3 .sale {
+    main > .section2 {
         width: 92%;
     }
 
@@ -1290,12 +1295,7 @@ main > .section2 .card:hover {
         gap: 8px;
     }
 
-    main > .section3 .sale {
-        width: calc(100% - 32px);
-    }
-
     main > .banner {
-        width: calc(100% - 32px);
         height: 230px;
         margin-bottom: 60px;
     }

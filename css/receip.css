@@ -50,22 +50,25 @@ a {
 
 body {
     font-family: "sb", "ns", sans-serif;
-    background: #f6f4f1;
+    background: #ffffff;
     color: #333;
 }
 
 header {
-    position: relative;
+    position: sticky;
+    z-index: 100;
+    top: 0;
     width: 100%;
     margin-bottom: 60px;
+    background: #fff;
+    border-bottom: 1px solid rgba(58, 58, 46, 0.3);
 }
 
 .header_inner {
     width: 90%;
     max-width: 1400px;
-    min-height: 100px;
+    height: 80px;
     margin: 0 auto;
-    padding: 20px 0;
     display: flex;
     align-items: center;
 }
@@ -181,10 +184,6 @@ header .icons img {
     display: none;
 }
 
-header {
-    position: relative;
-}
-
 .menu_item {
     position: static;
 }
@@ -208,8 +207,9 @@ header {
     z-index: 90;
     top: 100%;
     left: 50%;
-    width: 100%;
-    padding: 25px 5%;
+    width: 90%;
+    max-width: 1400px;
+    padding: 25px 30px;
     transform: translateX(-50%);
     background: #fff;
     border-top: 1px solid #eee;
@@ -223,7 +223,7 @@ header {
 
 .mega_list {
     display: grid;
-    column-gap: 45px;
+    column-gap: 30px;
     min-height: 220px;
 }
 
@@ -254,7 +254,7 @@ header .mega .mega_list a {
 .mega_card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
+    gap: 12px;
     margin-top: 16px;
 }
 
@@ -303,7 +303,7 @@ header .mega_card > a {
 .mega_button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
+    gap: 12px;
     margin-top: 18px;
 }
 
@@ -477,6 +477,15 @@ main > .section1 > .title {
 main > .section1 > .title h1 {
     margin-bottom: 10px;
     font-size: 34px;
+}
+
+main > .section1 > .title h1,
+.popular > h2,
+.category > h2,
+.selected_title h2,
+.type > h2,
+main > .section2 > .title h2 {
+    color: #74a640;
 }
 
 main > .section1 > .title p,
