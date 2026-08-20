@@ -1,9 +1,9 @@
 const header = document.querySelector("header");
-const menuButton = document.querySelector(".menu-trigger");
-const categoryButtons = document.querySelectorAll(".category-button");
+const menuButton = document.querySelector(".menu_trigger");
+const categoryButtons = document.querySelectorAll(".category_button");
 
 menuButton.addEventListener("click", function () {
-    header.classList.toggle("menu-open");
+    header.classList.toggle("menu_open");
 });
 
 categoryButtons.forEach(function (button) {
