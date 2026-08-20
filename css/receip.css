@@ -69,10 +69,15 @@ body {
 /* header */
 header {
     position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.header_inner {
     width: 90%;
     max-width: 1400px;
     min-height: 100px;
-    margin: 0 auto 60px;
+    margin: 0 auto;
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -146,7 +151,7 @@ header .search button {
     cursor: pointer;
 }
 
-header .icon {
+header .icons {
     margin-left: 22px;
     display: flex;
     align-items: center;
@@ -154,8 +159,8 @@ header .icon {
     color: #3a3a2e;
 }
 
-header .icon a,
-header .header_menu summary {
+header .icons a,
+header .icons details summary {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,12 +168,12 @@ header .header_menu summary {
     font-size: 19px;
 }
 
-header .icon .mobile_search,
-header .icon .menu_trigger {
+header .icons .mobile_search,
+header .icons .menu_trigger {
     display: none;
 }
 
-header .icon .menu_trigger {
+header .icons .menu_trigger {
     padding: 0;
     border: 0;
     background: transparent;
@@ -177,8 +182,8 @@ header .icon .menu_trigger {
     cursor: pointer;
 }
 
-header .header_menu summary img,
-header .icon img {
+header .icons details summary img,
+header .icons img {
     width: 36px;
     height: 36px;
     object-fit: cover;
@@ -194,15 +199,15 @@ header {
     position: relative;
 }
 
-.mega_item {
+.menu_item {
     position: static;
 }
 
-.mega_item > a {
+.menu_item > a {
     position: relative;
 }
 
-.mega_item > a::after {
+.menu_item > a::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -211,7 +216,7 @@ header {
     height: 50px;
 }
 
-.mega_menu {
+.mega {
     display: none;
     position: absolute;
     z-index: 90;
@@ -226,32 +231,32 @@ header {
     border-radius: 10px;
 }
 
-.mega_item:hover .mega_menu {
+.menu_item:hover .mega {
     display: block;
 }
 
-.mega_columns {
+.mega_list {
     display: grid;
     column-gap: 45px;
     min-height: 220px;
 }
 
-.recipe_mega .mega_columns {
+.mega1 .mega_list {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.store_mega .mega_columns {
+.mega2 .mega_list {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.mega_menu h3 {
+.mega h3 {
     margin: 0 0 12px;
     color: #6ea247;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .mega_menu .mega_columns a {
+header .mega .mega_list a {
     display: block;
     padding: 5px 0;
     color: #3a3a2e;
@@ -260,14 +265,14 @@ header .mega_menu .mega_columns a {
     white-space: nowrap;
 }
 
-.mega_cards {
+.mega_card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 14px;
     margin-top: 16px;
 }
 
-header .mega_card {
+header .mega_card > a {
     position: relative;
     height: 105px;
     padding: 12px;
@@ -276,14 +281,14 @@ header .mega_card {
     border-radius: 6px;
 }
 
-.mega_card b {
+.mega_card > a b {
     position: relative;
     z-index: 2;
     color: #6ea247;
     font-size: 13px;
 }
 
-.mega_card p {
+.mega_card > a p {
     position: relative;
     z-index: 2;
     width: 62%;
@@ -293,14 +298,14 @@ header .mega_card {
     line-height: 1.4;
 }
 
-.mega_card span {
+.mega_card > a span {
     position: absolute;
     bottom: 8px;
     left: 12px;
     font-size: 20px;
 }
 
-.mega_card img {
+.mega_card > a img {
     position: absolute;
     right: -5px;
     bottom: -8px;
@@ -309,14 +314,14 @@ header .mega_card {
     object-fit: contain;
 }
 
-.mega_buttons {
+.mega_button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 14px;
     margin-top: 18px;
 }
 
-header .mega_buttons a {
+header .mega_button a {
     padding: 12px;
     color: #6ea247;
     text-align: center;
@@ -326,26 +331,26 @@ header .mega_buttons a {
 }
 
 /* 헤더 아이콘 드롭다운 */
-.header_menu {
+.icons details {
     position: relative;
 }
 
-.header_menu summary {
+.icons details summary {
     display: flex;
     align-items: center;
     cursor: pointer;
     list-style: none;
 }
 
-.header_menu summary::-webkit-details-marker {
+.icons details summary::-webkit-details-marker {
     display: none;
 }
 
-.header_menu summary img {
+.icons details summary img {
     width: 35px;
 }
 
-.dropdown {
+.icons .box {
     position: absolute;
     z-index: 100;
     top: 40px;
@@ -361,12 +366,12 @@ header .mega_buttons a {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-.dropdown h2 {
+.icons .box h2 {
     margin: 0 0 12px;
     font-size: 19px;
 }
 
-.dropdown_row {
+.icons .row {
     min-height: 42px;
     display: flex;
     align-items: center;
@@ -374,23 +379,23 @@ header .mega_buttons a {
     font-size: 14px;
 }
 
-.dropdown_row i {
+.icons .row i {
     width: 18px;
     text-align: center;
     font-size: 16px;
 }
 
-.dropdown_row strong {
+.icons .row strong {
     margin-left: auto;
     font-size: 21px;
     font-weight: 400;
 }
 
-.dropdown_line {
+.icons .line {
     border-bottom: 1px solid #ccc;
 }
 
-.dropdown_title {
+.icons .title {
     margin-top: 28px;
     display: flex;
     justify-content: space-between;
@@ -398,12 +403,12 @@ header .mega_buttons a {
     font-weight: 600;
 }
 
-.dropdown_title span:last-child,
-.dropdown_tabs span {
+.icons .title span:last-child,
+.icons .tabs span {
     color: #bbb;
 }
 
-.dropdown_empty {
+.icons .empty {
     flex: 1;
     display: flex;
     align-items: center;
@@ -412,7 +417,7 @@ header .mega_buttons a {
     font-size: 11px;
 }
 
-.dropdown_button {
+.icons .view {
     height: 45px;
     border: 0;
     border-radius: 7px;
@@ -421,36 +426,36 @@ header .mega_buttons a {
     font-size: 14px;
 }
 
-.dropdown_tabs {
+.icons .tabs {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
     font-weight: 600;
 }
 
-.dropdown_space {
+.icons .space {
     flex: 1;
 }
 
-.dropdown_profile {
+.icons .profile_top {
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0 16px 16px;
 }
 
-.dropdown_profile img {
+.icons .profile_top img {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
-.dropdown_profile h2 {
+.icons .profile_top h2 {
     margin: 0;
     font-size: 17px;
 }
 
-.dropdown_profile p {
+.icons .profile_top p {
     margin: 4px 0 0;
     color: #bbb;
     font-size: 12px;
@@ -463,37 +468,37 @@ main {
     padding-bottom: 100px;
 }
 
-.find,
-.mix {
+main > .section1,
+main > .section2 {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto 100px;
 }
 
-.find {
+main > .section1 {
     padding: 55px;
     background: #fff;
     border-radius: 20px;
 }
 
-.find_top,
-.pick_top,
-.section_top {
+main > .section1 > .title,
+.selected_title,
+main .title {
     display: flex;
     justify-content: space-between;
 }
 
-.find_top {
+main > .section1 > .title {
     margin-bottom: 40px;
 }
 
-.find_top h1 {
+main > .section1 > .title h1 {
     margin-bottom: 10px;
     font-size: 34px;
 }
 
-.find_top p,
-.section_top p {
+main > .section1 > .title p,
+main .title p {
     color: #777;
     font-size: 14px;
 }
@@ -514,22 +519,22 @@ main {
     outline: 0;
 }
 
-.quick {
+.popular {
     margin-bottom: 45px;
 }
 
-.quick h2 {
+.popular h2 {
     margin-bottom: 18px;
     font-size: 17px;
 }
 
-.quick_list {
+.popular .allbox {
     display: flex;
     gap: 14px;
     overflow-x: auto;
 }
 
-.quick_list button {
+.popular .allbox button {
     min-width: 92px;
     height: 72px;
     padding: 9px 12px;
@@ -547,35 +552,35 @@ main {
     cursor: pointer;
 }
 
-.quick_list button:hover {
+.popular .allbox button:hover {
     color: #74a640;
     border-color: #74a640;
 }
 
-.quick_list img {
+.popular .allbox img {
     width: 40px;
     height: 28px;
     object-fit: contain;
 }
 
-.select_box {
+.select {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 35px;
 }
 
-.cate {
+.category {
     padding: 18px;
     border: 1px solid #ddd;
     border-radius: 12px;
 }
 
-.cate h2 {
+.category h2 {
     margin-bottom: 15px;
     text-align: center;
 }
 
-.cate button {
+.category button {
     width: 100%;
     height: 42px;
     padding: 0 14px;
@@ -588,27 +593,27 @@ main {
     cursor: pointer;
 }
 
-.cate button:hover {
+.category button:hover {
     background: #f0f5e9;
 }
 
-.cate button.active,
-.kind_list button.active {
+.category button.active,
+.type_list button.active {
     color: #fff;
     background: #74a640;
     border-color: #74a640;
 }
 
-.pick {
+.selected {
     margin-bottom: 35px;
 }
 
-.pick_top {
+.selected_title {
     margin-bottom: 15px;
     align-items: center;
 }
 
-.pick_top > button {
+.selected_title > button {
     padding: 0;
     color: #777;
     background: transparent;
@@ -618,16 +623,16 @@ main {
     cursor: pointer;
 }
 
-.pick_top > button:hover {
+.selected_title > button:hover {
     color: #74a640;
 }
 
-.pick_list {
+.selected .allbox {
     display: flex;
     gap: 15px;
 }
 
-.pick_list > div {
+.selected .allbox > div {
     min-width: 210px;
     padding: 15px;
     display: flex;
@@ -637,13 +642,13 @@ main {
     border-radius: 10px;
 }
 
-.pick_list img {
+.selected .allbox img {
     width: 45px;
     height: 35px;
     object-fit: contain;
 }
 
-.pick_list button {
+.selected .allbox button {
     width: 25px;
     height: 25px;
     margin-left: auto;
@@ -656,26 +661,26 @@ main {
     cursor: pointer;
 }
 
-.pick_list button:hover {
+.selected .allbox button:hover {
     color: #fff;
     background: #999;
 }
 
-.kind {
+.type {
     margin-bottom: 30px;
 }
 
-.kind h2 {
+.type h2 {
     margin-bottom: 15px;
 }
 
-.kind_list {
+.type_list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.kind_list button {
+.type_list button {
     height: 38px;
     padding: 0 20px;
     color: #3a3a2e;
@@ -687,12 +692,12 @@ main {
     cursor: pointer;
 }
 
-.kind_list button:hover {
+.type_list button:hover {
     color: #74a640;
     border-color: #74a640;
 }
 
-.find_btn {
+.find_button {
     width: 100%;
     height: 54px;
     color: #fff;
@@ -705,33 +710,33 @@ main {
     cursor: pointer;
 }
 
-.find_btn:hover {
+.find_button:hover {
     background: #638f38;
 }
 
-.find_btn i,
-.find_btn svg {
+.find_button i,
+.find_button svg {
     margin-right: 8px;
     color: #fff;
 }
 
-.find_result {
+.result {
     margin-top: 18px;
     text-align: center;
     color: #777;
 }
 
-.find_result strong {
+.result strong {
     color: #74a640;
 }
 
-.section_top {
+main .title {
     align-items: flex-end;
     margin-bottom: 35px;
 }
 
 .more,
-.more_text {
+.more {
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
@@ -746,42 +751,42 @@ main {
 }
 
 .more:hover,
-.more_text:hover {
+.more:hover {
     color: #74a640;
     border-color: #74a640;
 }
 
 .more i,
-.more_text i,
+.more i,
 .more svg,
-.more_text svg {
+.more svg {
     color: #3a3a2e;
 }
 
-.mix_list {
+main > .section2 .allbox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
 }
 
-.mix_card {
+main > .section2 .card {
     overflow: hidden;
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
-.mix_card img {
+main > .section2 .card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
 }
 
-.mix_card > a > div {
+main > .section2 .card > a > div {
     padding: 20px;
 }
 
-.mix_card p {
+main > .section2 .card p {
     margin: 8px 0 15px;
     color: #777;
 }
@@ -892,7 +897,7 @@ footer {
 }
 
 @media (min-width: 1025px) {
-    header {
+    .header_inner {
         display: flex;
         align-items: center;
     }
@@ -905,7 +910,7 @@ footer {
         margin-left: auto;
     }
 
-    header .icon {
+    header .icons {
         width: auto;
         margin-left: 22px;
     }
@@ -913,7 +918,7 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    header,
+    .header_inner,
     .banner,
     .section1,
     body > .section2,
@@ -921,7 +926,7 @@ footer {
         width: calc(100% - 64px);
     }
 
-    header {
+    .header_inner {
         padding: 32px 0;
     }
 
@@ -1007,13 +1012,13 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 480px) {
-    header .icon .mobile_search {
+    header .icons .mobile_search {
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
 
-    header .icon .menu_trigger {
+    header .icons .menu_trigger {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1024,7 +1029,7 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    header,
+    .header_inner,
     .banner,
     .section1,
     body > .section2,
@@ -1032,7 +1037,7 @@ footer {
         width: calc(100% - 32px);
     }
 
-    header {
+    .header_inner {
         padding: 18px 0;
     }
 
@@ -1049,22 +1054,22 @@ footer {
         display: none;
     }
 
-    header .icon {
+    header .icons {
         order: 2;
         gap: 6px;
     }
 
-    header .icon a {
+    header .icons a {
         font-size: 13px;
     }
 
-    header .icon .menu_trigger,
-    header .icon .mobile_search {
+    header .icons .menu_trigger,
+    header .icons .mobile_search {
         font-size: 13px;
         line-height: 1;
     }
 
-    .icon img {
+    .icons img {
         width: 24px;
     }
 
@@ -1207,7 +1212,7 @@ footer {
         font-size: 10px;
     }
 
-    .section1 .right .pick {
+    .section1 .right .selected {
         height: 42px;
     }
 
@@ -1436,7 +1441,7 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .section1 .right .pick .remove i,
+    .section1 .right .selected .remove i,
     .section1 .right .plus i,
     .section1 .right .magnifier i {
         font-size: 13px;
@@ -1600,14 +1605,14 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    header nav .mega_item {
+    header nav .menu_item {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 8px;
     }
 
-    header nav .mega_item > a {
+    header nav .menu_item > a {
         flex: none;
         padding-right: 0;
     }
@@ -1626,14 +1631,14 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .mega_item:hover .mega_menu {
+    .menu_item:hover .mega {
         display: none;
     }
 
 }
 
 @media (max-width: 480px) {
-    .dropdown {
+    .icons .box {
         position: fixed;
         top: 65px;
         right: 10px;
@@ -1645,115 +1650,59 @@ footer {
 
 /* 새 디자인 반응형 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .main_banner,
-    .pop,
-    .today,
-    .thema,
-    .find,
-    .mix,
-    .store_banner,
-    .store_cate,
-    .product,
-    .sale_banner {
+    main > .section1,
+    main > .section2 {
         width: 92%;
     }
 
-    .pop_list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .today_list,
-    .thema_list,
-    .mix_list,
-    .product_list {
+    main > .section2 .allbox {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .main_banner,
-    .pop,
-    .today,
-    .thema,
-    .find,
-    .mix,
-    .store_banner,
-    .store_cate,
-    .product,
-    .sale_banner {
+    main > .section1,
+    main > .section2 {
         width: 90%;
     }
 
-    .main_banner {
-        height: 350px;
-    }
-
-    .main_banner .swiper-slide > img {
-        height: 350px;
-    }
-
-    .banner_text {
-        top: 45px;
-        left: 22px;
-    }
-
-    .banner_text h2 {
-        font-size: 29px;
-    }
-
-    .pop_list,
-    .cate_list,
-    .product_list {
-        display: flex;
-        overflow-x: auto;
-    }
-
-    .pop_card,
-    .product_card {
-        min-width: 220px;
-    }
-
-    .today_list,
-    .thema_list,
-    .mix_list {
-        grid-template-columns: 1fr;
-    }
-
-    .find {
+    main > .section1 {
         padding: 25px 18px;
     }
 
-    .select_box {
+    .select {
         display: block;
     }
 
-    .cate {
+    .category {
         margin-bottom: 30px;
         display: flex;
         overflow-x: auto;
     }
 
-    .cate h2 {
+    .category h2 {
         display: none;
     }
 
-    .cate button {
+    .category button {
         min-width: 82px;
         height: 38px;
         padding: 0 12px;
         text-align: center;
     }
 
-    .kind_list button {
+    .type_list button {
         height: 36px;
         padding: 0 16px;
         font-size: 12px;
     }
 
-    .find_btn {
+    .find_button {
         height: 50px;
         font-size: 13px;
     }
 
+    main > .section2 .allbox {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,546 +1,595 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>스토어</title>
-    <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/store.css" />
-    <link rel="shortcut icon" href="../파비콘/favicon.ico" type="image/x-icon" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스토어</title>
+        <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/store.css" />
+        <link rel="shortcut icon" href="../파비콘/favicon.ico" type="image/x-icon" />
+    </head>
 
-  <body>
-    <!-- header -->
-    <header>
-      <div class="logo">
-        <a href="../index.html">
-          <img src="../image/logo.png" alt="로고" />
-        </a>
-      </div>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../image/logo.png" alt="로고" />
+                    </a>
+                </div>
 
-      <nav>
-        <ul>
-          <li class="mega_item">
-            <a href="./receip.html">레시피</a>
-            <button class="category_button" type="button" aria-label="레시피 카테고리 열기">
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="mega_menu recipe_mega">
-              <div class="mega_columns">
-                <div>
-                  <h3>추천</h3>
-                  <a href="#">이달의 추천</a>
-                  <a href="#">이번주 추천</a>
-                  <a href="#">오늘 추천</a>
-                </div>
-                <div>
-                  <h3>인기</h3>
-                  <a href="#">실시간 인기</a>
-                  <a href="#">주간 인기</a>
-                  <a href="#">월간 인기</a>
-                  <a href="#">조회수 TOP</a>
-                </div>
-                <div>
-                  <h3>재료</h3>
-                  <a href="#">육류</a>
-                  <a href="#">채소</a>
-                  <a href="#">버섯</a>
-                  <a href="#">해산물</a>
-                  <a href="#">유제품</a>
-                  <a href="#">곡물 / 면 / 콩</a>
-                  <a href="#">과일</a>
-                  <a href="#">기타재료</a>
-                </div>
-                <div>
-                  <h3>난이도</h3>
-                  <a href="#">초보</a>
-                  <a href="#">중급</a>
-                  <a href="#">고급</a>
-                  <a href="#">고수</a>
-                </div>
-                <div>
-                  <h3>조리방법</h3>
-                  <a href="#">볶음</a>
-                  <a href="#">구이</a>
-                  <a href="#">끓이기 / 국 / 탕</a>
-                  <a href="#">무침</a>
-                  <a href="#">튀김</a>
-                  <a href="#">조림</a>
-                  <a href="#">굽기 / 오븐</a>
-                  <a href="#">기타</a>
-                </div>
-                <div>
-                  <h3>요리분류</h3>
-                  <a href="#">한식</a>
-                  <a href="#">중식</a>
-                  <a href="#">양식</a>
-                  <a href="#">일식</a>
-                  <a href="#">아시안/퓨전</a>
-                  <a href="#">밑반찬/샐러드</a>
-                  <a href="#">디저트</a>
-                  <a href="#">기타</a>
-                </div>
-              </div>
-              <div class="mega_cards">
-                <a href="#" class="mega_card">
-                  <b>맞춤 추천</b>
-                  <p>
-                    내 취향에 딱 맞는
-                    <br />
-                    레시피를 추천해 드려요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/01-pasta.png" alt="파스타" />
-                </a>
-                <a href="#" class="mega_card">
-                  <b>인기 레시피 TOP 100</b>
-                  <p>
-                    많이 본 레시피를
-                    <br />
-                    확인해 보세요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/02-trophy.png" alt="트로피" />
-                </a>
-                <a href="#" class="mega_card">
-                  <b>제철 재료</b>
-                  <p>
-                    지금 가장 신선한
-                    <br />
-                    제철 재료로 요리해요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/03-vegetable-basket.png" alt="채소 바구니" />
-                </a>
-                <a href="#" class="mega_card">
-                  <b>나에게 맞는 난이도 찾기</b>
-                  <p>
-                    딱 맞는 난이도의 레시피를
-                    <br />
-                    추천해 드려요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/04-cooking-ingredients.png" alt="조리 재료" />
-                </a>
-                <a href="#" class="mega_card">
-                  <b>조리방법 가이드</b>
-                  <p>
-                    조리방법에 따른
-                    <br />
-                    팁과 노하우를 확인하세요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/05-cooking-pots.png" alt="냄비 요리" />
-                </a>
-                <a href="#" class="mega_card">
-                  <b>세계 요리 탐험</b>
-                  <p>
-                    다양한 나라의 요리를
-                    <br />
-                    만나보세요!
-                  </p>
-                  <span>›</span>
-                  <img src="../image/06-world-cuisine-bowl.png" alt="세계 요리" />
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="mobile_category">
-            <details>
-              <summary>레시피 카테고리</summary>
-              <div>
-                <a href="#">추천</a>
-                <a href="#">인기</a>
-                <a href="#">재료</a>
-                <a href="#">난이도</a>
-                <a href="#">조리방법</a>
-                <a href="#">요리분류</a>
-              </div>
-            </details>
-          </li>
-          <li>
-            <a href="#">랭킹</a>
-          </li>
-          <li class="mega_item">
-            <a href="./store.html">스토어</a>
-            <button class="category_button" type="button" aria-label="스토어 카테고리 열기">
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="mega_menu store_mega">
-              <div class="mega_columns">
-                <div>
-                  <h3>베스트</h3>
-                  <a href="#">실시간 베스트</a>
-                  <a href="#">주간 베스트</a>
-                  <a href="#">월간 베스트</a>
-                  <a href="#">리뷰 베스트</a>
-                </div>
-                <div>
-                  <h3>식재료</h3>
-                  <a href="#">육류</a>
-                  <a href="#">채소</a>
-                  <a href="#">과일</a>
-                  <a href="#">수산물</a>
-                  <a href="#">쌀 / 잡곡 / 견과</a>
-                  <a href="#">유제품 / 계란</a>
-                  <a href="#">가공식품 / 양념</a>
-                  <a href="#">건강식품</a>
-                </div>
-                <div>
-                  <h3>밀키트</h3>
-                  <a href="#">한식 밀키트</a>
-                  <a href="#">중식 밀키트</a>
-                  <a href="#">양식 밀키트</a>
-                  <a href="#">일식 밀키트</a>
-                  <a href="#">아시안 밀키트</a>
-                  <a href="#">샐러드 / 간편식</a>
-                  <a href="#">국 / 탕 / 찌개</a>
-                  <a href="#">면 / 파스타 / 볶음</a>
-                </div>
-                <div>
-                  <h3>주방용품</h3>
-                  <a href="#">냄비 / 프라이팬</a>
-                  <a href="#">칼 / 도마 / 커팅도구</a>
-                  <a href="#">조리도구</a>
-                  <a href="#">그릇 / 식기</a>
-                  <a href="#">보관용기 / 밀폐용기</a>
-                  <a href="#">수납 / 정리용품</a>
-                  <a href="#">주방가전</a>
-                  <a href="#">기타 주방용품</a>
-                </div>
-                <div>
-                  <h3>이벤트</h3>
-                  <a href="#">진행중인 이벤트</a>
-                  <a href="#">기간별 이벤트</a>
-                  <a href="#">혜택 / 쿠폰</a>
-                  <a href="#">기획전</a>
-                </div>
-              </div>
-              <div class="mega_buttons">
-                <a href="#">베스트 전체 보기　›</a>
-                <a href="#">식재료 전체 보기　›</a>
-                <a href="#">밀키트 전체 보기　›</a>
-                <a href="#">주방용품 전체 보기　›</a>
-                <a href="#">이벤트 전체 보기　›</a>
-              </div>
-            </div>
-          </li>
-          <li class="mobile_category">
-            <details>
-              <summary>스토어 카테고리</summary>
-              <div>
-                <a href="#">베스트</a>
-                <a href="#">식재료</a>
-                <a href="#">밀키트</a>
-                <a href="#">주방용품</a>
-                <a href="#">이벤트</a>
-              </div>
-            </details>
-          </li>
-          <li>
-            <a href="#">커뮤니티</a>
-          </li>
-          <li>
-            <a href="#">공지</a>
-          </li>
-        </ul>
-      </nav>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu_item">
+                            <a href="./receip.html">레시피</a>
+                            <button
+                                class="category_button"
+                                type="button"
+                                aria-label="레시피 카테고리 열기"
+                            >
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="mega mega1">
+                                <div class="mega_inner">
+                                <div class="mega_list">
+                                    <div class="mega_box">
+                                        <h3>추천</h3>
+                                        <a href="#">이달의 추천</a>
+                                        <a href="#">이번주 추천</a>
+                                        <a href="#">오늘 추천</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>인기</h3>
+                                        <a href="#">실시간 인기</a>
+                                        <a href="#">주간 인기</a>
+                                        <a href="#">월간 인기</a>
+                                        <a href="#">조회수 TOP</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>재료</h3>
+                                        <a href="#">육류</a>
+                                        <a href="#">채소</a>
+                                        <a href="#">버섯</a>
+                                        <a href="#">해산물</a>
+                                        <a href="#">유제품</a>
+                                        <a href="#">곡물 / 면 / 콩</a>
+                                        <a href="#">과일</a>
+                                        <a href="#">기타재료</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>난이도</h3>
+                                        <a href="#">초보</a>
+                                        <a href="#">중급</a>
+                                        <a href="#">고급</a>
+                                        <a href="#">고수</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>조리방법</h3>
+                                        <a href="#">볶음</a>
+                                        <a href="#">구이</a>
+                                        <a href="#">끓이기 / 국 / 탕</a>
+                                        <a href="#">무침</a>
+                                        <a href="#">튀김</a>
+                                        <a href="#">조림</a>
+                                        <a href="#">굽기 / 오븐</a>
+                                        <a href="#">기타</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>요리분류</h3>
+                                        <a href="#">한식</a>
+                                        <a href="#">중식</a>
+                                        <a href="#">양식</a>
+                                        <a href="#">일식</a>
+                                        <a href="#">아시안/퓨전</a>
+                                        <a href="#">밑반찬/샐러드</a>
+                                        <a href="#">디저트</a>
+                                        <a href="#">기타</a>
+                                    </div>
+                                </div>
+                                <div class="mega_card">
+                                    <a href="#">
+                                        <b>맞춤 추천</b>
+                                        <p>
+                                            내 취향에 딱 맞는
+                                            <br />
+                                            레시피를 추천해 드려요!
+                                        </p>
+                                        <span>›</span>
+                                        <img src="../image/01-pasta.png" alt="파스타" />
+                                    </a>
+                                    <a href="#">
+                                        <b>인기 레시피 TOP 100</b>
+                                        <p>
+                                            많이 본 레시피를
+                                            <br />
+                                            확인해 보세요!
+                                        </p>
+                                        <span>›</span>
+                                        <img src="../image/02-trophy.png" alt="트로피" />
+                                    </a>
+                                    <a href="#">
+                                        <b>제철 재료</b>
+                                        <p>
+                                            지금 가장 신선한
+                                            <br />
+                                            제철 재료로 요리해요!
+                                        </p>
+                                        <span>›</span>
+                                        <img
+                                            src="../image/03-vegetable-basket.png"
+                                            alt="채소 바구니"
+                                        />
+                                    </a>
+                                    <a href="#">
+                                        <b>나에게 맞는 난이도 찾기</b>
+                                        <p>
+                                            딱 맞는 난이도의 레시피를
+                                            <br />
+                                            추천해 드려요!
+                                        </p>
+                                        <span>›</span>
+                                        <img
+                                            src="../image/04-cooking-ingredients.png"
+                                            alt="조리 재료"
+                                        />
+                                    </a>
+                                    <a href="#">
+                                        <b>조리방법 가이드</b>
+                                        <p>
+                                            조리방법에 따른
+                                            <br />
+                                            팁과 노하우를 확인하세요!
+                                        </p>
+                                        <span>›</span>
+                                        <img src="../image/05-cooking-pots.png" alt="냄비 요리" />
+                                    </a>
+                                    <a href="#">
+                                        <b>세계 요리 탐험</b>
+                                        <p>
+                                            다양한 나라의 요리를
+                                            <br />
+                                            만나보세요!
+                                        </p>
+                                        <span>›</span>
+                                        <img
+                                            src="../image/06-world-cuisine-bowl.png"
+                                            alt="세계 요리"
+                                        />
+                                    </a>
+                                </div>
+                                                            </div>
+                            </div>
+                        </li>
+                        <li class="mobile_category">
+                            <details>
+                                <summary>레시피 카테고리</summary>
+                                <div>
+                                    <a href="#">추천</a>
+                                    <a href="#">인기</a>
+                                    <a href="#">재료</a>
+                                    <a href="#">난이도</a>
+                                    <a href="#">조리방법</a>
+                                    <a href="#">요리분류</a>
+                                </div>
+                            </details>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">랭킹</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="./store.html">스토어</a>
+                            <button
+                                class="category_button"
+                                type="button"
+                                aria-label="스토어 카테고리 열기"
+                            >
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="mega mega2">
+                                <div class="mega_inner">
+                                <div class="mega_list">
+                                    <div class="mega_box">
+                                        <h3>베스트</h3>
+                                        <a href="#">실시간 베스트</a>
+                                        <a href="#">주간 베스트</a>
+                                        <a href="#">월간 베스트</a>
+                                        <a href="#">리뷰 베스트</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>식재료</h3>
+                                        <a href="#">육류</a>
+                                        <a href="#">채소</a>
+                                        <a href="#">과일</a>
+                                        <a href="#">수산물</a>
+                                        <a href="#">쌀 / 잡곡 / 견과</a>
+                                        <a href="#">유제품 / 계란</a>
+                                        <a href="#">가공식품 / 양념</a>
+                                        <a href="#">건강식품</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>밀키트</h3>
+                                        <a href="#">한식 밀키트</a>
+                                        <a href="#">중식 밀키트</a>
+                                        <a href="#">양식 밀키트</a>
+                                        <a href="#">일식 밀키트</a>
+                                        <a href="#">아시안 밀키트</a>
+                                        <a href="#">샐러드 / 간편식</a>
+                                        <a href="#">국 / 탕 / 찌개</a>
+                                        <a href="#">면 / 파스타 / 볶음</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>주방용품</h3>
+                                        <a href="#">냄비 / 프라이팬</a>
+                                        <a href="#">칼 / 도마 / 커팅도구</a>
+                                        <a href="#">조리도구</a>
+                                        <a href="#">그릇 / 식기</a>
+                                        <a href="#">보관용기 / 밀폐용기</a>
+                                        <a href="#">수납 / 정리용품</a>
+                                        <a href="#">주방가전</a>
+                                        <a href="#">기타 주방용품</a>
+                                    </div>
+                                    <div class="mega_box">
+                                        <h3>이벤트</h3>
+                                        <a href="#">진행중인 이벤트</a>
+                                        <a href="#">기간별 이벤트</a>
+                                        <a href="#">혜택 / 쿠폰</a>
+                                        <a href="#">기획전</a>
+                                    </div>
+                                </div>
+                                <div class="mega_button">
+                                    <a href="#">베스트 전체 보기　›</a>
+                                    <a href="#">식재료 전체 보기　›</a>
+                                    <a href="#">밀키트 전체 보기　›</a>
+                                    <a href="#">주방용품 전체 보기　›</a>
+                                    <a href="#">이벤트 전체 보기　›</a>
+                                </div>
+                                                            </div>
+                            </div>
+                        </li>
+                        <li class="mobile_category">
+                            <details>
+                                <summary>스토어 카테고리</summary>
+                                <div>
+                                    <a href="#">베스트</a>
+                                    <a href="#">식재료</a>
+                                    <a href="#">밀키트</a>
+                                    <a href="#">주방용품</a>
+                                    <a href="#">이벤트</a>
+                                </div>
+                            </details>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">커뮤니티</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#">공지</a>
+                        </li>
+                    </ul>
+                </nav>
 
-      <div class="search">
-        <input type="text" />
-        <button type="button">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
+                <div class="search">
+                    <input type="text" />
+                    <button type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
 
-      <div class="icon">
-        <button class="menu_trigger" type="button" aria-label="메뉴">☰</button>
-        <a class="mobile_search" href="#" aria-label="검색">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        </a>
-        <details class="header_menu">
-          <summary>
-            <i class="fa-regular fa-bookmark"></i>
-          </summary>
-          <div class="dropdown">
-            <h2>북마크</h2>
-            <div class="dropdown_row dropdown_line">
-              <i class="fa-regular fa-bookmark"></i>
-              내가 찜한 레시피
-              <strong>›</strong>
+                <div class="icons">
+                    <button class="menu_trigger" type="button" aria-label="메뉴">☰</button>
+                    <a class="mobile_search" href="#" aria-label="검색">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    </a>
+                    <details class="save">
+                        <summary>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </summary>
+                        <div class="box">
+                            <h2>북마크</h2>
+                            <div class="row line">
+                                <i class="fa-regular fa-bookmark"></i>
+                                내가 찜한 레시피
+                                <strong>›</strong>
+                            </div>
+                            <div class="row line">
+                                <i class="fa-regular fa-clock"></i>
+                                최근에 본 레시피
+                                <strong>›</strong>
+                            </div>
+                            <div class="title">
+                                <span>최근 저장한 레시피</span>
+                                <span>더보기 &gt;</span>
+                            </div>
+                            <div class="empty">저장한 레시피가 없습니다.</div>
+                            <button class="view" type="button">전체 보기　›</button>
+                        </div>
+                    </details>
+                    <details class="bell">
+                        <summary>
+                            <i class="fa-regular fa-bell"></i>
+                        </summary>
+                        <div class="box">
+                            <h2>알림</h2>
+                            <div class="tabs">
+                                <b>전체</b>
+                                <span>댓글</span>
+                                <span>활동</span>
+                                <span>소식</span>
+                            </div>
+                            <div class="empty">최근 알림이 없습니다.</div>
+                            <button class="view" type="button">전체 보기　›</button>
+                        </div>
+                    </details>
+                    <details class="cart">
+                        <summary>
+                            <i class="fa-solid fa-store"></i>
+                        </summary>
+                        <div class="box">
+                            <h2>스토어</h2>
+                            <div class="row">
+                                <i class="fa-solid fa-receipt"></i>
+                                주문내역
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                장바구니
+                            </div>
+                            <div class="row">
+                                <i class="fa-regular fa-heart"></i>
+                                찜한상품
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-location-dot"></i>
+                                배송지관리
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-ticket"></i>
+                                쿠폰함
+                            </div>
+                            <div class="row">
+                                <i class="fa-regular fa-comment"></i>
+                                1:1 문의
+                            </div>
+                            <div class="space"></div>
+                            <button class="view" type="button">전체 보기　›</button>
+                        </div>
+                    </details>
+                    <details class="profile">
+                        <summary>
+                            <img src="../image/profile.png" alt="프로필" />
+                        </summary>
+                        <div class="box">
+                            <div class="profile_top">
+                                <img src="../image/profile.png" alt="프로필" />
+                                <div>
+                                    <h2>배고파님</h2>
+                                    <p>dasd1222@mangae.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa-regular fa-circle-user"></i>
+                                프로필 관리
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-pencil"></i>
+                                내가 쓴 레시피
+                            </div>
+                            <div class="row">
+                                <i class="fa-regular fa-heart"></i>
+                                내가 남긴 반응
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-gear"></i>
+                                설정
+                            </div>
+                            <div class="row">
+                                <i class="fa-regular fa-circle-question"></i>
+                                고객센터
+                            </div>
+                            <div class="row">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                로그아웃
+                            </div>
+                            <div class="space"></div>
+                            <button class="view" type="button">전체 보기　›</button>
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div class="dropdown_row dropdown_line">
-              <i class="fa-regular fa-clock"></i>
-              최근에 본 레시피
-              <strong>›</strong>
-            </div>
-            <div class="dropdown_title">
-              <span>최근 저장한 레시피</span>
-              <span>더보기 &gt;</span>
-            </div>
-            <div class="dropdown_empty">저장한 레시피가 없습니다.</div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
-          </div>
-        </details>
-        <details class="header_menu">
-          <summary>
-            <i class="fa-regular fa-bell"></i>
-          </summary>
-          <div class="dropdown">
-            <h2>알림</h2>
-            <div class="dropdown_tabs">
-              <b>전체</b>
-              <span>댓글</span>
-              <span>활동</span>
-              <span>소식</span>
-            </div>
-            <div class="dropdown_empty">최근 알림이 없습니다.</div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
-          </div>
-        </details>
-        <details class="header_menu">
-          <summary>
-            <i class="fa-solid fa-store"></i>
-          </summary>
-          <div class="dropdown">
-            <h2>스토어</h2>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-receipt"></i>
-              주문내역
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-basket-shopping"></i>
-              장바구니
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-regular fa-heart"></i>
-              찜한상품
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-location-dot"></i>
-              배송지관리
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-ticket"></i>
-              쿠폰함
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-regular fa-comment"></i>
-              1:1 문의
-            </div>
-            <div class="dropdown_space"></div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
-          </div>
-        </details>
-        <details class="header_menu">
-          <summary>
-            <img src="../image/profile.png" alt="프로필" />
-          </summary>
-          <div class="dropdown">
-            <div class="dropdown_profile">
-              <img src="../image/profile.png" alt="프로필" />
-              <div>
-                <h2>배고파님</h2>
-                <p>dasd1222@mangae.com</p>
-              </div>
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-regular fa-circle-user"></i>
-              프로필 관리
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-pencil"></i>
-              내가 쓴 레시피
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-regular fa-heart"></i>
-              내가 남긴 반응
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-gear"></i>
-              설정
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-regular fa-circle-question"></i>
-              고객센터
-            </div>
-            <div class="dropdown_row">
-              <i class="fa-solid fa-right-from-bracket"></i>
-              로그아웃
-            </div>
-            <div class="dropdown_space"></div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
-          </div>
-        </details>
-      </div>
-    </header>
-    <!-- //header -->
+        </header>
+        <!-- //header -->
 
-    <!-- main -->
-    <main>
-      <section class="store_banner">
-        <img src="../image/sub1/banner%20(1).png" alt="신선한 식재료" />
-        <div class="store_text">
-          <p>매일 먹는 식재료,</p>
-          <h1>
-            더 신선하게
-            <br />
-            더 맛있게
-          </h1>
-          <span>
-            엄선한 식재료와 주방용품을
-            <br />
-            합리적인 가격에 만나보세요.
-          </span>
-          <a href="#">
-            스토어 바로가기
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </section>
-      <section class="store_cate">
-        <div class="section_top">
-          <h2>CATEGORY</h2>
-          <a href="#" class="more_text">
-            전체 보기
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        <div class="cate_list">
-          <a href="#">
-            <span><i class="fa-solid fa-leaf"></i></span>
-            <b>채소</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-drumstick-bite"></i></span>
-            <b>육류</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-fish"></i></span>
-            <b>수산물</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-box"></i></span>
-            <b>간편식/밀키트</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-cheese"></i></span>
-            <b>곡물/견과</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-jar"></i></span>
-            <b>양념/소스</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-kitchen-set"></i></span>
-            <b>주방용품</b>
-          </a>
-          <a href="#">
-            <span><i class="fa-solid fa-cake-candles"></i></span>
-            <b>베이커리</b>
-          </a>
-        </div>
-      </section>
-      <section class="product">
-        <div class="section_top">
-          <h2>POPULAR</h2>
-          <a href="#" class="more_text">
-            더보기
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        <div class="product_list">
-          <article class="product_card">
-            <a href="#">
-              <div class="product_img">
-                <img src="../image/sub1/food%20(3).png" alt="국간장" />
-                <button type="button">
-                  <i class="fa-regular fa-bookmark"></i>
-                </button>
-              </div>
-              <div class="product_info">
-                <h3>국간장 500ml</h3>
-                <del>14,600원</del>
-                <p>
-                  <span>35%</span>
-                  <strong>9,600원</strong>
-                </p>
-              </div>
-            </a>
-          </article>
-          <article class="product_card">
-            <a href="#">
-              <div class="product_img">
-                <img src="../image/sub1/food%20(8).png" alt="표고버섯" />
-                <button type="button">
-                  <i class="fa-regular fa-bookmark"></i>
-                </button>
-              </div>
-              <div class="product_info">
-                <h3>표고버섯 600g</h3>
-                <del>11,000원</del>
-                <p>
-                  <span>35%</span>
-                  <strong>7,150원</strong>
-                </p>
-              </div>
-            </a>
-          </article>
-          <article class="product_card">
-            <a href="#">
-              <div class="product_img">
-                <img src="../image/sub1/food%20(6).png" alt="무농약 시금치" />
-                <button type="button">
-                  <i class="fa-regular fa-bookmark"></i>
-                </button>
-              </div>
-              <div class="product_info">
-                <h3>무농약 시금치 400g</h3>
-                <del>5,800원</del>
-                <p>
-                  <span>35%</span>
-                  <strong>3,440원</strong>
-                </p>
-              </div>
-            </a>
-          </article>
-          <article class="product_card">
-            <a href="#">
-              <div class="product_img">
-                <img src="../image/sub1/food%20(4).png" alt="이천쌀" />
-                <button type="button">
-                  <i class="fa-regular fa-bookmark"></i>
-                </button>
-              </div>
-              <div class="product_info">
-                <h3>이천쌀 3kg</h3>
-                <del>52,000원</del>
-                <p>
-                  <span>35%</span>
-                  <strong>33,800원</strong>
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-      <section class="sale_banner">
-        <img src="../image/sub1/banner%20(2).png" alt="신선 식재료 특가전" />
-        <div class="sale_text">
-          <p>이번 주 특별 혜택</p>
-          <h2>신선식재료 특가전</h2>
-          <b>최대 30% 할인 + 무료배송!</b>
-          <a href="#">
-            자세히 보기
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </section>
-    </main>
-    <!-- //main -->
+        <!-- main -->
+        <main>
+            <section class="banner">
+                <img src="../image/sub1/banner%20(1).png" alt="신선한 식재료" />
+                <div class="banner_text">
+                    <p>매일 먹는 식재료,</p>
+                    <h1>
+                        더 신선하게
+                        <br />
+                        더 맛있게
+                    </h1>
+                    <span>
+                        엄선한 식재료와 주방용품을
+                        <br />
+                        합리적인 가격에 만나보세요.
+                    </span>
+                    <a href="#">
+                        스토어 바로가기
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="section1">
+                <div class="title">
+                    <h2>CATEGORY</h2>
+                    <a href="#" class="more">
+                        전체 보기
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="allbox">
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-leaf"></i></span>
+                        <b>채소</b>
 
-    <!-- footer -->
-    <footer>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-drumstick-bite"></i></span>
+                        <b>육류</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-fish"></i></span>
+                        <b>수산물</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-box"></i></span>
+                        <b>간편식/밀키트</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-cheese"></i></span>
+                        <b>곡물/견과</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-jar"></i></span>
+                        <b>양념/소스</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-kitchen-set"></i></span>
+                        <b>주방용품</b>
+
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                        <span><i class="fa-solid fa-cake-candles"></i></span>
+                        <b>베이커리</b>
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="title">
+                    <h2>POPULAR</h2>
+                    <a href="#" class="more">
+                        더보기
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="allbox">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card_img">
+                                <img src="../image/sub1/food%20(3).png" alt="국간장" />
+                                <button type="button">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                            </div>
+                            <div class="card_text">
+                                <h3>국간장 500ml</h3>
+                                <del>14,600원</del>
+                                <p>
+                                    <span>35%</span>
+                                    <strong>9,600원</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card_img">
+                                <img src="../image/sub1/food%20(8).png" alt="표고버섯" />
+                                <button type="button">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                            </div>
+                            <div class="card_text">
+                                <h3>표고버섯 600g</h3>
+                                <del>11,000원</del>
+                                <p>
+                                    <span>35%</span>
+                                    <strong>7,150원</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card_img">
+                                <img src="../image/sub1/food%20(6).png" alt="무농약 시금치" />
+                                <button type="button">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                            </div>
+                            <div class="card_text">
+                                <h3>무농약 시금치 400g</h3>
+                                <del>5,800원</del>
+                                <p>
+                                    <span>35%</span>
+                                    <strong>3,440원</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card_img">
+                                <img src="../image/sub1/food%20(4).png" alt="이천쌀" />
+                                <button type="button">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                            </div>
+                            <div class="card_text">
+                                <h3>이천쌀 3kg</h3>
+                                <del>52,000원</del>
+                                <p>
+                                    <span>35%</span>
+                                    <strong>33,800원</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section3">
+                <div class="sale">
+                    <img src="../image/sub1/banner%20(2).png" alt="신선 식재료 특가전" />
+                    <div class="sale_text">
+                        <p>이번 주 특별 혜택</p>
+                        <h2>신선식재료 특가전</h2>
+                        <b>최대 30% 할인 + 무료배송!</b>
+                        <a href="#">
+                            자세히 보기
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+
+        <!-- footer -->
+<footer>
       <div class="footer_i">
         <div class="footer_l">
           <ul>
@@ -587,7 +636,7 @@
         </div>
       </div>
     </footer>
-    <!-- //footer -->
-    <script src="../script/banner-slider.js"></script>
-  </body>
+        <!-- //footer -->
+        <script src="../script/banner-slider.js"></script>
+    </body>
 </html>

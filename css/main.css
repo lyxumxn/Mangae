@@ -74,10 +74,15 @@ svg {
 /* header */
 header {
     position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.header_inner {
     width: 90%;
     max-width: 1400px;
     min-height: 100px;
-    margin: 0 auto 60px;
+    margin: 0 auto;
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -151,7 +156,7 @@ header .search button {
     cursor: pointer;
 }
 
-header .icon {
+header .icons {
     margin-left: 22px;
     display: flex;
     align-items: center;
@@ -159,8 +164,8 @@ header .icon {
     color: #3a3a2e;
 }
 
-header .icon a,
-header .header_menu summary {
+header .icons a,
+header .icons details summary {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,12 +173,12 @@ header .header_menu summary {
     font-size: 19px;
 }
 
-header .icon .mobile_search,
-header .icon .menu_trigger {
+header .icons .mobile_search,
+header .icons .menu_trigger {
     display: none;
 }
 
-header .icon .menu_trigger {
+header .icons .menu_trigger {
     padding: 0;
     border: 0;
     background: transparent;
@@ -182,8 +187,8 @@ header .icon .menu_trigger {
     cursor: pointer;
 }
 
-header .header_menu summary img,
-header .icon img {
+header .icons details summary img,
+header .icons img {
     width: 36px;
     height: 36px;
     object-fit: cover;
@@ -199,15 +204,15 @@ header {
     position: relative;
 }
 
-.mega_item {
+.menu_item {
     position: static;
 }
 
-.mega_item > a {
+.menu_item > a {
     position: relative;
 }
 
-.mega_item > a::after {
+.menu_item > a::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -216,7 +221,7 @@ header {
     height: 50px;
 }
 
-.mega_menu {
+.mega {
     display: none;
     position: absolute;
     z-index: 90;
@@ -231,32 +236,32 @@ header {
     border-radius: 10px;
 }
 
-.mega_item:hover .mega_menu {
+.menu_item:hover .mega {
     display: block;
 }
 
-.mega_columns {
+.mega_list {
     display: grid;
     column-gap: 45px;
     min-height: 220px;
 }
 
-.recipe_mega .mega_columns {
+.mega1 .mega_list {
     grid-template-columns: repeat(6, 1fr);
 }
 
-.store_mega .mega_columns {
+.mega2 .mega_list {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.mega_menu h3 {
+.mega h3 {
     margin: 0 0 12px;
     color: #6ea247;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .mega_menu .mega_columns a {
+header .mega .mega_list a {
     display: block;
     padding: 5px 0;
     color: #3a3a2e;
@@ -265,14 +270,14 @@ header .mega_menu .mega_columns a {
     white-space: nowrap;
 }
 
-.mega_cards {
+.mega_card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 14px;
     margin-top: 16px;
 }
 
-header .mega_card {
+header .mega_card > a {
     position: relative;
     height: 105px;
     padding: 12px;
@@ -281,14 +286,14 @@ header .mega_card {
     border-radius: 6px;
 }
 
-.mega_card b {
+.mega_card > a b {
     position: relative;
     z-index: 2;
     color: #6ea247;
     font-size: 13px;
 }
 
-.mega_card p {
+.mega_card > a p {
     position: relative;
     z-index: 2;
     width: 62%;
@@ -298,14 +303,14 @@ header .mega_card {
     line-height: 1.4;
 }
 
-.mega_card span {
+.mega_card > a span {
     position: absolute;
     bottom: 8px;
     left: 12px;
     font-size: 20px;
 }
 
-.mega_card img {
+.mega_card > a img {
     position: absolute;
     right: -5px;
     bottom: -8px;
@@ -314,14 +319,14 @@ header .mega_card {
     object-fit: contain;
 }
 
-.mega_buttons {
+.mega_button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 14px;
     margin-top: 18px;
 }
 
-header .mega_buttons a {
+header .mega_button a {
     padding: 12px;
     color: #6ea247;
     text-align: center;
@@ -331,26 +336,26 @@ header .mega_buttons a {
 }
 
 /* 헤더 아이콘 드롭다운 */
-.header_menu {
+.icons details {
     position: relative;
 }
 
-.header_menu summary {
+.icons details summary {
     display: flex;
     align-items: center;
     cursor: pointer;
     list-style: none;
 }
 
-.header_menu summary::-webkit-details-marker {
+.icons details summary::-webkit-details-marker {
     display: none;
 }
 
-.header_menu summary img {
+.icons details summary img {
     width: 35px;
 }
 
-.dropdown {
+.icons .box {
     position: absolute;
     z-index: 100;
     top: 40px;
@@ -366,12 +371,12 @@ header .mega_buttons a {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-.dropdown h2 {
+.icons .box h2 {
     margin: 0 0 12px;
     font-size: 19px;
 }
 
-.dropdown_row {
+.icons .row {
     min-height: 42px;
     display: flex;
     align-items: center;
@@ -379,23 +384,23 @@ header .mega_buttons a {
     font-size: 14px;
 }
 
-.dropdown_row i {
+.icons .row i {
     width: 18px;
     text-align: center;
     font-size: 16px;
 }
 
-.dropdown_row strong {
+.icons .row strong {
     margin-left: auto;
     font-size: 21px;
     font-weight: 400;
 }
 
-.dropdown_line {
+.icons .line {
     border-bottom: 1px solid #ccc;
 }
 
-.dropdown_title {
+.icons .title {
     margin-top: 28px;
     display: flex;
     justify-content: space-between;
@@ -403,12 +408,12 @@ header .mega_buttons a {
     font-weight: 600;
 }
 
-.dropdown_title span:last-child,
-.dropdown_tabs span {
+.icons .title span:last-child,
+.icons .tabs span {
     color: #bbb;
 }
 
-.dropdown_empty {
+.icons .empty {
     flex: 1;
     display: flex;
     align-items: center;
@@ -417,7 +422,7 @@ header .mega_buttons a {
     font-size: 11px;
 }
 
-.dropdown_button {
+.icons .view {
     height: 45px;
     border: 0;
     border-radius: 7px;
@@ -426,36 +431,36 @@ header .mega_buttons a {
     font-size: 14px;
 }
 
-.dropdown_tabs {
+.icons .tabs {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
     font-weight: 600;
 }
 
-.dropdown_space {
+.icons .space {
     flex: 1;
 }
 
-.dropdown_profile {
+.icons .profile_top {
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0 16px 16px;
 }
 
-.dropdown_profile img {
+.icons .profile_top img {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
-.dropdown_profile h2 {
+.icons .profile_top h2 {
     margin: 0;
     font-size: 17px;
 }
 
-.dropdown_profile p {
+.icons .profile_top p {
     margin: 4px 0 0;
     color: #bbb;
     font-size: 12px;
@@ -468,15 +473,15 @@ main {
     padding-bottom: 100px;
 }
 
-.pop,
-.today,
-.thema {
+.section1,
+.section2,
+.section3 {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto 100px;
 }
 
-.main_banner {
+.banner {
     position: relative;
     width: 90%;
     max-width: 1400px;
@@ -487,11 +492,11 @@ main {
     --swiper-theme-color: #74a640;
 }
 
-.main_banner .swiper-slide {
+.banner .swiper-slide {
     position: relative;
 }
 
-.main_banner .swiper-slide > img {
+.banner .swiper-slide > img {
     width: 100%;
     height: 530px;
     object-fit: cover;
@@ -532,13 +537,13 @@ main {
     color: #fff;
 }
 
-.main_banner .swiper-pagination {
+.banner .swiper-pagination {
     left: 70px;
     bottom: 40px;
     width: auto;
 }
 
-.main_banner .swiper-pagination-bullet {
+.banner .swiper-pagination-bullet {
     width: 24px;
     height: 5px;
     background: #ccc;
@@ -546,30 +551,30 @@ main {
     opacity: 1;
 }
 
-.main_banner .swiper-pagination-bullet-active {
+.banner .swiper-pagination-bullet-active {
     background: #74a640;
 }
 
-.section_top {
+main .title {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 35px;
 }
 
-.section_top h2 {
+main .title h2 {
     margin-bottom: 8px;
     color: #3a3a2e;
     font-size: 30px;
 }
 
-.section_top p {
+main .title p {
     color: #777;
     font-size: 14px;
 }
 
 .more,
-.more_text {
+.more {
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
@@ -584,32 +589,32 @@ main {
 }
 
 .more:hover,
-.more_text:hover {
+.more:hover {
     color: #74a640;
     border-color: #74a640;
 }
 
 .more i,
-.more_text i,
+.more i,
 .more svg,
-.more_text svg {
+.more svg {
     color: #3a3a2e;
 }
 
-.pop_list {
+.section1 .allbox {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 18px;
 }
 
-.pop_card {
+.section1 .card {
     overflow: hidden;
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-.pop_card > a {
+.section1 .card > a {
     display: block;
 }
 
@@ -638,32 +643,32 @@ main {
     border-radius: 8px;
 }
 
-.card_info {
+.section1 .card_text {
     padding: 17px;
 }
 
-.card_info h3 {
+.section1 .card_text h3 {
     margin-bottom: 12px;
     font-size: 17px;
 }
 
-.card_meta {
+.info {
     margin-bottom: 15px;
     display: flex;
     gap: 7px;
     font-size: 13px;
 }
 
-.card_meta .star {
+.info .star {
     color: #f6b400;
 }
 
-.card_tag {
+.tag {
     display: flex;
     gap: 7px;
 }
 
-.card_tag span,
+.tag span,
 .tag span {
     padding: 5px 8px;
     color: #666;
@@ -672,54 +677,54 @@ main {
     font-size: 11px;
 }
 
-.today_list,
-.thema_list {
+.section2 .allbox,
+.section3 .allbox {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
-.today_card {
+.section2 .card {
     overflow: hidden;
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
-.today_card img {
+.section2 .card img {
     width: 100%;
     height: 175px;
     object-fit: cover;
 }
 
-.today_info {
+.section2 .card_text {
     padding: 18px;
 }
 
-.today_info h3 {
+.section2 .card_text h3 {
     margin-bottom: 7px;
     font-size: 17px;
 }
 
-.today_info b {
+.section2 .card_text b {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
 }
 
-.today_info p {
+.section2 .card_text p {
     color: #777;
     font-size: 12px;
 }
 
-.thema_card {
+.section3 .card {
     position: relative;
     height: 250px;
     overflow: hidden;
     border-radius: 14px;
 }
 
-.thema_card::after {
+.section3 .card::after {
     content: "";
     position: absolute;
     top: 0;
@@ -729,26 +734,26 @@ main {
     background: rgba(0, 0, 0, 0.35);
 }
 
-.thema_card > img {
+.section3 .card > a > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.thema_text {
+.section3 .card_text {
     position: absolute;
     top: 28px;
     left: 25px;
     z-index: 1;
 }
 
-.thema_text p,
-.thema_text h3,
-.thema_text span {
+.section3 .card_text p,
+.section3 .card_text h3,
+.section3 .card_text span {
     color: #fff;
 }
 
-.thema_text h3 {
+.section3 .card_text h3 {
     margin: 8px 0 60px;
     font-size: 21px;
 }
@@ -845,7 +850,7 @@ footer {
 
 /* 미디어쿼리 */
 @media (min-width: 1025px) {
-    header {
+    .header_inner {
         display: flex;
         align-items: center;
     }
@@ -858,7 +863,7 @@ footer {
         margin-left: auto;
     }
 
-    header .icon {
+    header .icons {
         width: auto;
         margin-left: 22px;
     }
@@ -866,7 +871,7 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    header,
+    .header_inner,
     body > section,
     .contents2,
     .contents3,
@@ -874,7 +879,7 @@ footer {
         width: calc(100% - 64px);
     }
 
-    header {
+    .header_inner {
         padding: 32px 0;
     }
 
@@ -887,7 +892,7 @@ footer {
         display: none;
     }
 
-    header .icon {
+    header .icons {
         order: 1;
     }
 
@@ -944,13 +949,13 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 480px) {
-    header .icon .mobile_search {
+    header .icons .mobile_search {
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
 
-    header .icon .menu_trigger {
+    header .icons .menu_trigger {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -961,7 +966,7 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    header,
+    .header_inner,
     body > section,
     .contents2,
     .contents3,
@@ -969,7 +974,7 @@ footer {
         width: calc(100% - 32px);
     }
 
-    header {
+    .header_inner {
         padding: 18px 0;
     }
 
@@ -986,22 +991,22 @@ footer {
         display: none;
     }
 
-    header .icon {
+    header .icons {
         order: 2;
         gap: 6px;
     }
 
-    header .icon a {
+    header .icons a {
         font-size: 13px;
     }
 
-    header .icon .menu_trigger,
-    header .icon .mobile_search {
+    header .icons .menu_trigger,
+    header .icons .mobile_search {
         font-size: 13px;
         line-height: 1;
     }
 
-    header .icon img {
+    header .icons img {
         width: 25px;
     }
 
@@ -1262,14 +1267,14 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    header nav .mega_item {
+    header nav .menu_item {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 8px;
     }
 
-    header nav .mega_item > a {
+    header nav .menu_item > a {
         flex: none;
         padding-right: 0;
     }
@@ -1288,14 +1293,14 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .mega_item:hover .mega_menu {
+    .menu_item:hover .mega {
         display: none;
     }
 
 }
 
 @media (max-width: 480px) {
-    .dropdown {
+    .icons .box {
         position: fixed;
         top: 65px;
         right: 10px;
@@ -1307,51 +1312,36 @@ footer {
 
 /* 새 디자인 반응형 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .main_banner,
-    .pop,
-    .today,
-    .thema,
-    .find,
-    .mix,
-    .store_banner,
-    .store_cate,
-    .product,
-    .sale_banner {
+    .banner,
+    .section1,
+    .section2,
+    .section3 {
         width: 92%;
     }
 
-    .pop_list {
+    .section1 .allbox {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .today_list,
-    .thema_list,
-    .mix_list,
-    .product_list {
+    .section2 .allbox,
+    .section3 .allbox {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .main_banner,
-    .pop,
-    .today,
-    .thema,
-    .find,
-    .mix,
-    .store_banner,
-    .store_cate,
-    .product,
-    .sale_banner {
+    .banner,
+    .section1,
+    .section2,
+    .section3 {
         width: 90%;
     }
 
-    .main_banner {
+    .banner {
         height: 350px;
     }
 
-    .main_banner .swiper-slide > img {
+    .banner .swiper-slide > img {
         height: 350px;
     }
 
@@ -1364,45 +1354,17 @@ footer {
         font-size: 29px;
     }
 
-    .pop_list,
-    .cate_list,
-    .product_list {
+    .section1 .allbox {
         display: flex;
         overflow-x: auto;
     }
 
-    .pop_card,
-    .product_card {
+    .section1 .card {
         min-width: 220px;
     }
 
-    .today_list,
-    .thema_list,
-    .mix_list {
+    .section2 .allbox,
+    .section3 .allbox {
         grid-template-columns: 1fr;
     }
-
-    .find {
-        padding: 25px 18px;
-    }
-
-    .select_box {
-        display: block;
-    }
-
-    .cate {
-        margin-bottom: 30px;
-        display: flex;
-        overflow-x: auto;
-    }
-
-    .cate h2 {
-        display: none;
-    }
-
-    .cate button {
-        min-width: 80px;
-        text-align: center;
-    }
-
 }
