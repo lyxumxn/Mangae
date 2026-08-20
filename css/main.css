@@ -1181,25 +1181,25 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .recipe > a .title b {
-        font-size: 14px;
-    }
-
-    .recipe > a .time,
-    .recipe > a .review {
-        font-size: 11px;
-    }
-
-    .footer_l ul li a,
-    .footer_l p,
-    .footer_r p {
-        font-size: 12px;
-    }
-
+    
 }
 
 @media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 767px) {
     .header_inner {
+        .recipe > a .title b {
+            font-size: 14px;
+        }
+        
+        .recipe > a .time,
+        .recipe > a .review {
+            font-size: 11px;
+        }
+        
+        .footer_l ul li a,
+        .footer_l p,
+        .footer_r p {
+            font-size: 12px;
+        }
         width: 90%;
         max-width: 1400px;
         margin: 0 auto;
