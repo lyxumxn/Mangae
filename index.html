@@ -12,7 +12,7 @@
   <body>
     <!-- header -->
     <header>
-
+      <div class="header_inner">
       <div class="logo">
         <a href="./index.html">
           <img src="./image/logo.png" alt="로고" />
@@ -21,13 +21,13 @@
 
       <nav>
         <ul>
-          <li class="megaitem">
+          <li class="menu_item">
             <a href="./sub/receip.html">레시피</a>
             <button class="category_button" type="button" aria-label="레시피 카테고리 열기">
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="megamenu">
-              <div class="megamenu_i">
+            <div class="mega mega1">
+              <div class="mega_list">
                 <div>
                   <h3>추천</h3>
                   <a href="#">이달의 추천</a>
@@ -82,8 +82,8 @@
                   <a href="#">기타</a>
                 </div>
               </div>
-              <div class="megacards">
-                <a href="#" class="megacard">
+              <div class="mega_card">
+                <a href="#">
                   <b>맞춤 추천</b>
                   <p>
                     내 취향에 딱 맞는
@@ -93,7 +93,7 @@
                   <span>›</span>
                   <img src="./image/01-pasta.png" alt="파스타" />
                 </a>
-                <a href="#" class="mega_card">
+                <a href="#">
                   <b>인기 레시피 TOP 100</b>
                   <p>
                     많이 본 레시피를
@@ -103,7 +103,7 @@
                   <span>›</span>
                   <img src="./image/02-trophy.png" alt="트로피" />
                 </a>
-                <a href="#" class="mega_card">
+                <a href="#">
                   <b>제철 재료</b>
                   <p>
                     지금 가장 신선한
@@ -113,7 +113,7 @@
                   <span>›</span>
                   <img src="./image/03-vegetable-basket.png" alt="채소 바구니" />
                 </a>
-                <a href="#" class="mega_card">
+                <a href="#">
                   <b>나에게 맞는 난이도 찾기</b>
                   <p>
                     딱 맞는 난이도의 레시피를
@@ -123,7 +123,7 @@
                   <span>›</span>
                   <img src="./image/04-cooking-ingredients.png" alt="조리 재료" />
                 </a>
-                <a href="#" class="mega_card">
+                <a href="#">
                   <b>조리방법 가이드</b>
                   <p>
                     조리방법에 따른
@@ -133,7 +133,7 @@
                   <span>›</span>
                   <img src="./image/05-cooking-pots.png" alt="냄비 요리" />
                 </a>
-                <a href="#" class="mega_card">
+                <a href="#">
                   <b>세계 요리 탐험</b>
                   <p>
                     다양한 나라의 요리를
@@ -162,13 +162,13 @@
           <li>
             <a href="#">랭킹</a>
           </li>
-          <li class="mega_item">
+          <li class="menu_item">
             <a href="./sub/store.html">스토어</a>
             <button class="category_button" type="button" aria-label="스토어 카테고리 열기">
               <i class="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="mega_menu store_mega">
-              <div class="mega_columns">
+            <div class="mega mega2">
+              <div class="mega_list">
                 <div>
                   <h3>베스트</h3>
                   <a href="#">실시간 베스트</a>
@@ -217,7 +217,7 @@
                   <a href="#">기획전</a>
                 </div>
               </div>
-              <div class="mega_buttons">
+              <div class="mega_button">
                 <a href="#">베스트 전체 보기　›</a>
                 <a href="#">식재료 전체 보기　›</a>
                 <a href="#">밀키트 전체 보기　›</a>
@@ -252,125 +252,126 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      <div class="icon">
+      <div class="icons">
         <button class="menu_trigger" type="button" aria-label="메뉴">☰</button>
         <a class="mobile_search" href="#" aria-label="검색">
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         </a>
-        <details class="header_menu">
+        <details class="save">
           <summary>
             <i class="fa-regular fa-bookmark"></i>
           </summary>
-          <div class="dropdown">
+          <div class="box">
             <h2>북마크</h2>
-            <div class="dropdown_row dropdown_line">
+            <div class="row line">
               <i class="fa-regular fa-bookmark"></i>
               내가 찜한 레시피
               <strong>›</strong>
             </div>
-            <div class="dropdown_row dropdown_line">
+            <div class="row line">
               <i class="fa-regular fa-clock"></i>
               최근에 본 레시피
               <strong>›</strong>
             </div>
-            <div class="dropdown_title">
+            <div class="title">
               <span>최근 저장한 레시피</span>
               <span>더보기 &gt;</span>
             </div>
-            <div class="dropdown_empty">저장한 레시피가 없습니다.</div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
+            <div class="empty">저장한 레시피가 없습니다.</div>
+            <button class="view" type="button">전체 보기　›</button>
           </div>
         </details>
-        <details class="header_menu">
+        <details class="bell">
           <summary>
             <i class="fa-regular fa-bell"></i>
           </summary>
-          <div class="dropdown">
+          <div class="box">
             <h2>알림</h2>
-            <div class="dropdown_tabs">
+            <div class="tabs">
               <b>전체</b>
               <span>댓글</span>
               <span>활동</span>
               <span>소식</span>
             </div>
-            <div class="dropdown_empty">최근 알림이 없습니다.</div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
+            <div class="empty">최근 알림이 없습니다.</div>
+            <button class="view" type="button">전체 보기　›</button>
           </div>
         </details>
-        <details class="header_menu">
+        <details class="cart">
           <summary>
             <i class="fa-solid fa-store"></i>
           </summary>
-          <div class="dropdown">
+          <div class="box">
             <h2>스토어</h2>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-receipt"></i>
               주문내역
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-basket-shopping"></i>
               장바구니
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-regular fa-heart"></i>
               찜한상품
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-location-dot"></i>
               배송지관리
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-ticket"></i>
               쿠폰함
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-regular fa-comment"></i>
               1:1 문의
             </div>
-            <div class="dropdown_space"></div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
+            <div class="space"></div>
+            <button class="view" type="button">전체 보기　›</button>
           </div>
         </details>
-        <details class="header_menu">
+        <details class="profile">
           <summary>
             <img src="./image/profile.png" alt="프로필" />
           </summary>
-          <div class="dropdown">
-            <div class="dropdown_profile">
+          <div class="box">
+            <div class="profile_top">
               <img src="./image/profile.png" alt="프로필" />
               <div>
                 <h2>배고파님</h2>
                 <p>dasd1222@mangae.com</p>
               </div>
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-regular fa-circle-user"></i>
               프로필 관리
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-pencil"></i>
               내가 쓴 레시피
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-regular fa-heart"></i>
               내가 남긴 반응
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-gear"></i>
               설정
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-regular fa-circle-question"></i>
               고객센터
             </div>
-            <div class="dropdown_row">
+            <div class="row">
               <i class="fa-solid fa-right-from-bracket"></i>
               로그아웃
             </div>
-            <div class="dropdown_space"></div>
-            <button class="dropdown_button" type="button">전체 보기　›</button>
+            <div class="space"></div>
+            <button class="view" type="button">전체 보기　›</button>
           </div>
         </details>
+      </div>
       </div>
     </header>
     <!-- //header -->
@@ -378,7 +379,7 @@
     <!-- main -->
     <main>
       <!-- 배너 -->
-      <section>
+      <section class="banner swiper">
         <h1 class="sr_only">만개의레시피</h1>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -443,8 +444,8 @@
       </section>
       <!-- //배너 -->
 
-      <section class="pop">
-        <div class="section_top">
+      <section class="section1">
+        <div class="title">
           <div>
             <h2>POPULAR</h2>
             <p>많이 찾는 메뉴를 모아봤어요 ❤</p>
@@ -454,112 +455,112 @@
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-        <div class="pop_list">
-          <article class="pop_card">
+        <div class="allbox">
+          <div class="card">
             <a href="#">
               <div class="card_img">
                 <img src="./image/main/food%20(12).png" alt="해물 볶음우동" />
                 <span class="bookmark"><i class="fa-regular fa-bookmark"></i></span>
               </div>
-              <div class="card_info">
+              <div class="card_text">
                 <h3>해물 볶음우동</h3>
-                <div class="card_meta">
+                <div class="info">
                   <span>30분</span>
                   <span class="star">★ 4.7</span>
                   <small>(12,545)</small>
                 </div>
-                <div class="card_tag">
+                <div class="tag">
                   <span>#우동</span>
                   <span>#해물요리</span>
                 </div>
               </div>
             </a>
-          </article>
-          <article class="pop_card">
+          </div>
+          <div class="card">
             <a href="#">
               <div class="card_img">
                 <img src="./image/main/food%20(5).png" alt="바질파스타" />
                 <span class="bookmark"><i class="fa-regular fa-bookmark"></i></span>
               </div>
-              <div class="card_info">
+              <div class="card_text">
                 <h3>바질파스타</h3>
-                <div class="card_meta">
+                <div class="info">
                   <span>40분</span>
                   <span class="star">★ 4.3</span>
                   <small>(18,115)</small>
                 </div>
-                <div class="card_tag">
+                <div class="tag">
                   <span>#파스타</span>
                   <span>#바질</span>
                 </div>
               </div>
             </a>
-          </article>
-          <article class="pop_card">
+          </div>
+          <div class="card">
             <a href="#">
               <div class="card_img">
                 <img src="./image/main/food%20(2).png" alt="감성스테이크" />
                 <span class="bookmark"><i class="fa-regular fa-bookmark"></i></span>
               </div>
-              <div class="card_info">
+              <div class="card_text">
                 <h3>감성스테이크</h3>
-                <div class="card_meta">
+                <div class="info">
                   <span>60분</span>
                   <span class="star">★ 4.1</span>
                   <small>(9,345)</small>
                 </div>
-                <div class="card_tag">
+                <div class="tag">
                   <span>#스테이크</span>
                   <span>#홈파티</span>
                 </div>
               </div>
             </a>
-          </article>
-          <article class="pop_card">
+          </div>
+          <div class="card">
             <a href="#">
               <div class="card_img">
                 <img src="./image/main/food%20(3).png" alt="깐쇼새우" />
                 <span class="bookmark"><i class="fa-regular fa-bookmark"></i></span>
               </div>
-              <div class="card_info">
+              <div class="card_text">
                 <h3>깐쇼새우</h3>
-                <div class="card_meta">
+                <div class="info">
                   <span>60분</span>
                   <span class="star">★ 2.7</span>
                   <small>(2,345)</small>
                 </div>
-                <div class="card_tag">
+                <div class="tag">
                   <span>#중식</span>
                   <span>#새우요리</span>
                 </div>
               </div>
             </a>
-          </article>
-          <article class="pop_card">
+          </div>
+          <div class="card">
             <a href="#">
               <div class="card_img">
                 <img src="./image/main/food%20(4).png" alt="돈까스덮밥" />
                 <span class="bookmark"><i class="fa-regular fa-bookmark"></i></span>
               </div>
-              <div class="card_info">
+              <div class="card_text">
                 <h3>돈까스덮밥</h3>
-                <div class="card_meta">
+                <div class="info">
                   <span>40분</span>
                   <span class="star">★ 3.7</span>
                   <small>(12,635)</small>
                 </div>
-                <div class="card_tag">
+                <div class="tag">
                   <span>#덮밥</span>
                   <span>#한그릇요리</span>
                 </div>
               </div>
             </a>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="today">
-        <div class="section_top">
+      <section class="section2">
+        <div class="title">
           <div>
             <h2>TODAY'S</h2>
             <p>오늘 알아두면 좋은 요리 이야기를 확인해보세요.</p>
@@ -569,94 +570,102 @@
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-        <div class="today_list">
-          <article class="today_card">
+        <div class="allbox">
+          <div class="card">
             <a href="#">
               <img src="./image/main/contents%20(2).png" alt="푸드 스타일링 팁" />
-              <div class="today_info">
+              <div class="card_text">
                 <h3>푸드 스타일링 팁</h3>
                 <b>음식을 더 예쁘게!</b>
                 <p>플레이팅부터 촬영까지 알아보세요.</p>
               </div>
             </a>
-          </article>
-          <article class="today_card">
+          </div>
+          <div class="card">
             <a href="#">
               <img src="./image/main/contents%20(3).png" alt="8월 식재료 가이드" />
-              <div class="today_info">
+              <div class="card_text">
                 <h3>8월 식재료 가이드</h3>
                 <b>8월 제철 음식</b>
                 <p>신선한 제철 재료를 확인해보세요.</p>
               </div>
             </a>
-          </article>
-          <article class="today_card">
+          </div>
+          <div class="card">
             <a href="#">
               <img src="./image/main/contents%20(4).png" alt="요리 기본 가이드" />
-              <div class="today_info">
+              <div class="card_text">
                 <h3>요리 기본 가이드</h3>
                 <b>칼질부터 양념까지</b>
                 <p>요리의 기초를 차근차근 알려드려요.</p>
               </div>
             </a>
-          </article>
-          <article class="today_card">
+          </div>
+          <div class="card">
             <a href="#">
               <img src="./image/main/contents%20(5).png" alt="셰프 레시피" />
-              <div class="today_info">
+              <div class="card_text">
                 <h3>셰프 레시피</h3>
                 <b>집에서 즐기는 레스토랑</b>
                 <p>특별한 요리를 집에서 완성해보세요.</p>
               </div>
             </a>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="thema">
-        <div class="section_top">
+      <section class="section3">
+        <div class="title">
           <div>
             <h2>HTEMA</h2>
             <p>상황과 취향에 맞는 요리를 골라보세요.</p>
           </div>
-          <a href="#" class="more_text">
+          <a href="#" class="more">
             전체 보기
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-        <div class="thema_list">
-          <a href="#" class="thema_card">
+        <div class="allbox">
+          <div class="card">
+          <a href="#">
             <img src="./image/main/thema%20(2).png" alt="요리 모음" />
-            <div class="thema_text">
+            <div class="card_text">
               <p>초보자도 실패 없는</p>
               <h3>요리 모음</h3>
               <span>12가지 레시피 ›</span>
             </div>
           </a>
-          <a href="#" class="thema_card">
+          </div>
+          <div class="card">
+          <a href="#">
             <img src="./image/main/thema%20(3).png" alt="한국 가정식" />
-            <div class="thema_text">
+            <div class="card_text">
               <p>집밥이 그리울 때</p>
               <h3>한국 가정식</h3>
               <span>16가지 레시피 ›</span>
             </div>
           </a>
-          <a href="#" class="thema_card">
+          </div>
+          <div class="card">
+          <a href="#">
             <img src="./image/main/thema%20(4).png" alt="손님 초대 요리" />
-            <div class="thema_text">
+            <div class="card_text">
               <p>특별한 날을 위한</p>
               <h3>손님 초대 요리</h3>
               <span>10가지 레시피 ›</span>
             </div>
           </a>
-          <a href="#" class="thema_card">
+          </div>
+          <div class="card">
+          <a href="#">
             <img src="./image/main/thema%20(5).png" alt="키즈 식단" />
-            <div class="thema_text">
+            <div class="card_text">
               <p>아이들이 좋아하는</p>
               <h3>키즈 식단</h3>
               <span>14가지 레시피 ›</span>
             </div>
           </a>
+          </div>
         </div>
       </section>
     </main>
