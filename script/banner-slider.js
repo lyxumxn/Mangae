@@ -21,7 +21,7 @@ document.querySelectorAll(".banner.swiper").forEach((banner) => {
         loop: true,
         speed: 700,
         autoplay: {
-            delay: 3500,
+            delay: 1500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
