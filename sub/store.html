@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>스토어</title>
   <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../제이쿼리/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../css/store.css" />
   <link rel="shortcut icon" href="../파비콘/favicon.ico" type="image/x-icon" />
 </head>
@@ -472,8 +473,9 @@
       <div class="title">
         <h2>POPULAR</h2>
       </div>
-      <div class="allbox">
-        <div class="card">
+      <div class="card_swiper swiper">
+      <div class="allbox swiper-wrapper">
+        <div class="card swiper-slide">
           <a href="#">
             <div class="card_img">
               <img src="../image/sub1/food%20(3).png" alt="국간장" />
@@ -491,7 +493,7 @@
             </div>
           </a>
         </div>
-        <div class="card">
+        <div class="card swiper-slide">
           <a href="#">
             <div class="card_img">
               <img src="../image/sub1/food%20(8).png" alt="표고버섯" />
@@ -509,7 +511,7 @@
             </div>
           </a>
         </div>
-        <div class="card">
+        <div class="card swiper-slide">
           <a href="#">
             <div class="card_img">
               <img src="../image/sub1/food%20(6).png" alt="무농약 시금치" />
@@ -527,7 +529,7 @@
             </div>
           </a>
         </div>
-        <div class="card">
+        <div class="card swiper-slide">
           <a href="#">
             <div class="card_img">
               <img src="../image/sub1/food%20(4).png" alt="이천쌀" />
@@ -545,6 +547,7 @@
             </div>
           </a>
         </div>
+      </div>
       </div>
     </section>
     <section class="section3">
@@ -613,6 +616,7 @@
     </div>
   </footer>
   <!-- //footer -->
+  <script src="../../제이쿼리/swiper/swiper-bundle.min.js"></script>
   <script src="../script/banner-slider.js"></script>
 </body>
 

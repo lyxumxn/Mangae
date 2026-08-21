@@ -32,3 +32,20 @@ document.querySelectorAll(".banner.swiper").forEach((banner) => {
         keyboard: { enabled: true },
     });
 });
+
+document.querySelectorAll(".card_swiper").forEach(function (slider) {
+    new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 18,
+            },
+        },
+    });
+});
