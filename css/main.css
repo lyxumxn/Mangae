@@ -46,7 +46,7 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #3a3a2e;
 }
 
 body {
@@ -190,7 +190,7 @@ header .icons svg {
 }
 
 header .search svg {
-    color: #3a3a2e;
+    color: #fff;
 }
 
 header .icons .mobile_search,
@@ -248,8 +248,8 @@ header .icons img {
     padding: 25px 30px;
     transform: translateX(-50%);
     background: #fff;
-    border-top: 3px solid #74a640;
-    box-shadow: 0 10px 24px rgba(58, 58, 46, 0.12);
+    border-top: 1px solid #eee;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
 }
 
@@ -259,17 +259,8 @@ header .icons img {
 
 .mega_list {
     display: grid;
-    column-gap: 0;
+    column-gap: 30px;
     min-height: 220px;
-}
-
-.mega_list > div {
-    padding: 0 20px;
-    border-right: 1px solid rgba(58, 58, 46, 0.12);
-}
-
-.mega_list > div:last-child {
-    border-right: 0;
 }
 
 .mega1 .mega_list {
@@ -281,18 +272,15 @@ header .icons img {
 }
 
 .mega h3 {
-    margin: 0 0 14px;
-    padding-bottom: 8px;
-    color: #74a640;
-    border-bottom: 2px solid #f0f3e9;
-    font-size: 16px;
+    margin: 0 0 12px;
+    color: #6ea247;
+    font-size: 18px;
     font-weight: 600;
 }
 
 header .mega .mega_list a {
     display: block;
-    margin-bottom: 9px;
-    padding: 0;
+    padding: 5px 0;
     color: #3a3a2e;
     font-size: 13px;
     font-weight: 500;
@@ -304,9 +292,6 @@ header .mega .mega_list a {
     grid-template-columns: repeat(6, 1fr);
     gap: 12px;
     margin-top: 16px;
-    padding: 18px;
-    background: #f0f3e9;
-    border-radius: 10px;
 }
 
 header .mega_card > a {
@@ -314,7 +299,7 @@ header .mega_card > a {
     height: 105px;
     padding: 12px;
     overflow: hidden;
-    background: #fff;
+    background: #f7f5f2;
     border-radius: 6px;
 }
 
@@ -360,10 +345,10 @@ header .mega_card > a {
 
 header .mega_button a {
     padding: 12px;
-    color: #fff;
+    color: #6ea247;
     text-align: center;
-    background: #74a640;
-    border-radius: 8px;
+    background: #dce5d2;
+    border-radius: 6px;
     font-size: 13px;
 }
 
@@ -506,7 +491,7 @@ main {
 }
 
 main section + section {
-    border-top: 4px solid #74a640;
+    border-top: 1px solid rgba(58, 58, 46, 0.12);
 }
 
 .section1,
@@ -593,15 +578,21 @@ main section + section {
     color: #fff;
 }
 
-.banner .swiper-scrollbar {
-    left: 5%;
-    bottom: 24px;
-    width: 90%;
-    height: 4px;
-    background: rgba(58, 58, 46, 0.2);
+.banner .swiper-pagination {
+    left: 70px;
+    bottom: 40px;
+    width: auto;
 }
 
-.banner .swiper-scrollbar-drag {
+.banner .swiper-pagination-bullet {
+    width: 24px;
+    height: 5px;
+    background: #ccc;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.banner .swiper-pagination-bullet-active {
     background: #74a640;
 }
 
@@ -706,16 +697,8 @@ main .title p {
 .info {
     margin-bottom: 15px;
     display: flex;
-    align-items: center;
     gap: 7px;
     font-size: 13px;
-    line-height: 1;
-}
-
-.info span,
-.info small {
-    font-size: 13px;
-    line-height: 1;
 }
 
 .info .star {
@@ -727,6 +710,7 @@ main .title p {
     gap: 7px;
 }
 
+.tag span,
 .tag span {
     padding: 5px 8px;
     color: #3a3a2e;
@@ -1483,6 +1467,16 @@ footer {
         height: 11px;
     }
 
+    .banner .swiper-pagination {
+        left: 20px;
+        bottom: 14px;
+    }
+
+    .banner .swiper-pagination-bullet {
+        width: 14px;
+        height: 3px;
+    }
+
     .section1 .allbox {
         display: flex;
         overflow-x: auto;
@@ -1634,137 +1628,5 @@ footer {
     header .icons svg {
         width: 16px;
         height: 16px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 767px) {
-    header nav {
-        left: 50%;
-        width: 90%;
-        margin-left: 0;
-        padding: 16px;
-        transform: translateX(-50%);
-        background: #f0f3e9;
-        border: 0;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 10px 24px rgba(58, 58, 46, 0.14);
-    }
-
-    header nav > ul {
-        width: 100%;
-        gap: 0;
-    }
-
-    header nav > ul > li {
-        min-height: 48px;
-    }
-
-    header nav .menu_item {
-        justify-content: space-between;
-        gap: 12px;
-    }
-
-    header nav .menu_item > a {
-        width: auto;
-        height: auto;
-        flex: 1;
-        line-height: 1.4;
-    }
-
-    header nav .category_button {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    header nav li > a {
-        padding: 14px 12px;
-        color: #3a3a2e;
-        border-bottom: 1px solid rgba(58, 58, 46, 0.12);
-        font-weight: 500;
-        line-height: 1.4;
-    }
-
-    header nav .mobile_category.open {
-        margin-top: 8px;
-        padding: 10px;
-        background: #fff;
-        border: 0;
-        border-radius: 8px;
-    }
-
-    header nav .mobile_category div {
-        padding: 0;
-        display: grid;
-        gap: 4px;
-    }
-
-    header nav .mobile_category div a {
-        padding: 9px 12px;
-        color: #3a3a2e;
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .banner {
-        aspect-ratio: 16 / 6;
-        height: auto;
-    }
-
-    .banner_text {
-        top: 50%;
-        left: 40px;
-        transform: translateY(-50%);
-    }
-
-    .banner_text h2 {
-        margin-bottom: 12px;
-        font-size: 24px;
-    }
-
-    .banner_text p {
-        margin-bottom: 16px;
-        font-size: 13px;
-    }
-
-    .banner_text a {
-        padding: 8px 14px;
-        gap: 6px;
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .banner {
-        aspect-ratio: 16 / 9;
-        height: auto;
-    }
-
-    .banner_text {
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-    }
-
-    .banner_text h2 {
-        margin-bottom: 8px;
-        font-size: 18px;
-        line-height: 1.2;
-    }
-
-    .banner_text p {
-        margin-bottom: 12px;
-        font-size: 11px;
-        line-height: 1.4;
-    }
-
-    .banner_text a {
-        padding: 7px 11px;
-        gap: 5px;
-        font-size: 11px;
     }
 }

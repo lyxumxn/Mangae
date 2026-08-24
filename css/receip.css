@@ -45,13 +45,13 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #3a3a2e;
 }
 
 body {
     font-family: "sb", "ns", sans-serif;
     background: #ffffff;
-    color: #333;
+    color: #3a3a2e;
 }
 
 header {
@@ -172,7 +172,7 @@ header .icons svg {
 }
 
 header .search svg {
-    color: #3a3a2e;
+    color: #fff;
 }
 
 header .icons .mobile_search,
@@ -229,8 +229,8 @@ header .icons img {
     padding: 25px 30px;
     transform: translateX(-50%);
     background: #fff;
-    border-top: 3px solid #74a640;
-    box-shadow: 0 10px 24px rgba(58, 58, 46, 0.12);
+    border-top: 1px solid #eee;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
 }
 
@@ -240,17 +240,8 @@ header .icons img {
 
 .mega_list {
     display: grid;
-    column-gap: 0;
+    column-gap: 30px;
     min-height: 220px;
-}
-
-.mega_list > div {
-    padding: 0 20px;
-    border-right: 1px solid rgba(58, 58, 46, 0.12);
-}
-
-.mega_list > div:last-child {
-    border-right: 0;
 }
 
 .mega1 .mega_list {
@@ -262,18 +253,15 @@ header .icons img {
 }
 
 .mega h3 {
-    margin: 0 0 14px;
-    padding-bottom: 8px;
-    color: #74a640;
-    border-bottom: 2px solid #f0f3e9;
-    font-size: 16px;
+    margin: 0 0 12px;
+    color: #6ea247;
+    font-size: 18px;
     font-weight: 600;
 }
 
 header .mega .mega_list a {
     display: block;
-    margin-bottom: 9px;
-    padding: 0;
+    padding: 5px 0;
     color: #3a3a2e;
     font-size: 13px;
     font-weight: 500;
@@ -285,9 +273,6 @@ header .mega .mega_list a {
     grid-template-columns: repeat(6, 1fr);
     gap: 12px;
     margin-top: 16px;
-    padding: 18px;
-    background: #f0f3e9;
-    border-radius: 10px;
 }
 
 header .mega_card > a {
@@ -295,7 +280,7 @@ header .mega_card > a {
     height: 105px;
     padding: 12px;
     overflow: hidden;
-    background: #fff;
+    background: #f7f5f2;
     border-radius: 6px;
 }
 
@@ -341,10 +326,10 @@ header .mega_card > a {
 
 header .mega_button a {
     padding: 12px;
-    color: #fff;
+    color: #6ea247;
     text-align: center;
-    background: #74a640;
-    border-radius: 8px;
+    background: #dce5d2;
+    border-radius: 6px;
     font-size: 13px;
 }
 
@@ -483,7 +468,7 @@ main {
 }
 
 main section + section {
-    border-top: 4px solid #74a640;
+    border-top: 1px solid rgba(58, 58, 46, 0.12);
 }
 
 main > .section1,
@@ -494,27 +479,9 @@ main > .section2 {
 }
 
 main > .section1 {
-    margin-top: 60px;
-    padding: 0;
+    padding: 0 55px 55px;
     background: #fff;
     border-radius: 20px;
-}
-
-main > .section1::before,
-main > .section1::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: #74a640;
-}
-
-main > .section1::before {
-    margin-bottom: 35px;
-}
-
-main > .section1::after {
-    margin-top: 55px;
 }
 
 main > .section1 > .title,
@@ -726,11 +693,11 @@ main .title p {
 }
 
 .type_list button {
-    height: 42px;
-    padding: 0 18px;
+    height: 38px;
+    padding: 0 20px;
     color: #3a3a2e;
-    background: transparent;
-    border: 0;
+    background: #fff;
+    border: 1px solid #ccc;
     border-radius: 20px;
     font-family: inherit;
     font-size: 13px;
@@ -738,8 +705,8 @@ main .title p {
 }
 
 .type_list button:hover {
-    color: #3a3a2e;
-    background: #f0f5e9;
+    color: #74a640;
+    border-color: #74a640;
 }
 
 .find_button {
@@ -843,11 +810,8 @@ main > .section2 .card p {
 }
 
 .tag span {
-    padding: 5px 8px;
     color: #3a3a2e;
     background: #74a640;
-    border-radius: 12px;
-    font-size: 11px;
 }
 
 .card_swiper {
@@ -1148,10 +1112,6 @@ footer {
     main > .section1,
     main > .section2 {
         width: 92%;
-    }
-
-    main > .section1 {
-        margin-top: 40px;
     }
 
     main > .section2 .allbox {
@@ -1497,17 +1457,8 @@ footer {
 
     main > .section1 {
         width: calc(100% - 32px);
-        margin-top: 20px;
         margin-bottom: 60px;
-        padding: 0;
-    }
-
-    main > .section1::before {
-        margin-bottom: 20px;
-    }
-
-    main > .section1::after {
-        margin-top: 24px;
+        padding: 0 16px 24px;
     }
 
     main .title {
@@ -1674,77 +1625,5 @@ footer {
     header .icons svg {
         width: 16px;
         height: 16px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 767px) {
-    header nav {
-        left: 50%;
-        width: 90%;
-        margin-left: 0;
-        padding: 16px;
-        transform: translateX(-50%);
-        background: #f0f3e9;
-        border: 0;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 10px 24px rgba(58, 58, 46, 0.14);
-    }
-
-    header nav > ul {
-        width: 100%;
-        gap: 0;
-    }
-
-    header nav > ul > li {
-        min-height: 48px;
-    }
-
-    header nav .menu_item {
-        justify-content: space-between;
-        gap: 12px;
-    }
-
-    header nav .menu_item > a {
-        width: auto;
-        height: auto;
-        flex: 1;
-        line-height: 1.4;
-    }
-
-    header nav .category_button {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    header nav li > a {
-        padding: 14px 12px;
-        color: #3a3a2e;
-        border-bottom: 1px solid rgba(58, 58, 46, 0.12);
-        font-weight: 500;
-        line-height: 1.4;
-    }
-
-    header nav .mobile_category.open {
-        margin-top: 8px;
-        padding: 10px;
-        background: #fff;
-        border: 0;
-        border-radius: 8px;
-    }
-
-    header nav .mobile_category div {
-        padding: 0;
-        display: grid;
-        gap: 4px;
-    }
-
-    header nav .mobile_category div a {
-        padding: 9px 12px;
-        color: #3a3a2e;
-        font-size: 13px;
     }
 }
