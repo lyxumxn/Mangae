@@ -158,6 +158,14 @@ header .icons details summary {
     font-size: 19px;
 }
 
+header .search svg,
+header .icons svg {
+    width: 20px;
+    height: 20px;
+    color: #3a3a2e;
+    stroke-width: 1.8;
+}
+
 header .icons .mobile_search,
 header .icons .menu_trigger {
     display: none;
@@ -1583,5 +1591,21 @@ footer {
         flex-wrap: wrap;
         gap: 4px;
         font-size: 9px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header .search svg,
+    header .icons svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    header .search svg,
+    header .icons svg {
+        width: 16px;
+        height: 16px;
     }
 }

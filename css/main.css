@@ -176,6 +176,14 @@ header .icons details summary {
     font-size: 19px;
 }
 
+header .search svg,
+header .icons svg {
+    width: 20px;
+    height: 20px;
+    color: #3a3a2e;
+    stroke-width: 1.8;
+}
+
 header .icons .mobile_search,
 header .icons .menu_trigger {
     display: none;
@@ -852,24 +860,6 @@ footer {
     color: #3a3a2e;
     font-size: 14px;
     line-height: 30px;
-}
-
-/* 카드 호버 효과 */
-.recipe,
-.contents2 .card,
-.contents3 .card {
-    position: relative;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.recipe:hover,
-.contents2 .card:hover,
-.contents3 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(58, 58, 46, 0.16);
-    z-index: 1;
 }
 
 /* //footer */
@@ -1608,5 +1598,21 @@ footer {
 
     main .tag {
         font-size: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header .search svg,
+    header .icons svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    header .search svg,
+    header .icons svg {
+        width: 16px;
+        height: 16px;
     }
 }

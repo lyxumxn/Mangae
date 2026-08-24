@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>레시피</title>
         <script src="https://kit.fontawesome.com/be9c80fc70.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
         <link rel="stylesheet" href="../../제이쿼리/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../css/receip.css" />
         <link rel="shortcut icon" href="../파비콘/favicon.ico" type="image/x-icon" />
@@ -272,18 +273,20 @@
                 <div class="search">
                     <input type="text" />
                     <button type="button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i data-lucide="search"></i>
                     </button>
                 </div>
 
                 <div class="icons">
-                    <button class="menu_trigger" type="button" aria-label="메뉴">☰</button>
+                    <button class="menu_trigger" type="button" aria-label="메뉴">
+                        <i data-lucide="menu"></i>
+                    </button>
                     <a class="mobile_search" href="#" aria-label="검색">
-                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <i data-lucide="search" aria-hidden="true"></i>
                     </a>
                     <details class="save">
                         <summary>
-                            <i class="fa-regular fa-bookmark"></i>
+                            <i data-lucide="bookmark"></i>
                         </summary>
                         <div class="box">
                             <h2>북마크</h2>
@@ -307,7 +310,7 @@
                     </details>
                     <details class="bell">
                         <summary>
-                            <i class="fa-regular fa-bell"></i>
+                            <i data-lucide="bell"></i>
                         </summary>
                         <div class="box">
                             <h2>알림</h2>
@@ -323,7 +326,7 @@
                     </details>
                     <details class="cart">
                         <summary>
-                            <i class="fa-solid fa-store"></i>
+                            <i data-lucide="store"></i>
                         </summary>
                         <div class="box">
                             <h2>스토어</h2>
@@ -510,32 +513,6 @@
                     </div>
                     <div class="card swiper-slide">
                         <a href="#">
-                            <img src="../image/sub2/food%20(6).png" alt="닭가슴살과 브로콜리" />
-                            <div class="card_text">
-                                        <h3>닭가슴살 + 브로콜리</h3>
-                                <p>건강한 한 끼 완성</p>
-                                <div class="tag">
-                                    <span>#닭가슴살</span>
-                                    <span>#브로콜리</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card swiper-slide">
-                        <a href="#">
-                            <img src="../image/sub2/food%20(3).png" alt="새우와 마늘" />
-                            <div class="card_text">
-                                        <h3>새우 + 마늘</h3>
-                                <p>감칠맛 가득 요리</p>
-                                <div class="tag">
-                                    <span>#새우</span>
-                                    <span>#마늘</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card swiper-slide">
-                        <a href="#">
                             <img src="../image/sub2/food%20(1).png" alt="김치찌개" />
                             <div class="card_text">
                                 <h3>돼지고기 + 김치</h3>
@@ -618,5 +595,6 @@
 
         <script src="../../제이쿼리/swiper/swiper-bundle.min.js"></script>
         <script src="../script/banner-slider.js"></script>
+        <script>lucide.createIcons();</script>
     </body>
 </html>

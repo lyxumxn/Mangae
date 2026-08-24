@@ -33,7 +33,7 @@ document.querySelectorAll(".banner.swiper").forEach((banner) => {
     });
 });
 
-document.querySelectorAll(".card_swiper").forEach(function (slider) {
+document.querySelectorAll(".card_swiper:not(.store_swiper)").forEach(function (slider) {
     new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 12,
@@ -49,3 +49,27 @@ document.querySelectorAll(".card_swiper").forEach(function (slider) {
         },
     });
 });
+
+const storeSlider = document.querySelector(".store_swiper");
+let storeSwiper;
+
+function storeSlide() {
+    if (!storeSlider) {
+        return;
+    }
+
+    if (window.innerWidth >= 1025 && !storeSwiper) {
+        storeSwiper = new Swiper(storeSlider, {
+            slidesPerView: 3,
+            spaceBetween: 18,
+        });
+    }
+
+    if (window.innerWidth < 1025 && storeSwiper) {
+        storeSwiper.destroy(true, true);
+        storeSwiper = null;
+    }
+}
+
+storeSlide();
+window.addEventListener("resize", storeSlide);
