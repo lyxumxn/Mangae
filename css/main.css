@@ -77,9 +77,9 @@ header {
     z-index: 100;
     top: 0;
     width: 100%;
-    margin-bottom: 60px;
-    background: #fff;
-    border-bottom: 1px solid rgba(58, 58, 46, 0.3);
+    margin-bottom: 0;
+    background: #f0f3e9;
+    border-bottom: 0;
 }
 
 .header_inner {
@@ -140,16 +140,21 @@ header .search {
     padding: 0 15px;
     display: flex;
     align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #74a640;
+    border: 0;
     border-radius: 24px;
 }
 
 header .search input {
     width: 100%;
+    color: #fff;
     border: 0;
     outline: 0;
     background: transparent;
+}
+
+header .search input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
 }
 
 header .search button {
@@ -182,6 +187,10 @@ header .icons svg {
     height: 20px;
     color: #3a3a2e;
     stroke-width: 1.8;
+}
+
+header .search svg {
+    color: #3a3a2e;
 }
 
 header .icons .mobile_search,
@@ -239,8 +248,8 @@ header .icons img {
     padding: 25px 30px;
     transform: translateX(-50%);
     background: #fff;
-    border-top: 1px solid #eee;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-top: 3px solid #74a640;
+    box-shadow: 0 10px 24px rgba(58, 58, 46, 0.12);
     border-radius: 10px;
 }
 
@@ -250,8 +259,17 @@ header .icons img {
 
 .mega_list {
     display: grid;
-    column-gap: 30px;
+    column-gap: 0;
     min-height: 220px;
+}
+
+.mega_list > div {
+    padding: 0 20px;
+    border-right: 1px solid rgba(58, 58, 46, 0.12);
+}
+
+.mega_list > div:last-child {
+    border-right: 0;
 }
 
 .mega1 .mega_list {
@@ -263,15 +281,18 @@ header .icons img {
 }
 
 .mega h3 {
-    margin: 0 0 12px;
-    color: #6ea247;
-    font-size: 18px;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    color: #74a640;
+    border-bottom: 2px solid #f0f3e9;
+    font-size: 16px;
     font-weight: 600;
 }
 
 header .mega .mega_list a {
     display: block;
-    padding: 5px 0;
+    margin-bottom: 9px;
+    padding: 0;
     color: #3a3a2e;
     font-size: 13px;
     font-weight: 500;
@@ -283,6 +304,9 @@ header .mega .mega_list a {
     grid-template-columns: repeat(6, 1fr);
     gap: 12px;
     margin-top: 16px;
+    padding: 18px;
+    background: #f0f3e9;
+    border-radius: 10px;
 }
 
 header .mega_card > a {
@@ -290,7 +314,7 @@ header .mega_card > a {
     height: 105px;
     padding: 12px;
     overflow: hidden;
-    background: #f7f5f2;
+    background: #fff;
     border-radius: 6px;
 }
 
@@ -336,10 +360,10 @@ header .mega_card > a {
 
 header .mega_button a {
     padding: 12px;
-    color: #6ea247;
+    color: #fff;
     text-align: center;
-    background: #dce5d2;
-    border-radius: 6px;
+    background: #74a640;
+    border-radius: 8px;
     font-size: 13px;
 }
 
@@ -481,6 +505,10 @@ main {
     padding-bottom: 100px;
 }
 
+main section + section {
+    border-top: 4px solid #74a640;
+}
+
 .section1,
 .section2,
 .section3 {
@@ -565,21 +593,15 @@ main {
     color: #fff;
 }
 
-.banner .swiper-pagination {
-    left: 70px;
-    bottom: 40px;
-    width: auto;
+.banner .swiper-scrollbar {
+    left: 5%;
+    bottom: 24px;
+    width: 90%;
+    height: 4px;
+    background: rgba(58, 58, 46, 0.2);
 }
 
-.banner .swiper-pagination-bullet {
-    width: 24px;
-    height: 5px;
-    background: #ccc;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-.banner .swiper-pagination-bullet-active {
+.banner .swiper-scrollbar-drag {
     background: #74a640;
 }
 
@@ -637,7 +659,7 @@ main .title p {
 
 .section1 .card {
     overflow: hidden;
-    background: #fff;
+    background: #f0f3e9;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
@@ -656,6 +678,7 @@ main .title p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.9) saturate(0.92);
 }
 
 .bookmark {
@@ -667,7 +690,7 @@ main .title p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #f0f3e9;
     border-radius: 8px;
 }
 
@@ -683,8 +706,16 @@ main .title p {
 .info {
     margin-bottom: 15px;
     display: flex;
+    align-items: center;
     gap: 7px;
     font-size: 13px;
+    line-height: 1;
+}
+
+.info span,
+.info small {
+    font-size: 13px;
+    line-height: 1;
 }
 
 .info .star {
@@ -696,11 +727,10 @@ main .title p {
     gap: 7px;
 }
 
-.tag span,
 .tag span {
     padding: 5px 8px;
-    color: #666;
-    background: #f5f5f5;
+    color: #3a3a2e;
+    background: #74a640;
     border-radius: 12px;
     font-size: 11px;
 }
@@ -714,7 +744,7 @@ main .title p {
 
 .section2 .card {
     overflow: hidden;
-    background: #fff;
+    background: #f0f3e9;
     border-radius: 14px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
@@ -723,6 +753,7 @@ main .title p {
     width: 100%;
     height: 175px;
     object-fit: cover;
+    filter: brightness(0.9) saturate(0.92);
 }
 
 .section2 .card_text {
@@ -805,8 +836,7 @@ main .card_swiper .card {
 
 footer {
     width: 100%;
-    background: #fff;
-    opacity: 0.5;
+    background: #f0f3e9;
 }
 
 .footer_i {
@@ -1453,16 +1483,6 @@ footer {
         height: 11px;
     }
 
-    .banner .swiper-pagination {
-        left: 20px;
-        bottom: 14px;
-    }
-
-    .banner .swiper-pagination-bullet {
-        width: 14px;
-        height: 3px;
-    }
-
     .section1 .allbox {
         display: flex;
         overflow-x: auto;
@@ -1482,7 +1502,7 @@ footer {
 /* 반응형 글자와 간격 */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
 
     header .logo img {
@@ -1542,7 +1562,7 @@ footer {
 
 @media (min-width: 320px) and (max-width: 767px) {
     header {
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     header .logo img {
@@ -1614,5 +1634,102 @@ footer {
     header .icons svg {
         width: 16px;
         height: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px), (min-width: 320px) and (max-width: 767px) {
+    header nav {
+        left: 50%;
+        width: 90%;
+        padding: 16px;
+        transform: translateX(-50%);
+        background: #f0f3e9;
+        border: 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 10px 24px rgba(58, 58, 46, 0.14);
+    }
+
+    header nav li > a {
+        padding: 14px 12px;
+        color: #3a3a2e;
+        border-bottom: 1px solid rgba(58, 58, 46, 0.12);
+    }
+
+    header nav .mobile_category.open {
+        margin-top: 8px;
+        padding: 10px;
+        background: #fff;
+        border: 0;
+        border-radius: 8px;
+    }
+
+    header nav .mobile_category div {
+        padding: 0;
+    }
+
+    header nav .mobile_category div a {
+        padding: 9px 12px;
+        color: #3a3a2e;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        aspect-ratio: 16 / 6;
+        height: auto;
+    }
+
+    .banner_text {
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+    }
+
+    .banner_text h2 {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .banner_text p {
+        margin-bottom: 16px;
+        font-size: 13px;
+    }
+
+    .banner_text a {
+        padding: 8px 14px;
+        gap: 6px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .banner {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .banner_text {
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    .banner_text h2 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .banner_text p {
+        margin-bottom: 12px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .banner_text a {
+        padding: 7px 11px;
+        gap: 5px;
+        font-size: 11px;
     }
 }

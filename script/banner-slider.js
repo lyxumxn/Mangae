@@ -25,9 +25,9 @@ document.querySelectorAll(".banner.swiper").forEach((banner) => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
-        pagination: {
-            el: banner.querySelector(".swiper-pagination"),
-            clickable: true,
+        scrollbar: {
+            el: banner.querySelector(".swiper-scrollbar"),
+            draggable: true,
         },
         keyboard: { enabled: true },
     });
